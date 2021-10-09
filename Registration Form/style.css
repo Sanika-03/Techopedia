@@ -1,171 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 body{
   height: 100vh;
-  /* background: url('parts.png') no-repeat /*center  center/cover*/; 
-  background-color: rgb(35, 49, 87);
-  /* background-size: 100%; */
+}
+
+.hero-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.card{
-  overflow: hidden;
-  border: 0 !important;
-  border-radius: 20px !important;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-}
-
-.img-right{
-  width: 45%;
-  background: url('clock.png') center no-repeat;
-  background-size: contain;
-  background-color: #F4D366;
-  
-}
-
-.card-body{
-  padding: 2rem;
-  background-color: #F4D366;
-}
-
-.title{
-  margin-bottom: 2rem;
-}
-/* .......................... */
-
-
-/* .form-input{
-  position: relative;
-}
-
-.form-input input{
+  background-color: #233157;
+  background-image: url('./Images/Background.png');
+  background-repeat: repeat-y;
   width: 100%;
-  height: 45px;
-  padding-left: 40px;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.primary-title{
+  font-family: 'Audiowide', cursive;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.secondary-title{
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.hero-form {
+  width: 900px;
+  background: #F4D366;
+  padding: 30px 0px 30px 30px;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.form{
+  width: 100%;
+}
+
+.form-container{
+  display: flex;
+}
+
+.form-component{
   margin-bottom: 20px;
-  box-sizing: border-box;
-  box-shadow: none;
-  border: 1px solid #00000020;
-  border-radius: 50px;
-  outline: none;
-  background: transparent;
 }
 
-.form-input span{
-  position: absolute;
-  top: 10px;
-  padding-left: 15px;
-  color: #007bff;
+.form-control{
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid !important;
+  padding: 0px 5px !important;
 }
 
-.form-input input::placeholder{
-  color: black;
-  padding-left: 0px;
+.form-control:focus{
+  box-shadow: none !important;
 }
 
-.form-input input:focus, .form-input input:valid{
-  border: 2px solid #007bff;
-}
-
-.form-input input:focus::placeholder{
-  color: #454b69;
-}
-
-
-.form-box button[type="submit"]{
-  margin-top: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  background: #44627A;
-  color: #fff;
-  font-size: 90%;
-  font-weight: bold;
-  letter-spacing: .1rem;
-  transition: 0.5s;
-  padding: 12px;
-  width: 30%;
-}
-
-.form-box button[type="submit"]:hover{
-  background: #0069d9;
-} */
-/* ........................... */
-
-/* 
-.button{
-  color: #fff;
-  margin-top: 40px;
-}
-.button input{
-  color: #fff;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  background: #53748E;
-  box-shadow: -3px 8px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-  width: 7rem;
-}
-
-.button input:hover{
-  background: #314d63;
-}
-
-.input-box input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  font-size: 16px;
+.label{
+  margin-bottom: 0 !important;
   font-weight: 500;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  background:transparent;
-} */
-
-
-
-
-.input-boxes {
-  margin-top: 30px;
 }
-.forms .form-content .input-box{
-display: flex;
-align-items: center;
-height: 50px;
-width: 100%;
-margin: 5px 0;
-position: relative;
-}
-.input-box input{
-height: 100%;
-width: 80%;
-outline: none;
-border: none;
-font-size: 16px;
-font-weight: 500;
-border-bottom: 2px solid rgba(0,0,0,0.2);
-transition: all 0.3s ease;
-background:transparent;
-}
-
-.forms .form-content .button{
-color: rgb(255, 255, 255);
-margin-top: 40px;
-}
-.forms .form-content .button input{
-color: #fff;
-padding: 0;
-cursor: pointer;
-transition: all 0.4s ease;
-background: #53748E;
-box-shadow: -3px 8px 4px rgba(0, 0, 0, 0.25);
-border-radius: 22px;
-}
-.forms .form-content .button input:hover{
-background: #314d63;
-
-}
-
