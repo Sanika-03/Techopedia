@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-body{
-  height: 100vh;
-}
 
 .hero-container{
   display: flex;
@@ -21,6 +18,7 @@ body{
   margin-bottom: 40px;
   color: black;
   text-align: center;
+  font-weight: 600;
 }
 /* 
 .secondary-title{
@@ -41,7 +39,7 @@ body{
 }
 
 .form{
-  width: 85%;
+  width: 90%;
   padding-bottom: 50px;
 }
 
@@ -84,6 +82,7 @@ body{
 .eventimg img{
   width: 130px;
   height: 130px;
+  object-fit: cover;
 }
 
 .desc{
@@ -92,6 +91,7 @@ body{
 
 .eventtitle{
   font-size: 20px;
+  font-weight: bold;
 }
 
 .button-group{
@@ -117,9 +117,18 @@ body{
     width: 80%;
     padding: 20px;
   }
+
+  .form{
+    width: 95%;
+    padding-bottom: 20px;
+  }
 }
 
 @media(max-width:320px){
+  .primary-title{
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
   .hero-container{
     padding-top: 20px;
   }
@@ -135,6 +144,14 @@ body{
 
   .eventdesc{
     flex-direction: column;
+  }
+
+  .eventimg img{
+    width: 248px;
+  }
+
+  .eventtitle{
+    text-align: center;
   }
 
   .desc{
