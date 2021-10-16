@@ -112,7 +112,7 @@ body{
   border-radius: 10px;
 }
 
-@media(min-width:768px){
+@media(max-width:768px){
   .hero-form{
     width: 80%;
     padding: 20px;
