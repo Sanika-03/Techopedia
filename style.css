@@ -40,7 +40,7 @@
 
 .form{
   width: 90%;
-  padding-bottom: 50px;
+  padding-bottom: 5px;
 }
 
 .form-container{
@@ -92,6 +92,8 @@
 .eventtitle{
   font-size: 20px;
   font-weight: bold;
+  margin-bottom:20px;
+  /* border-left: 5px solid #475BDE; */
 }
 
 .button-group{
@@ -99,28 +101,50 @@
   justify-content: center;
   width: 100%;
 }
-.btn-primary{
+.button{
   width: 200px;
   color: #fff;
-  padding: 10px;
+  padding: 8px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.4s ease;
-  background: #475BDE;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #475BDE;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+.button:hover{
+  background-color:#6d7de6;
+  color:#000;
+  transform: translateY(-0.30em);
+}
+/* Media queries */
 
 @media(max-width:768px){
   .hero-form{
     width: 80%;
-    padding: 20px;
+    padding: 35px 30px 20px;
   }
 
   .form{
     width: 95%;
     padding-bottom: 20px;
+  }
+  .eventdesc{
+    flex-direction: column;
+  }
+  .eventimg{
+    margin:auto;
+    justify-content: center;
+    padding:25px 0px;
+  }
+  .eventimg img{
+    width: 200px;
+  }
+  .eventtitle{
+    text-align: center;
+    /* margin:auto; */
+    border:none;
   }
 }
 
@@ -147,7 +171,7 @@
   }
 
   .eventimg img{
-    width: 248px;
+    width: 130px;
   }
 
   .eventtitle{
