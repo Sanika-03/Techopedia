@@ -15,7 +15,7 @@
 
 .primary-title{
   font-family: url('./Fonts/Integral-CF-20211009T173813Z-001/Integral-CF/OTF/IntegralCF-Medium.otf');
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   color: black;
   text-align: center;
   font-weight: 600;
@@ -92,7 +92,6 @@
 .eventtitle{
   font-size: 20px;
   font-weight: bold;
-  margin-bottom:20px;
   /* border-left: 5px solid #475BDE; */
 }
 
@@ -118,7 +117,11 @@
   color:#000;
   transform: translateY(-0.30em);
 }
-/* Media queries */
+
+.underline{
+  text-decoration-color:#475BDE;
+  margin-bottom:30px;
+}
 
 @media(max-width:768px){
   .hero-form{
