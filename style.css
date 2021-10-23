@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+body{
+  background-image: url('./Images/Night.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+}
 
 .hero-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('./Images/Night.png');
-  background-size: cover;
-  background-repeat: repeat-y;
+  margin: 0 auto;
   width: 100%;
-  padding-top: 60px;
+  padding: 60px 0;
 }
 
 .primary-title{
@@ -32,7 +35,7 @@
   background:#ffffffd8;
   padding: 30px;
   font-family: 'Poppins', sans-serif !important;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   @media(min-width:320px){
     width: 90%;
   }
@@ -125,6 +128,9 @@
 }
 
 @media(max-width:320px){
+  .hero-container{
+    max-width: 300px;
+  }
   .primary-title{
     margin-bottom: 15px;
     font-size: 24px;
@@ -147,7 +153,7 @@
   }
 
   .eventimg img{
-    width: 248px;
+    width: 100%;
   }
 
   .eventtitle{
