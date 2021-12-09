@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="page">
+        <header class="main-header">
+            <nav class="main-nav">
+                <a class="logo"
+                href="#">
+                    <img src=".//Image/image 1.png">
+                </a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <box-icon name='menu'></box-icon>
+                  </a>
+              <ul class="nav-list">
+                <li class="nav-items"><a href="#" class="nav-link">About</a><a href="#" class="dropdown-item"></a></li>
+                <li class="nav-items"><a href="#" class="nav-link">Events</a><a href="#" class="dropdown-item"></a></li>               
+                <li class="nav-items"><a href="#" class="nav-link">Sponsors</a><a href="#" class="dropdown-item"></a></li>
+                <li class="nav-items"><a href="#" class="nav-link">FAQ</a><a href="#" class="dropdown-item"></a></li>
+              </ul>
+            </nav>
+
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="title primary-title">TECHOPEDIA 10.0</h1>  
+                    <div class="about">
+                    </div>    
+                    <button class="btn-light">Register</button>      
+                    <p class="countdown" id="demo"></p> 
+                </div>
+                <script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+                    
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+                    
+                      // Get today's date and time
+                      var now = new Date().getTime();
+                        
+                      // Find the distance between now and the count down date
+                      var distance = countDownDate - now;
+                        
+                      // Time calculations for days, hours, minutes and seconds
+                      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        
+                      // Output the result in an element with id="demo"
+                      document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+                      + minutes + "M " + seconds + "S ";
+                        
+                      // If the count down is over, write some text 
+                      if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                      }
+                    }, 1000);
+
+                    function myFunction() {
+                    var x = document.getElementById("myLinks");
+                    if (x.style.display === "block") {
+                      x.style.display = "none";
+                    } else {
+                      x.style.display = "block";
+                    }
+                    }
+                </script>
+            </div>
+        </header>
+
+
+        <section class="content">
+            <div class="about">
+                <h2 class="secondary-title">About</h2>
+                <div class="flex-container">
+                    <div class="about">
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</body>
+</html>

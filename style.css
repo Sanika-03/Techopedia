@@ -1,205 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body{
-  background-image: url('./Images/Night.png');
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+body {
+    background-color: #090F16;
+}
+
+.content{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 0 15px ;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li{
+display: inline-block;
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+}
+
+.nav-link{
+color: #FFFFFF;
+
+}
+
+.logo img{
+    width:100px;
+    height: 100px;
+}
+
+.main-header{
+  margin: 0;
+  padding: 0;
+  background-image: url(./Image/traveling-through-door-future-with-speed-light\ 1.png);
   background-size: cover;
-  background-repeat: repeat-y;
-}
-
-.hero-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
+  background-position: center;
   width: 100%;
-  padding: 60px 0;
+  height: 800px;
 }
 
-.primary-title{
-  font-family: url('./Fonts/Integral-CF-20211009T173813Z-001/Integral-CF/OTF/IntegralCF-Medium.otf');
-  /* margin-bottom: 40px; */
-  color: black;
-  text-align: center;
-  font-weight: 600;
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-/* 
+
+.primary-title {
+text-align: center;
+padding-top: 250px;
+font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 70px;
+letter-spacing: 0.05em;
+color: #FFFFFF;
+text-shadow: 0px 0px 15px #B8D9ED;
+}
+
+.btn-light{
+width: 145px;
+height: 41px;
+left: 648px;
+top: 459px;
+border: 1px solid #FFFFFF;
+background-color: transparent;
+color: #FFFFFF;
+box-sizing: border-box;
+box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.37);
+border-radius: 10px;
+}
+
+.countdown {
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 50px;
+color: #FFFFFF;
+text-align: center;
+letter-spacing: 0.05em;
+padding-top: 200px;
+}
+
+.about-container{
+    display: flex;
+}
+
 .secondary-title{
-  font-size: 26px;
-  margin-bottom: 40px;
-  font-weight: 600;
-} */
-
-.hero-form {
-  width: 60%;
-  background:#ffffffd8;
-  padding: 30px;
-  font-family: 'Poppins', sans-serif !important;
-  @media(min-width:320px){
-    width: 90%;
-  }
+    text-align: center;
+    color: #FFFFFF;
 }
 
-.form{
-  width: 90%;
-  padding-bottom: 5px;
+.about{
+    color: #FFFFFF;
+    padding-top: 20px;
 }
 
-.form-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 3px solid #475BDE;
-  padding-top: 30px;
-  margin-top: 30px;
+.desc{
+    width: 100%;
 }
 
-.form-component{
-  margin-bottom: 30px;
-}
-
-.form-control{
-  background-color: transparent !important;
-  border: none !important;
-  border-bottom: 1px solid !important;
-  padding: 5px 0px !important;
-  border-radius: 0 !important;
-}
-
-.form-control:focus{
-  box-shadow: none !important;
-}
-
-.label{
-  margin-bottom: 0 !important;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-/* ______________event info______________ */
-.eventdesc{
-  display: flex;
-  margin-top: 20px;
-}
-
-.eventimg img{
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-}
-
-.event-info{
-  padding-left: 20px;
-}
-
-.eventtitle{
-  font-size: 20px;
-  font-weight: bold;
-  /* border-left: 5px solid #475BDE; */
-}
-
-.button-group{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.button{
-  width: 200px;
-  color: #fff;
-  padding: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  background-color: #475BDE;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  border: none;
-}
-.button:hover{
-  background-color:#6d7de6;
-  color:#000;
-  transform: translateY(-0.30em);
-}
-
-.underline{
-  text-decoration-color:#475BDE;
-  margin-bottom:30px;
-  font-size: 18px;
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @media(max-width:768px){
-  .hero-form{
-    width: 80%;
-    padding: 35px 30px 20px;
-  }
-
-  .primary-title{
-    margin-bottom: 25px;
-  }
-
-  .form{
-    width: 95%;
-    padding-bottom: 20px;
-  }
-  .eventdesc{
-    flex-direction: column;
-    margin-top: 0;
-  }
-  .eventimg{
-    margin:auto;
-    justify-content: center;
-  }
-  .eventimg img{
-    width: 200px;
-  }
-  .eventtitle{
-    text-align: center;
-    /* margin:auto; */
-    border:none;
-    padding-top: 20px;
-  }
-  .event-info{
-    padding-left: 0px;
-  }
+    .main-header{
+        width: 100%;
+        height: 80vh;
+        background-position: center;
+    }    
+    .content{
+        max-width: 720px;
+    }
+    .primary-title {
+        padding-top: 140px;
+        font-size: 40px;
+    }
+    .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .nav-list li{
+        font-size: 18px;
+    }
+    .btn-light{
+        width: 130px;
+        height: 35px;
+    }
+    .countdown{
+        padding-top: 110px;
+        font-size: 30px;
+    }
 }
 
-@media(max-width:320px){
-  .hero-container{
-    max-width: 300px;
-  }
-  .primary-title{
-    font-size: 24px;
-  }
-  .hero-container{
-    padding: 20px 0;
-  }
-  .hero-form{
-    width: 90%;
-    padding: 20px;
-  }
+@media(max-width:320px) {
+    .main-header{
+        width: 100%;
+        height: 80vh;
+        background-position: center;
+    }
+    .content{
+        max-width: 290px;
+    }
 
-  .form{
-  padding-bottom: 30px;
-  width: 100%;
-  }
+    .desc {
+        width: 100%;
+    }
 
-  .eventdesc{
-    flex-direction: column;
-  }
+    .logo img{
+        width: 60px;
+        height: 60px;
+    }
+    .primary-title {
+        padding-top: 160px;
+        font-size: 30px;
+    }
 
-  .eventimg img{
-    width: 200px;
-    height: 200px;
-    padding-top: 10px;
-  }
+    .main-nav{
+        padding: 5px;
+    }
 
-  .eventtitle{
-    text-align: center;
-  }
+    .nav-list{
+        flex-direction: column;
+        display: none;
+    }
+    .btn-light{
+        width: 120px;
+        height: 35px;
+    }
 
-  .desc{
-    padding: 0;
-    margin: 15px 0 0 0;
-  }
+    .countdown{
+        padding-top: 120px;
+        font-size: 30px;
+    }
+
 }
