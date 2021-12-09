@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
     color: white;
+}
+
+ul{
+    padding: 0;
 }
 
 li{
@@ -15,6 +23,10 @@ li{
 
 body {
     background-color: #090F16;
+}
+
+#about, #events, #tineline,#faq,#sponsors{
+    scroll-margin: 20px;
 }
 
 .content{
@@ -27,7 +39,9 @@ body {
 .main-nav {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 15px 15px 0 15px ;
+    position: fixed;
 }
 .nav-list {
     display: flex;
@@ -59,7 +73,7 @@ color: #FFFFFF;
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 800px;
+  height: 100vh;
 }
 
 .hero-content{
@@ -70,7 +84,7 @@ color: #FFFFFF;
 
 .primary-title {
 text-align: center;
-padding-top: 250px;
+padding-top: 300px;
 font-family: 'Poppins', sans-serif;
 font-style: normal;
 font-weight: 500;
@@ -128,7 +142,189 @@ padding-top: 200px;
     justify-content: space-between;
 }
 
+.timeline-heading{
+    margin-top: 50px;
+    text-align: center;
+  }
+  .container-timeline {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 0 0;
+  }
+  
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 145%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 95%;
+    background-color: gray;
+  }
+
+  .timeline ul {
+    list-style: none;
+  }
+
+  .timeline ul li {
+    padding: 20px;
+    background:transparent;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .timeline ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-content h1 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  .timeline-content .date {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    background-color: #278EA5;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .timeline ul li {
+      width: 50%;
+      position: relative;
+      margin-bottom: 50px;
+    }
+    .timeline ul li:nth-child(odd) {
+      float: left;
+      clear: right;
+      transform: translateX(-30px);
+      border-radius: 20px 0px 20px 20px;
+    }
+    .timeline ul li:nth-child(even) {
+      float: right;
+      clear: left;
+      transform: translateX(30px);
+      border-radius: 0px 20px 20px 20px;
+    }
+    .timeline ul li::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: gray;
+      top: 0px;
+    }
+    .timeline ul li:nth-child(odd)::before {
+      transform: translate(50%, -50%);
+      right: -30px;
+    }
+    .timeline ul li:nth-child(even)::before {
+      transform: translate(-50%, -50%);
+      left: -30px;
+    }
+    .timeline-content .date {
+      position: absolute;
+      top: -30px;
+    }
+    
+  }
+
+
+  .accordion {
+	width: 90%;
+	max-width: 1000px;
+	margin: 2rem auto;
+	background-color: #090F16;
+
+}
+
+.accordion-item {
+	background-color: #090F16;
+	color: white;
+	margin: 1rem 0;
+    border: 1px solid white;
+}
+
+.accordion-item-header {
+	padding: 0.5rem 3rem 0.5rem 1rem;
+	min-height: 3.5rem;
+	line-height: 1.25rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	color:#FFFFFF;
+	background-color: #090F16;
+
+ 
+  ;
+}
+.accordion-item-body-content{
+  background-color: #278EA5;
+}
+
+.accordion-item-header::after {
+	content: "\002B";
+	font-size: 2rem;
+	position: absolute;
+	right: 1rem;
+}
+
+.accordion-item-header.active::after {
+	content: "\2212";
+}
+
+.accordion-item-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+  background-color: #090F16;
+}
+
+.accordion-item-body-content {
+	padding: 1rem;
+	line-height: 1.5rem;
+	border-top: 1px solid;
+}
+
+.faq-img {
+    display: flex;
+    justify-content: center;
+}
+
+.faq-img img{
+    margin: 0% !important;
+}
+
+@media(max-width:767px) {
+	html {
+	font-size: 14px;
+	}
+}
+
 @media(max-width:768px){
+    ul{
+        padding-left: 20px;
+    }
     .main-header{
         width: 100%;
         height: 80vh;
@@ -138,7 +334,7 @@ padding-top: 200px;
         max-width: 720px;
     }
     .primary-title {
-        padding-top: 140px;
+        padding-top: 220px;
         font-size: 40px;
     }
     .logo img{
@@ -153,8 +349,20 @@ padding-top: 200px;
         height: 35px;
     }
     .countdown{
-        padding-top: 110px;
+        padding-top: 140px;
         font-size: 30px;
+    }
+
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 20;
+        left: 51%;
+        top: 138%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 120%;
+        background-color: gray;
     }
 }
 
@@ -177,7 +385,7 @@ padding-top: 200px;
         height: 60px;
     }
     .primary-title {
-        padding-top: 160px;
+        padding-top: 230px;
         font-size: 30px;
     }
 
@@ -195,8 +403,11 @@ padding-top: 200px;
     }
 
     .countdown{
-        padding-top: 120px;
+        padding-top: 140px;
         font-size: 30px;
+    }
+    .timeline:before{
+        background-color: transparent;
     }
 
 }
