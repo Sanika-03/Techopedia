@@ -47,7 +47,12 @@ body {
     display: flex;
     align-items: center;
 }
-
+.toggle-icon{
+  display: block;
+  padding: 2px 15px;
+  background-color: #919698;
+  margin:5px;
+}
 .nav-list li{
 display: inline-block;
 font-family: Poppins;
@@ -60,14 +65,23 @@ text-decoration: none;
 .nav-link{
 color: #FFFFFF;
 border-radius: 10px;
-
+margin: 0 7px;
 }
 .nav-link:hover{
 color: #fff;
 background-color: #278EA5;
-
+padding: 5px 10px;
 }
-
+.nav-right{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-light a{
+  color: #B8D9ED;
+}
+.btn-light a:hover{
+  color: #278EA5;
+}
 .logo img{
     width:100px;
     height: 100px;
