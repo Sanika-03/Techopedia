@@ -25,7 +25,7 @@ body {
     background-color: #090F16;
 }
 
-#about, #events, #tineline,#faq,#sponsors{
+#about, #events, #timeline,#faq,#sponsors{
     scroll-margin: 20px;
 }
 
@@ -140,7 +140,7 @@ padding-top: 50px;
 }
 
 .desc{
-    width: 100%;
+    width: 90%;
 }
 
 .flex-container{
@@ -182,7 +182,7 @@ padding-top: 50px;
         height: 35px;
     }
     .countdown{
-        padding-top: 140px;
+        padding-top: 40px;
         font-size: 30px;
     }
 }
@@ -223,7 +223,7 @@ padding-top: 50px;
   }
 
   .countdown{
-      padding-top: 140px;
+      padding-top: 0px;
       font-size: 30px;
   }
 
@@ -428,13 +428,6 @@ html {
 }
 
 /******************Footer******************/
-footer{
-	position: fixed;
-	bottom: 0;
-}
-
-
-
 
 .footer-distributed{
 	background-color: #263238;
