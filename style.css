@@ -920,3 +920,19 @@ textarea:focus {
 .social-links li a{
 text-decoration: none;
 }
+
+
+.Event-heading{
+  margin-bottom: 30px;
+}
+
+.btn-outline-light a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-outline-light:hover a{
+  text-decoration: none;
+  color: #0f0f0f;
+  
+}
