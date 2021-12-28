@@ -11,20 +11,15 @@ body {
   scroll-behavior: smooth;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0rem ;
+  font-weight: 500;
+  line-height: 0.8 !important;
+}
+
 #home, #timeline, #events, #faq{
   scroll-margin: 30px;
   /* margin-top: -50px; */
-}
-
-.whitespace {
-  width: 100%;
-  height: 100px;
-}
-
-@media (max-width: 768px) {
-  .whitespace {
-    display: none;
-  }
 }
 
 /*--------------- typewriter effect --------------- */
@@ -81,6 +76,13 @@ nav {
   height: 80px;
   position: fixed;
   z-index: 1;
+}
+
+.black {
+  background:    
+    linear-gradient(#fff,#fff) 0 100px/100% 100% no-repeat fixed,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 100px, red 0) center/100% 100%;
+  height: 80px;
 }
 
 nav #brand {
@@ -240,6 +242,7 @@ nav #menu li a:hover {
   background: url(./Image/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .outline{
@@ -885,10 +888,14 @@ textarea:focus {
 	border-top: 1px solid;
 }
 
-@media(max-width:767px) {
-	html {
-	font-size: 14px;
-	}
+@media(max-width:768px) {
+  .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
+    background-size: 800px;
+    margin-top: -90px;
+  }
+  .project{
+    height: 300px;
+  }
 }
 
 @media(max-width:320px) {
@@ -896,7 +903,14 @@ textarea:focus {
       padding-top: 0px;
       font-size: 30px;
   }
+  .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
+    background-size: 600px;
+    margin-top: -90px;
+  }
 
+  .project{
+    height: 200px;
+  }
 }
 /* ḷogo */
 .logo{
