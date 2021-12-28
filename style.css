@@ -17,9 +17,13 @@ body {
   line-height: 0.8 !important;
 }
 
-#home, #timeline, #events, #faq{
+#home, #timeline, #events, #faq, #sponsors{
   scroll-margin: 30px;
   /* margin-top: -50px; */
+}
+
+.squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
+  align-items: center;
 }
 
 /*--------------- typewriter effect --------------- */
@@ -462,6 +466,24 @@ h6 {
     display: none;
   }
 }
+/* ______________________sponsors_____________________ */
+.sponsors{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sponsor-container{
+  justify-content: space-around;
+  flex-direction: row !important;
+  align-items: center;
+}
+
+.card{
+  background-color: transparent !important;
+  border: none !important;
+  align-items: center;
+}
 
 /*--------------- footer section --------------- */
 .collab {
@@ -823,6 +845,10 @@ textarea:focus {
   padding-top: 30px;
 }
 
+.faq{
+  justify-content: center !important;
+}
+
 .faq-heading{
 	text-align: center;
 	font-size: 2.0rem;
@@ -910,6 +936,10 @@ textarea:focus {
 
   .project{
     height: 200px;
+  }
+
+  .card{
+    margin-bottom: 20px !important;
   }
 }
 /* ḷogo */
