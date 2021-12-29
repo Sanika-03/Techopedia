@@ -281,7 +281,7 @@ nav #menu li a:hover {
 }
 
 /*--------------- scroll down icon animation --------------- */
-.scroll-down {
+/* .scroll-down {
   position: absolute;
   left: 50%;
   bottom: 50px;
@@ -297,7 +297,7 @@ nav #menu li a:hover {
   border-right: 2px solid #fff;
   -webkit-transform: translate(-50%, 0) rotate(45deg);
   animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
-}
+} */
 
 @keyframes fade_move_down {
   0% {
@@ -863,7 +863,7 @@ textarea:focus {
 
 }
 
-.accordion-item {
+.accordion-item-faq{
 	background-color: transparent;
 	color: #fff;
 	margin: 1rem 0;
@@ -918,21 +918,27 @@ textarea:focus {
   .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
     background-size: 800px;
     margin-top: -90px;
+    padding-top: 0px;
   }
   .project{
     height: 300px;
   }
+  .countdown{
+    padding-top: 0px;
+    font-size: 30px;
+}
 }
 
 @media(max-width:320px) {
   .countdown{
       padding-top: 0px;
-      font-size: 30px;
+      font-size: 15px;
   }
   .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
     background-size: 600px;
     margin-top: -90px;
   }
+
 
   .project{
     height: 200px;
