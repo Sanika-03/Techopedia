@@ -42,36 +42,6 @@ body {
   animation: typewriter 4s steps(40) 1s 1 normal both,
     blinkTextCussor 500ms steps(40) infinite normal;
 }
-
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 18em;
-  }
-}
-
-@media (max-width: 768px) {
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 17em;
-    }
-  }
-}
-
-@keyframes blinkTextCussor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
 /*--------------- navigation --------------- */
 nav {
   width: 100%;
