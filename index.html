@@ -31,8 +31,8 @@
             
           </span>
 
-          <ul id="menu">
-            <li>
+          <ul id="menu" class="menu">
+            <li >
               <a href="#home">Home<span>.</span></a>
             </li>
             <li>
@@ -45,7 +45,7 @@
               <a href="#faq">FAQ<span>.</span></a>
             </li>
             <li>
-              <a href="#sponsors">FAQ<span>.</span></a>
+              <a href="#sponsors">Sponsors<span>.</span></a>
             </li>
           </ul>
 
@@ -126,13 +126,11 @@
 
       <!--------------- projects section starts here --------------->
       <div class="container-fluid">
-        <br /><br /><br />
-
+       
         <h3 class="text-center" id="events">OUR EVENTS</h3>
 
         <!-- <div class="vertical"></div> -->
-        <br />
-
+      
         <div class="Events" >
 
           <div class="row squabble">
@@ -144,7 +142,7 @@
                 to showcase your oratory skills with a technical perspective which will
                 consist of group discussion and one-on-one debate with time limitations.
               </p>
-              <button type="submit" class="btn btn-outline-light btn-lg">
+              <button type="submit" class="btn btn-outline-light btn-lg draw-border">
                 <a href="./forms/squabble.html" >Participate</a>
               </button>
             </div>
@@ -160,7 +158,7 @@
                 quiz on the occurrences, technologies, advancements and affairs of the
                 present time.
               </p>
-              <button type="submit" class="btn btn-outline-light btn-lg">
+              <button type="submit" class="btn btn-outline-light btn-lg draw-border">
                 <a href="./forms/inquisitive.html" >Participate</a>
               </button>
             </div>
@@ -176,7 +174,7 @@
                 will try their best hand at selling products from the past century which
                 hold very less value in today's world. 
               </p>
-              <button type="submit" class="btn btn-outline-light btn-lg">
+              <button type="submit" class="btn btn-outline-light btn-lg draw-border">
                 <a href="./forms/technopreneur.html" >Participate</a>
               </button>
             </div>
@@ -191,7 +189,7 @@
                 Your teammate is kept as a hostage and you have to rescue them going
                 unnoticed by the abductors.
               </p>
-              <button type="submit" class="btn btn-outline-light btn-lg">
+              <button type="submit" class="btn btn-outline-light btn-lg draw-border">
                 <a href="./forms/quantumBreak.html" >Participate</a>
               </button>
             </div>
@@ -206,7 +204,7 @@
                 codes to make them right. Participants can test their technical creativity
                 and ability to brainstorm ideas and solutions.
               </p>
-              <button type="submit" class="btn btn-outline-light btn-lg">
+              <button type="submit" class="btn btn-outline-light btn-lg draw-border">
                 <a href="./forms/nexus.html" >Participate</a>
               </button>
             </div>
@@ -222,7 +220,7 @@
                 choice in this game, but there is always a better choice (red pill/ blue pill
                 situation).
               </p>
-              <button type="submit" class="btn btn-outline-light btn-lg">
+              <button type="submit" class="btn btn-outline-light btn-lg draw-border">
                 <a href="./forms/labyrinth.html" >Participate</a>
               </button>
             </div>
@@ -231,7 +229,7 @@
 
 <!-- ****************TIMELINE STARTS HERE******************** -->
         <div class="bg" id="timeline">
-          <h1 class="timeline-heading" id="timeline">
+          <h1 class="timeline-heading" >
             <b>Timeline</b>
           </h1>
           <div class="container-timeline">
@@ -239,14 +237,16 @@
               <ul>
                 <li>
                   <div class="timeline-content">
+
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium
+                      voluptatibus
+                      aut eos placeat laborum, quibusdam exercitationem labore.</div>
                     <div class="date">
                       1 NOV, 2021 - 3 NOV, 2021
                     </div>
-                    <h1>Heading 1</h1>
+                    
                   </div>
-                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium
-                    voluptatibus
-                    aut eos placeat laborum, quibusdam exercitationem labore.</div>
+                  
                 </li>
                 <li>
                   <div class="timeline-content">
@@ -376,9 +376,9 @@
         <div class="card col-lg-4 col-md-6 col-12 p-3" >
           <img src="./Image/augeo.png" class="" alt="..." style="width: 12rem;">
         </div>
-        <div class="card col-lg-4 col-md-6 col-12 p-3" >
+        <!-- <div class="card col-lg-4 col-md-6 col-12 p-3" >
           <img src="" class="" alt="..." style="width: 15rem;">
-        </div>
+        </div> -->
       </div>
       </section>
 
@@ -487,10 +487,12 @@
       if (accordionItemHeader.classList.contains("active")) {
         accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
         accordionItemHeader.style.backgroundColor = "transparent";
+        accordionItemHeader.style.border = "#fff solid 2px";
       }
       else {
         accordionItemBody.style.maxHeight = 0;
         accordionItemHeader.style.backgroundColor = "transparent";
+        accordionItemHeader.style.border = "#fff solid 0px";
 
       }
 
