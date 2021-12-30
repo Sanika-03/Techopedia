@@ -293,125 +293,39 @@ h6 {
   background-size: cover;
 }
 
-.project1::after {
-  content: "";
-  font-family: "Roboto Mono";
-  font-size: 36px;
-  position: relative;
-  color: #fff;
-  display: block;
-  top: 8%;
-  left: -60%;
-  right: 0;
-  bottom: 0;
-}
+
 
 .inquisitive {
   background: url('./Image/inqus.png') no-repeat 50% 50%;
   background-size: cover;
 }
 
-.project2::after {
-  content: "";
-  font-family: "Roboto Mono";
-  font-size: 36px;
-  position: relative;
-  color: #fff;
-  display: block;
-  top: 80%;
-  left: 90%;
-  right: 0;
-  bottom: 0;
-}
+
 
 .technopreneur {
   background: url('./Image/technopreneur.png') no-repeat 50% 50%;
   background-size: cover;
 }
 
-.project3::after {
-  content: "never again.";
-  font-family: "Roboto Mono";
-  font-size: 36px;
-  position: relative;
-  color: #fff;
-  display: block;
-  top: 80%;
-  left: -50%;
-  right: 0;
-  bottom: 0;
-}
+
 
 .QB {
   background: url('./Image/QB.png') no-repeat 50% 50%;
   background-size: cover;
 }
 
-.project4::after {
-  content: "";
-  font-family: "Roboto Mono";
-  font-size: 36px;
-  position: relative;
-  color: #fff;
-  display: block;
-  top: 10%;
-  left: 90%;
-  right: 0;
-  bottom: 0;
-}
+
 .nexus {
   background: url('./Image/nexus.png') no-repeat 50% 50%;
   background-size: cover;
 }
 
-.project5::after {
-  content: "";
-  font-family: "Roboto Mono";
-  font-size: 36px;
-  position: relative;
-  color: #fff;
-  display: block;
-  top: 10%;
-  left: 90%;
-  right: 0;
-  bottom: 0;
-}
+
 
 .labyrinth {
   background: url('./Image/Labyrinth.png') no-repeat 50% 50%;
   background-size: cover;
-}
-
-.project6::after {
-  content: "";
-  font-family: "Roboto Mono";
-  font-size: 36px;
-  position: relative;
-  color: #fff;
-  display: block;
-  top: 10%;
-  left: 90%;
-  right: 0;
-  bottom: 0;
-}
-@media (max-width: 768px) {
-  .project {
-    width: 90% !important;
-    margin: 14px auto;
-  }
-
-  .vertical {
-    display: none;
-  }
-
-  .project1::after,
-  .project2::after,
-  .project3::after,
-  .project4::after {
-    display: none;
-  }
-}
-/* ______________________sponsors_____________________ */
+}/* ______________________sponsors_____________________ */
 .sponsors{
   margin-top: 30px;
   display: flex;
@@ -668,6 +582,10 @@ textarea:focus {
   }
 
 /*********** TIMELINE **********/
+.bg{
+  background-color: transparent;
+  padding-top: 75px;
+}
 .timeline-heading{
   background-color: transparent;
   text-align: center;
@@ -681,7 +599,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 0 100px 0;
+  
   background: transparent;
 
 }
@@ -698,7 +616,7 @@ textarea:focus {
   list-style: none;
 }
 .timeline ul li {
-  padding: 20px;
+  
   background:transparent;
   color: white;
   border-radius: 10px;
@@ -791,10 +709,7 @@ textarea:focus {
 }
 
 /*************** FAQ **************/
-.bg{
-  background-color: transparent;
-  padding-top: 30px;
-}
+
 
 .faq{
   justify-content: center !important;
@@ -922,14 +837,6 @@ text-decoration: none;
   color: #0f0f0f;
   
 }
-
-/* SPONSORS */
-
-.sponsor-container .card{
-background-color: #fff;
-}
-
-
 /* Event hover button  */
 .draw-border {
   box-shadow: inset 0 0 0 4px #1d2223;
