@@ -327,7 +327,6 @@ h6 {
   background-size: cover;
 }/* ______________________sponsors_____________________ */
 .sponsors{
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -584,22 +583,20 @@ textarea:focus {
 /*********** TIMELINE **********/
 .bg{
   background-color: transparent;
-  padding-top: 75px;
+  padding-top: 50px;
 }
 .timeline-heading{
   background-color: transparent;
   text-align: center;
 	color: #fff;
 	font-size: 2.0rem;
-	
 }
 .container-timeline {
-  min-height: 100vh;
+  min-height: 550px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
   background: transparent;
 
 }
@@ -630,6 +627,7 @@ textarea:focus {
   font-size: 25px;
   line-height: 30px;
   margin-bottom: 10px;
+  
 }
 .timeline-content p {
   font-size: 16px;
@@ -705,6 +703,9 @@ textarea:focus {
  }
  .timeline-content-heading h1{
    top:0
+ }
+ .timeline-heading{
+  margin-bottom: 15px;
  }
 }
 
