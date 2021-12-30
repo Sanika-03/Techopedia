@@ -688,7 +688,7 @@ textarea:focus {
 .timeline {
   width: 80%;
   height: auto;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
 }
@@ -729,6 +729,9 @@ textarea:focus {
   padding: 10px;
   margin-bottom: 20px;
 }
+.timeline-content .date{
+  margin-bottom: 20px;
+}
 @media only screen and (min-width: 768px) {
   .timeline:before {
     content: "";
@@ -743,7 +746,7 @@ textarea:focus {
   .timeline ul li {
     width: 50%;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .timeline ul li:nth-child(odd) {
     float: left;
@@ -763,7 +766,7 @@ textarea:focus {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: #fff;
     top: 0px;
   }
   .timeline ul li:nth-child(odd)::before {
@@ -774,15 +777,18 @@ textarea:focus {
     transform: translate(50%, -50%);
     left: -50px;
   }
-  .timeline-content .date {
-    position: absolute;
-    top: -30px;
+  .timeline-content{ 
+    margin-bottom: 30px;
+    margin-top: -30px;
   }
-  /* .timeline ul li:hover::before {
-    background-color: aqua;
-  } */
+ .timeline-content-heading{
+  margin-bottom: 30px;
+  margin-top: -30px;
+ }
+ .timeline-content-heading h1{
+   top:0
+ }
 }
-
 
 /*************** FAQ **************/
 .bg{
@@ -966,4 +972,4 @@ background-color: #fff;
   transition-delay: 0s, 0.25s, 0s;
 }
 
-/* navigation hover button */
+
