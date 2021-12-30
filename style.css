@@ -827,7 +827,7 @@ textarea:focus {
 	cursor: pointer;
 	color:#FFFFFF;
 	background-color: transparent;
-
+  border:#fff solid 2px;
  
   ;
 }
