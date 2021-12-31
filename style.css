@@ -323,6 +323,16 @@ h6 {
   flex-direction: column;
   justify-content: center;
 }
+#sponsors{
+  margin-top: 104px;
+  margin-bottom: 104px;
+
+}
+#previous-sponsors{
+  margin-top: 104px;
+  margin-bottom: 104px;
+
+}
 .sponsor-container{
   justify-content: space-around;
   flex-direction: row !important;
@@ -598,6 +608,7 @@ textarea:focus {
   max-width: 600px;
   margin: 0 auto;
   position: relative;
+  margin-bottom:40px;
 }
 
 .timeline ul {
@@ -635,7 +646,7 @@ textarea:focus {
   border-radius: 10px;
   border:2px solid rgba(255, 255, 255, 0.75);
   padding: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .timeline-content .date{
   margin-bottom: 20px;
@@ -689,16 +700,11 @@ textarea:focus {
     margin-bottom: 30px;
     margin-top: -30px;
   }
- .timeline-content-heading{
-  margin-bottom: 30px;
-  margin-top: -30px;
- }
- .timeline-content-heading h1{
-   top:0
- }
- .timeline-heading{
-  margin-bottom: 15px;
- }
+  .timeline-content h1{
+    margin-top: 15px;
+  }
+ 
+
  
 }
 
@@ -706,6 +712,7 @@ textarea:focus {
 
 
 .faq{
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;justify-content: center;
@@ -884,7 +891,7 @@ text-decoration: none;
   bottom: 25%;
 }
 .menu li:hover::after {
-  width: 70%;
+  width: 55%;
   height: 1px;
   background-color: #fff;
 }
