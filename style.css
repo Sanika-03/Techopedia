@@ -381,45 +381,7 @@ h6 {
   padding-left: 20px;
 }
 
-#fb::before {
-  display: inline-block;
-  content: "";
-  border-radius: 100%;
-  height: 4px;
-  width: 4px;
-  margin-right: 6px;
-  background: #3b5998;
-}
 
-#ig::before {
-  display: inline-block;
-  content: "";
-  border-radius: 100%;
-  height: 4px;
-  width: 4px;
-  margin-right: 6px;
-  background: #fcaf45;
-}
-
-#tw::before {
-  display: inline-block;
-  content: "";
-  border-radius: 100%;
-  height: 4px;
-  width: 4px;
-  margin-right: 6px;
-  background: #55acee;
-}
-
-#yt::before {
-  display: inline-block;
-  content: "";
-  border-radius: 100%;
-  height: 4px;
-  width: 4px;
-  margin-right: 6px;
-  background: #c4302b;
-}
 
 #media,
 #address {
@@ -929,3 +891,46 @@ border-radius: 5px;
 }
 
 
+/* Footer  */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+}
+.social-links li ,.social-links li a {
+  list-style: none;
+  text-align: center;
+  
+}
+#personal h3{
+  margin-bottom: 30px;
+  color:#C1CAE8;
+}
+#personal h4{
+  
+ 
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  
+}
+#personal h4 a {
+  color: #535A71;
+  text-decoration: none;
+}
+.follow-us , .Reach-us{
+  text-align: center;
+  color:#C1CAE8;
+  margin-bottom: 30px;
+}
+#address h4{
+  
+ width:75%;
+ color: #535A71;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+.copyright{
+  font-size: 15px;
+  color: #535A71;
+  text-align: center;
+}
