@@ -1,4 +1,6 @@
 /*--------------- basic styling --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 html,
 body {
   margin: 0;
@@ -825,13 +827,28 @@ text-decoration: none;
 
 .Event-heading{
   margin-bottom: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #C1CAE8;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+.Event-para{
+  color: #535A71;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .btn-outline-light a{
   text-decoration: none;
   color: #fff;
+  
 }
-
+.Event-button{
+  display: flex;
+ justify-content: center;
+}
 .btn-outline-light:hover a{
   text-decoration: none;
   color: #0f0f0f;
