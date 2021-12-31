@@ -333,6 +333,10 @@ h6 {
   margin-bottom: 104px;
 
 }
+.sponsor-container .card p {
+  font-family:'Space Grotesk', sans-serif;
+  margin-top: 5px;
+}
 .sponsor-container{
   justify-content: space-around;
   flex-direction: row !important;
@@ -923,4 +927,5 @@ border-radius: 5px;
 .menu li a:hover::after{
   color: #1d2223;
 }
+
 
