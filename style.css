@@ -713,9 +713,16 @@ textarea:focus {
 /*************** FAQ **************/
 
 
-/* .faq{
-  justify-content: center !important;
-} */
+.faq{
+  display: flex;
+  justify-content: center;
+  align-items: center;justify-content: center;
+}
+.faq img {
+  width: 90%;
+  height: 90%;
+  margin-left: 20px;
+}
 
 .faq-heading{
 	text-align: center;
@@ -757,6 +764,7 @@ textarea:focus {
 }
 .accordion-item-body-content{
   background-color: transparent;
+  border-radius: 20px;
 }
 
 .accordion-item-header::after {
@@ -765,10 +773,6 @@ textarea:focus {
 	position: absolute;
 	right: 1rem;
 }
-
-/* .accordion-item-header.active::after {
-	content: "\2212";
-} */
 
 .accordion-item-body {
 	max-height: 0;
@@ -806,15 +810,10 @@ textarea:focus {
     background-size: 600px;
     margin-top: -90px;
   }
-
-
-  .project{
-    height: 200px;
-  }
-
   .card{
     margin-bottom: 20px !important;
   }
+ 
 }
 /* ḷogo */
 .logo{
