@@ -18,12 +18,17 @@ body {
 }
 
 #home, #timeline, #events, #faq, #sponsors{
-  scroll-margin: 30px;
+  scroll-margin: 60px;
   /* margin-top: -50px; */
 }
 
 .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
   align-items: center;
+}
+
+.nav-event:hover{
+  font-size: 18px;
+  transition: 2s ease-in;
 }
 
 /*--------------- typewriter effect --------------- */
@@ -927,7 +932,7 @@ textarea:focus {
 @media(max-width:320px) {
   .countdown{
       padding-top: 0px;
-      font-size: 30px;
+      font-size: 26px !important;
   }
   .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
     background-size: 600px;
@@ -940,6 +945,9 @@ textarea:focus {
 
   .card{
     margin-bottom: 20px !important;
+  }
+  .event {
+    height: 20px !important;
   }
 }
 /* ḷogo */
