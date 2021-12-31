@@ -707,14 +707,15 @@ textarea:focus {
  .timeline-heading{
   margin-bottom: 15px;
  }
+ 
 }
 
 /*************** FAQ **************/
 
 
-.faq{
+/* .faq{
   justify-content: center !important;
-}
+} */
 
 .faq-heading{
 	text-align: center;
@@ -731,10 +732,11 @@ textarea:focus {
 }
 
 .accordion-item-faq{
-	background-color: transparent;
+	background-color: transparent ;
 	color: #fff;
 	margin: 1rem 0;
-	border:transparent;
+	/* border:transparent; */
+  
 
 }
 
@@ -749,7 +751,7 @@ textarea:focus {
 	cursor: pointer;
 	color:#FFFFFF;
 	background-color: transparent;
-  border:#fff solid 2px;
+  border:#fff solid 1px;
  
   ;
 }
@@ -764,9 +766,9 @@ textarea:focus {
 	right: 1rem;
 }
 
-.accordion-item-header.active::after {
+/* .accordion-item-header.active::after {
 	content: "\2212";
-}
+} */
 
 .accordion-item-body {
 	max-height: 0;
@@ -777,7 +779,7 @@ textarea:focus {
 .accordion-item-body-content {
 	padding: 1rem;
 	line-height: 1.5rem;
-  background: linear-gradient(180deg, #000516 0%, #262A39 99.97%, #000516 99.98%);	
+  background: linear-gradient(180deg, #000516 0%, #0a1640b4 99.97%, #2a2e3d 99.98%);	
 }
 
 @media(max-width:768px) {
@@ -797,7 +799,7 @@ textarea:focus {
 
 @media(max-width:320px) {
   .countdown{
-      padding-top: 0px;
+      padding-top: 30px;
       font-size: 15px;
   }
   .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
