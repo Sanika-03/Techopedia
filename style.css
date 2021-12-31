@@ -32,21 +32,17 @@ color: #C1CAE8;
   align-items: center;
 }
 
-/*--------------- typewriter effect --------------- */
-.line {
-  width: 24em;
-  top: 50%;
-  margin: auto;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
-}
+.primary-title{
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: bold;
 
-.anim-typewriter {
-  animation: typewriter 4s steps(40) 1s 1 normal both,
-    blinkTextCussor 500ms steps(40) infinite normal;
+}
+.about-text{
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+
 }
 /*--------------- navigation --------------- */
 nav {
@@ -239,12 +235,10 @@ nav #menu li a {
 }
 
 .hero h1 {
-  font-weight: lighter;
   text-align: center;
   letter-spacing: -2px;
   line-height: 58px;
   font-size: 60px;
-  /* font-family: 'Poppins', sans-serif; */
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -643,19 +637,13 @@ textarea:focus {
   line-height: 30px;
   font-weight: 300;
 }
-.timeline-content .date {
-  font-size: 12px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  background-color: transparent;
-  color: white;
-  border-radius: 10px;
-  border:2px solid rgba(255, 255, 255, 0.75);
-  padding: 10px;
-  margin-top: 20px;
-}
+
 .timeline-content .date{
   margin-bottom: 20px;
+}
+.date{
+  color:#C1CAE8;
+  
 }
 @media only screen and (min-width: 768px) {
   .timeline:before {
@@ -691,7 +679,7 @@ textarea:focus {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color:#C1CAE8;
     top: 0px;
   }
   .timeline ul li:nth-child(odd)::before {
@@ -845,7 +833,7 @@ text-decoration: none;
   text-align: center;
 }
 
-.btn-outline-light a{
+.Event-button button a{
   text-decoration: none;
   color: #fff;
   
@@ -854,9 +842,13 @@ text-decoration: none;
   display: flex;
  justify-content: center;
 }
-.btn-outline-light:hover a{
+.Event-button .btn{
+  background: linear-gradient(90.78deg, #331465 8.47%, #1C0245 97.06%);
+box-shadow: 0px 12px 54px #0B001D;
+border-radius: 5px;
+}
+.Event-button .btn:hover a{
   text-decoration: none;
-  color: #0f0f0f;
   
 }
 /* Event hover button  */
@@ -868,6 +860,7 @@ text-decoration: none;
 }
 .draw-border::before, .draw-border::after {
   border: 0 solid transparent;
+  border-radius: 5px;
   box-sizing: border-box;
   content: "";
   pointer-events: none;
@@ -878,12 +871,12 @@ text-decoration: none;
   right: 0;
 }
 .draw-border::before {
-  border-bottom-width: 4px;
-  border-left-width: 4px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
 }
 .draw-border::after {
-  border-top-width: 4px;
-  border-right-width: 4px;
+  border-top-width: 1px;
+  border-right-width: 1px;
 }
 .draw-border:hover {
   color: #FFF;
