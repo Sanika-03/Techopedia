@@ -77,11 +77,10 @@ nav #brand a:hover {
 
 }
 
-nav #menu {
-  float: left;
-  right: 80px;
-  position: fixed;
-  text-align: center;
+nav #menu{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
 nav #menu li {
@@ -101,15 +100,8 @@ nav #menu li span {
 
 nav #menu li a {
   color: #fff;
-  text-decoration: none;
-  
+  text-decoration: none; 
 
-}
-
-nav #menu li a:hover {
-  text-decoration: none;
-  color: #fff;
-  
 }
 
 #toggle {
@@ -796,14 +788,13 @@ textarea:focus {
     height: 300px;
   }
   .countdown{
-    padding-top: 0px;
     font-size: 30px;
 }
 }
 
 @media(max-width:320px) {
   .countdown{
-      padding-top: 30px;
+      padding-top: 0px;
       font-size: 15px;
   }
   .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
@@ -881,4 +872,23 @@ text-decoration: none;
   transition-delay: 0s, 0.25s, 0s;
 }
 
+
+/* navbar hover */
+.menu li:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: 25%;
+}
+.menu li:hover::after {
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+}
+.menu li a:hover::after{
+  color: #1d2223;
+}
 
