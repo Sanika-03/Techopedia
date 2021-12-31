@@ -637,13 +637,23 @@ textarea:focus {
   line-height: 30px;
   font-weight: 300;
 }
-
+/* .timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  border:2px solid rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  margin-top: 20px;
+} */
 .timeline-content .date{
   margin-bottom: 20px;
 }
 .date{
   color:#C1CAE8;
-  
+  font-weight:light
 }
 @media only screen and (min-width: 768px) {
   .timeline:before {
@@ -679,7 +689,7 @@ textarea:focus {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color:#C1CAE8;
+    background-color: #fff;
     top: 0px;
   }
   .timeline ul li:nth-child(odd)::before {
@@ -843,7 +853,7 @@ text-decoration: none;
  justify-content: center;
 }
 .Event-button .btn{
-background: linear-gradient(90.78deg, #331465 8.47%, #1C0245 97.06%);
+  background: linear-gradient(90.78deg, #331465 8.47%, #1C0245 97.06%);
 box-shadow: 0px 12px 54px #0B001D;
 border-radius: 5px;
 }
