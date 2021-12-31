@@ -19,9 +19,13 @@ body {
   line-height: 0.8 !important;
 }
 
-#home, #timeline, #events, #faq, #sponsors{
+#home, #timeline, #events, #faq, #sponsors, #previous-sponsors{
   scroll-margin: 30px;
-  /* margin-top: -50px; */
+  font-family: Space Grotesk;
+font-style: normal;
+font-weight: bold;
+color: #C1CAE8;
+
 }
 
 .squabble, .inquisitive, .technopreneur, .QB, .labyrinth, .nexus {
@@ -240,7 +244,7 @@ nav #menu li a {
   letter-spacing: -2px;
   line-height: 58px;
   font-size: 60px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -573,10 +577,10 @@ textarea:focus {
 
 /************HERO SECTION************/
 .countdown {
-  font-family:"Roboto Mono";
+  font-family:'Space Grotesk', sans-serif;
   font-style: normal;
   margin-top: -150px;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 50px;
   color: #FFFFFF;
   text-align: center;
@@ -592,7 +596,7 @@ textarea:focus {
 .timeline-heading{
   background-color: transparent;
   text-align: center;
-	color: #fff;
+	color: #C1CAE8;
 	font-size: 2.0rem;
 }
 .container-timeline {
@@ -720,15 +724,16 @@ textarea:focus {
   align-items: center;justify-content: center;
 }
 .faq img {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   margin-left: 20px;
+ 
 }
 
 .faq-heading{
 	text-align: center;
 	font-size: 2.0rem;
-	color: #FFFFFF;
+	color: #C1CAE8;
 }
 
 .accordion {
