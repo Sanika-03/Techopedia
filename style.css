@@ -782,6 +782,7 @@ textarea:focus {
   .card{
     margin-bottom: 20px !important;
   }
+  
  
 }
 /* ḷogo */
@@ -933,4 +934,20 @@ border-radius: 5px;
   font-size: 15px;
   color: #535A71;
   text-align: center;
+}
+@media (max-width:768px){
+  .social-links{
+    margin-left: 56px;
+  }
+  #address h4{
+    margin-left: 50px;
+  }
+}
+@media (max-width:328px){
+  .social-links li{
+    margin-left: 35px;
+  }
+  #address h4{
+    margin-left: 40px;
+  }
 }
