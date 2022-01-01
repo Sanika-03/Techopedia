@@ -937,12 +937,15 @@ border-radius: 5px;
   margin-top: 30px;
   display: flex;
   text-align: center;
-  /* margin-left: -83px; */
 }
 .social-links li ,.social-links li a {
   list-style: none;
   text-align: center;
   
+}
+.follow-us ul{
+  width: 110%;
+  margin: auto;
 }
 #personal h3{
   margin-bottom: 30px;
@@ -964,10 +967,6 @@ border-radius: 5px;
   color:#C1CAE8;
   margin-bottom: 30px;
 }
-/* .follow-us{
-  margin-left:-10px;
-  margin-left: -120px;
-} */
 #address h4{
   
  width:75%;
@@ -981,20 +980,36 @@ border-radius: 5px;
   text-align: center;
 }
 @media (max-width:768px){
-  .social-links{
-    margin-left: 56px;
+ 
+  
+  .social-links li a img {
+    margin-left: -10px;
   }
   #address h4{
     margin-left: 69px;
   }
-  .footer-column{
-    margin-left: 69px;
-  }
+
   .footer-column ul{
-    margin-left: 20px;
+    width: 60%;
+    margin: auto;
   }
   .Reach-us{
     margin-left: 20px;
+  }
+  
+}
+@media (max-width:950px){
+  #personal{
+   width:30%;
+   margin:auto;
+  }
+  .follow-us ul{
+    width:64%;
+  }
+  #address h4{
+    width:22%;
+    margin: auto;
+    padding-top: 10px;
   }
 }
 @media (max-width:328px){
@@ -1003,5 +1018,8 @@ border-radius: 5px;
   }
   #address h4{
     margin-left: 40px;
+  }
+  .social-links li a img {
+    margin-left: -20px;
   }
 }
