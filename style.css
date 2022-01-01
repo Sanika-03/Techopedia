@@ -555,6 +555,7 @@ textarea:focus {
   background-color: transparent;
   padding-top: 50px;
 }
+
 .timeline-heading{
   background-color: transparent;
   text-align: center;
@@ -577,6 +578,7 @@ textarea:focus {
   margin: 0 auto;
   position: relative;
   margin-bottom:40px;
+ 
 }
 
 .timeline ul {
@@ -678,8 +680,41 @@ textarea:focus {
     margin-top: 15px;
   }
  
-
+  
  
+}
+@media (max-width:768px){
+  .vl {
+    border-left: 3px solid gray;
+    height: 390px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(50%, -50%);
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #C1CAE8;
+    left: -18px;
+    margin-top: 5px;
+    
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #C1CAE8;
+    left: -18px;
+    margin-top: 5px;
+    
+  }
+  .timeline{
+    margin-left: 15px;
+  }
 }
 
 /*************** FAQ **************/
@@ -902,6 +937,7 @@ border-radius: 5px;
   margin-top: 30px;
   display: flex;
   text-align: center;
+  /* margin-left: -83px; */
 }
 .social-links li ,.social-links li a {
   list-style: none;
@@ -928,6 +964,10 @@ border-radius: 5px;
   color:#C1CAE8;
   margin-bottom: 30px;
 }
+/* .follow-us{
+  margin-left:-10px;
+  margin-left: -120px;
+} */
 #address h4{
   
  width:75%;
@@ -945,7 +985,16 @@ border-radius: 5px;
     margin-left: 56px;
   }
   #address h4{
-    margin-left: 50px;
+    margin-left: 69px;
+  }
+  .footer-column{
+    margin-left: 69px;
+  }
+  .footer-column ul{
+    margin-left: 20px;
+  }
+  .Reach-us{
+    margin-left: 20px;
   }
 }
 @media (max-width:328px){
