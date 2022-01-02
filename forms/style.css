@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-body{
+body {
   background-image: url('./Images/Night.png');
   background-size: cover;
   background-repeat: repeat-y;
 }
 
-.hero-container{
+.hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@ body{
   padding: 60px 0;
 }
 
-.primary-title{
+.primary-title {
   font-family: url('./Fonts/Integral-CF-20211009T173813Z-001/Integral-CF/OTF/IntegralCF-Medium.otf');
   /* margin-bottom: 40px; */
   color: black;
@@ -32,33 +32,33 @@ body{
 
 .hero-form {
   width: 60%;
-  background:#ffffffd8;
+  background: #ffffffd8;
   padding: 30px;
   font-family: 'Poppins', sans-serif !important;
-  @media(min-width:320px){
+  @media (min-width: 320px) {
     width: 90%;
   }
 }
 
-.form{
+.form {
   width: 90%;
   padding-bottom: 5px;
 }
 
-.form-container{
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 3px solid #475BDE;
+  border-top: 3px solid #475bde;
   padding-top: 30px;
   margin-top: 30px;
 }
 
-.form-component{
+.form-component {
   margin-bottom: 30px;
 }
 
-.form-control{
+.form-control {
   background-color: transparent !important;
   border: none !important;
   border-bottom: 1px solid !important;
@@ -66,44 +66,44 @@ body{
   border-radius: 0 !important;
 }
 
-.form-control:focus{
+.form-control:focus {
   box-shadow: none !important;
 }
 
-.label{
+.label {
   margin-bottom: 0 !important;
   font-weight: 500;
   font-size: 18px;
 }
 
 /* ______________event info______________ */
-.eventdesc{
+.eventdesc {
   display: flex;
   margin-top: 20px;
 }
 
-.eventimg img{
+.eventimg img {
   width: 130px;
   height: 130px;
   object-fit: cover;
 }
 
-.event-info{
+.event-info {
   padding-left: 20px;
 }
 
-.eventtitle{
+.eventtitle {
   font-size: 20px;
   font-weight: bold;
   /* border-left: 5px solid #475BDE; */
 }
 
-.button-group{
+.button-group {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.button{
+.button {
   width: 200px;
   color: #fff;
   padding: 8px;
@@ -111,95 +111,122 @@ body{
   font-weight: 500;
   cursor: pointer;
   transition: all 0.4s ease;
-  background-color: #475BDE;
+  background-color: #475bde;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   border: none;
 }
-.button:hover{
-  background-color:#6d7de6;
-  color:#000;
-  transform: translateY(-0.30em);
+.button:hover {
+  background-color: #6d7de6;
+  color: #000;
+  transform: translateY(-0.3em);
 }
 
-.underline{
-  text-decoration-color:#475BDE;
-  margin-bottom:30px;
+.underline {
+  text-decoration-color: #475bde;
+  margin-bottom: 30px;
   font-size: 18px;
 }
 
-@media(max-width:768px){
-  .hero-form{
+@media (max-width: 768px) {
+  .hero-form {
     width: 80%;
     padding: 35px 30px 20px;
   }
 
-  .primary-title{
+  .primary-title {
     margin-bottom: 25px;
   }
 
-  .form{
+  .form {
     width: 95%;
     padding-bottom: 20px;
   }
-  .eventdesc{
+  .eventdesc {
     flex-direction: column;
     margin-top: 0;
   }
-  .eventimg{
-    margin:auto;
+  .eventimg {
+    margin: auto;
     justify-content: center;
   }
-  .eventimg img{
+  .eventimg img {
     width: 200px;
   }
-  .eventtitle{
+  .eventtitle {
     text-align: center;
     /* margin:auto; */
-    border:none;
+    border: none;
     padding-top: 20px;
   }
-  .event-info{
+  .event-info {
     padding-left: 0px;
   }
 }
 
-@media(max-width:320px){
-  .hero-container{
+@media (max-width: 320px) {
+  .hero-container {
     max-width: 300px;
   }
-  .primary-title{
+  .primary-title {
     font-size: 24px;
   }
-  .hero-container{
+  .hero-container {
     padding: 20px 0;
   }
-  .hero-form{
+  .hero-form {
     width: 90%;
     padding: 20px;
   }
 
-  .form{
-  padding-bottom: 30px;
-  width: 100%;
+  .form {
+    padding-bottom: 30px;
+    width: 100%;
   }
 
-  .eventdesc{
+  .eventdesc {
     flex-direction: column;
   }
 
-  .eventimg img{
+  .eventimg img {
     width: 200px;
     height: 200px;
     padding-top: 10px;
   }
 
-  .eventtitle{
+  .eventtitle {
     text-align: center;
   }
 
-  .desc{
+  .desc {
     padding: 0;
     margin: 15px 0 0 0;
   }
+}
+
+#loadingText {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 25px;
+}
+
+#preloader {
+  position: fixed;
+
+  width: 100%;
+
+  height: 100vh;
+
+  top: 0;
+
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
 }
