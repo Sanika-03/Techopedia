@@ -991,9 +991,9 @@ border-radius: 5px;
   background-color:#000516 ;
 }
 .social-links img:hover{
-  /* box-shadow: 0px 1px 100px 0px #fff; */
+  box-shadow: 0px 1px 100px 0px #fff;
   /* background-color:#fff */
-  border: #fff solid 1px;
+  border: #0B001D solid .05px;
   border-radius:5px;
 }
 @media (max-width:768px){
