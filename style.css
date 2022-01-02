@@ -962,11 +962,14 @@ border-radius: 5px;
   margin: auto;
 }
 
-.follow-us , .Reach-us{
+#explore h3, .follow-us , .Reach-us{
   text-align: center;
   color:#C1CAE8;
   margin-bottom: 30px;
   font-size: 20px;
+}
+#explore h4{
+  text-align : center;
 }
 #contact-info h4{
   
