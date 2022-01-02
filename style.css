@@ -793,7 +793,7 @@ textarea:focus {
 .accordion-item-body-content {
 	padding: 1rem;
 	line-height: 1.5rem;
-  background: linear-gradient(180deg, #000516 0%, #0a1640b4 99.97%, #2a2e3d 99.98%);	
+
 }
 
 @media(max-width:768px) {
@@ -858,6 +858,9 @@ text-decoration: none;
 .Event-button{
   display: flex;
  justify-content: center;
+}
+.Event-button button a{
+  font-size: 18px;
 }
 .Event-button .btn{
 background: linear-gradient(90.78deg, #331465 8.47%, #1C0245 97.06%);
