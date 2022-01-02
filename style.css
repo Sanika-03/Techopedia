@@ -103,7 +103,7 @@ nav #menu li span {
 nav #menu li a {
   color: #fff;
   text-decoration: none; 
-
+  font-family: Space Grotesk;
 }
 
 #toggle {
