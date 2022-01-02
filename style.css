@@ -861,6 +861,7 @@ text-decoration: none;
 }
 .Event-button button a{
   font-size: 18px;
+  font-family: Space Grotesk;
 }
 .Event-button .btn{
 background: linear-gradient(90.78deg, #331465 8.47%, #1C0245 97.06%);
