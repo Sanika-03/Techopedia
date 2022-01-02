@@ -386,7 +386,7 @@ h6 {
 
 
 #media,
-#address {
+#contact-info {
   text-align: right;
 }
 
@@ -400,9 +400,9 @@ h6 {
 
 @media (max-width: 768px) {
   .collab,
-  #personal,
+  #explore,
   #media,
-  #address {
+  #contact-info {
     text-align: center;
   }
 
@@ -933,6 +933,19 @@ border-radius: 5px;
 
 
 /* Footer  */
+#explore h3{
+  margin-bottom: 30px;
+  color:#C1CAE8;
+}
+#explore h4{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  
+}
+#explore h4 a {
+  color: #535A71;
+  text-decoration: none;
+}
 .social-links {
   margin-top: 30px;
   display: flex;
@@ -947,27 +960,13 @@ border-radius: 5px;
   width: 110%;
   margin: auto;
 }
-#personal h3{
-  margin-bottom: 30px;
-  color:#C1CAE8;
-}
-#personal h4{
-  
- 
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  
-}
-#personal h4 a {
-  color: #535A71;
-  text-decoration: none;
-}
+
 .follow-us , .Reach-us{
   text-align: center;
   color:#C1CAE8;
   margin-bottom: 30px;
 }
-#address h4{
+#contact-info h4{
   
  width:75%;
  color: #535A71;
@@ -980,16 +979,11 @@ border-radius: 5px;
   text-align: center;
 }
 @media (max-width:768px){
- 
-  
   .social-links li a img {
     margin-left: -10px;
   }
-  #address h4{
-    margin-left: 69px;
-  }
-
-  .footer-column ul{
+  
+  .social-media ul{
     width: 60%;
     margin: auto;
   }
@@ -998,28 +992,42 @@ border-radius: 5px;
   }
   
 }
-@media (max-width:950px){
-  #personal{
-   width:30%;
-   margin:auto;
+@media (max-width:988px){
+  
+  #explore h3{
+    text-align: center;
+  }
+  #explore h4{
+    text-align: center;
   }
   .follow-us ul{
     width:64%;
   }
-  #address h4{
-    width:22%;
+  .social-links li{
+    width: 65%;
+    margin: auto;
+  }
+  #contact-info h4{
+    width: 21%;
     margin: auto;
     padding-top: 10px;
   }
 }
-@media (max-width:328px){
+@media (max-width:441px){
   .social-links li{
-    margin-left: 35px;
+    margin-left: 0px;
   }
-  #address h4{
-    margin-left: 40px;
-  }
+  
   .social-links li a img {
     margin-left: -20px;
+  }
+  .social-media ul {
+    width: 79%;
+    margin: auto;}
+
+  #contact-info h4{
+   width: 42%;
+    margin: auto;
+    padding-top: 10px;
   }
 }
