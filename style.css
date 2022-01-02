@@ -352,14 +352,14 @@ h6 {
 }
 
 /*--------------- footer section --------------- */
-.collab {
+/* .collab {
   text-align: right;
 }
 
 .collab p {
   font-weight: lighter !important;
   margin-bottom: 20px;
-}
+} */
 
 .hr {
   background: rgba(255, 255, 255, 0.2);
@@ -936,6 +936,7 @@ border-radius: 5px;
 #explore h3{
   margin-bottom: 30px;
   color:#C1CAE8;
+  font-size: 20px;
 }
 #explore h4{
   font-family: 'Inter', sans-serif;
@@ -965,10 +966,11 @@ border-radius: 5px;
   text-align: center;
   color:#C1CAE8;
   margin-bottom: 30px;
+  font-size: 20px;
 }
 #contact-info h4{
   
- width:75%;
+ width:67%;
  color: #535A71;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
