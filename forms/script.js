@@ -1,27 +1,59 @@
+let x
+document.getElementById('form2').style.display = 'none'
+document.getElementById('Team2Form').addEventListener('click', () => {
+  document.getElementById('form2').style.display = 'block'
+})
+document.getElementById('Team1Form').addEventListener('click', () => {
+  document.getElementById('form2').style.display = 'none'
+})
+
 if (document.getElementById('squabble') !== null) {
   document
     .getElementById('squabble')
     .addEventListener('submit', (formresponse) => {
       document.getElementById('preloader').style.display = 'block'
-
       formresponse.preventDefault()
-      let name = document.getElementById('name').value
-      let college_name = document.getElementById('college_name').value
-      let branch = document.getElementById('branch_name').value
-      let year = document.getElementById('year').value
-      let phone = document.getElementById('phone').value
-      let email = document.getElementById('email').value
+      if (document.getElementById('form2').style.display == 'none') {
+        x = 1
+      } else {
+        x = 2
+      }
+      console.log(x)
 
-      serialJSON['name'] = name
-      serialJSON['college_name'] = college_name
-      serialJSON['branch'] = branch
-      serialJSON['year'] = year
-      serialJSON['phone'] = phone
-      serialJSON['email'] = email
-      sendData('squabble', serialJSON)
+      for (i = 1; i <= 3; i++) {
+        serialJSON['name' + i] = document.getElementById('name' + i).value
+        serialJSON['college' + i] = document.getElementById(
+          'college_name' + 1
+        ).value
+        serialJSON['branch' + i] = document.getElementById('branch' + i).value
+        serialJSON['email' + i] = document.getElementById('email' + i).value
+        serialJSON['phone' + i] = document.getElementById('phone' + i).value
+
+        serialJSON['year' + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value
+        serialJSON['vaccine' + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value
+        serialJSON['attend' + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value
+      }
+
+      return false
+
+      //   sendData('squabble', serialJSON)
     })
 }
+
 if (document.getElementById('inquisitive') !== null) {
+  document.getElementById('form2').style.display = 'none'
+  document.getElementById('Team2Form').addEventListener('click', () => {
+    document.getElementById('form2').style.display = 'none'
+  })
+  document.getElementById('Team1Form').addEventListener('click', () => {
+    document.getElementById('form2').style.display = 'none'
+  })
   document
     .getElementById('inquisitive')
     .addEventListener('submit', (formresponse) => {
@@ -33,6 +65,8 @@ if (document.getElementById('inquisitive') !== null) {
       let year = document.getElementById('year').value
       let phone = document.getElementById('phone').value
       let email = document.getElementById('email').value
+      let offline = document.getElementById('offline').value
+      let vaccine = document.getElementById('vaccine').value
 
       serialJSON['name'] = name
       serialJSON['college_name'] = college_name
@@ -40,6 +74,9 @@ if (document.getElementById('inquisitive') !== null) {
       serialJSON['year'] = year
       serialJSON['phone'] = phone
       serialJSON['email'] = email
+      serialJSON['offline'] = offline
+      serialJSON['vaccine'] = vaccine
+
       sendData('inquisitive', serialJSON)
     })
 }
@@ -50,43 +87,36 @@ if (document.getElementById('technopreneur') !== null) {
     .addEventListener('submit', (formresponse) => {
       document.getElementById('preloader').style.display = 'block'
       formresponse.preventDefault()
-      let name = document.getElementById('name').value
-      let college_name = document.getElementById('college_name').value
-      let branch = document.getElementById('branch_name').value
-      let year = document.getElementById('year').value
-      let phone = document.getElementById('phone').value
-      let email = document.getElementById('email').value
+      if (document.getElementById('form2').style.display == 'none') {
+        x = 1
+      } else {
+        x = 2
+      }
+      console.log(x)
 
-      serialJSON['name'] = name
-      serialJSON['college_name'] = college_name
-      serialJSON['branch'] = branch
-      serialJSON['year'] = year
-      serialJSON['phone'] = phone
-      serialJSON['email'] = email
-      sendData('technopreneur', serialJSON)
-    })
-}
+      for (i = 1; i <= 2; i++) {
+        serialJSON['name' + i] = document.getElementById('name' + i).value
+        serialJSON['college' + i] = document.getElementById(
+          'college_name' + 1
+        ).value
+        serialJSON['branch' + i] = document.getElementById('branch' + i).value
+        serialJSON['email' + i] = document.getElementById('email' + i).value
+        serialJSON['phone' + i] = document.getElementById('phone' + i).value
 
-if (document.getElementById('labyrinth') !== null) {
-  document
-    .getElementById('labyrinth')
-    .addEventListener('submit', (formresponse) => {
-      document.getElementById('preloader').style.display = 'block'
-      formresponse.preventDefault()
-      let name = document.getElementById('name').value
-      let college_name = document.getElementById('college_name').value
-      let branch = document.getElementById('branch_name').value
-      let year = document.getElementById('year').value
-      let phone = document.getElementById('phone').value
-      let email = document.getElementById('email').value
+        serialJSON['year' + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value
+        serialJSON['vaccine' + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value
+        serialJSON['attend' + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value
+      }
 
-      serialJSON['name'] = name
-      serialJSON['college_name'] = college_name
-      serialJSON['branch'] = branch
-      serialJSON['year'] = year
-      serialJSON['phone'] = phone
-      serialJSON['email'] = email
-      sendData('labyrinth', serialJSON)
+      return false
+      // console.log(serialJSON)
+      //   sendData('technopreneur', serialJSON)
     })
 }
 
@@ -96,35 +126,36 @@ if (document.getElementById('nexus') !== null) {
     .addEventListener('submit', (formresponse) => {
       document.getElementById('preloader').style.display = 'block'
       formresponse.preventDefault()
-      let name = document.getElementById('name').value
-      let college_name = document.getElementById('college_name').value
-      let branch = document.getElementById('branch_name').value
-      let year = document.getElementById('year').value
-      let phone = document.getElementById('phone').value
-      let email = document.getElementById('email').value
+      if (document.getElementById('form2').style.display == 'none') {
+        x = 1
+      } else {
+        x = 2
+      }
+      console.log(x)
 
-      let namei = document.getElementById('name1').value
-      let college_namei = document.getElementById('college_name1').value
-      let branchi = document.getElementById('branch_name1').value
-      let yeari = document.getElementById('year1').value
-      let phonei = document.getElementById('phone1').value
-      let emaili = document.getElementById('email1').value
+      for (i = 1; i <= 2; i++) {
+        serialJSON['name' + i] = document.getElementById('name' + i).value
+        serialJSON['college' + i] = document.getElementById(
+          'college_name' + 1
+        ).value
+        serialJSON['branch' + i] = document.getElementById('branch' + i).value
+        serialJSON['email' + i] = document.getElementById('email' + i).value
+        serialJSON['phone' + i] = document.getElementById('phone' + i).value
 
-      serialJSON['name'] = name
-      serialJSON['college_name'] = college_name
-      serialJSON['branch'] = branch
-      serialJSON['year'] = year
-      serialJSON['phone'] = phone
-      serialJSON['email'] = email
+        serialJSON['year' + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value
+        serialJSON['vaccine' + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value
+        serialJSON['attend' + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value
+      }
 
-      serialJSON['namei'] = namei
-      serialJSON['college_namei'] = college_namei
-      serialJSON['branchi'] = branchi
-      serialJSON['yeari'] = yeari
-      serialJSON['phonei'] = phonei
-      serialJSON['emaili'] = emaili
+      return false
 
-      sendData('nexus', serialJSON)
+      //   sendData('nexus', serialJSON)
     })
 }
 
@@ -134,35 +165,52 @@ if (document.getElementById('quantumBreak') !== null) {
     .addEventListener('submit', (formresponse) => {
       document.getElementById('preloader').style.display = 'block'
       formresponse.preventDefault()
-      let name = document.getElementById('name').value
-      let college_name = document.getElementById('college_name').value
-      let branch = document.getElementById('branch_name').value
-      let year = document.getElementById('year').value
-      let phone = document.getElementById('phone').value
-      let email = document.getElementById('email').value
+      if (document.getElementById('form2').style.display == 'none') {
+        x = 1
+      } else {
+        x = 2
+      }
+      console.log(x)
+      //x =  documnet.getElId('btnTab').value
+      // x = document.getElementById('teamOf1').value
 
-      let namei = document.getElementById('name1').value
-      let college_namei = document.getElementById('college_name1').value
-      let branchi = document.getElementById('branch_name1').value
-      let yeari = document.getElementById('year1').value
-      let phonei = document.getElementById('phone1').value
-      let emaili = document.getElementById('email1').value
+      // if (id == 'team1') {
+      //   x = document.getElementById('team1').value
+      // } else if (id == 'team2') {
+      //   x = document.getElementById('team1').value
+      // }
+      // value of btn if x (1 or 2)----for (i = 1; i <= x; i++)
 
-      serialJSON['name'] = name
-      serialJSON['college_name'] = college_name
-      serialJSON['branch'] = branch
-      serialJSON['year'] = year
-      serialJSON['phone'] = phone
-      serialJSON['email'] = email
+      // document.getElementById('teamOf1').addEventListener('onclick', () => {
+      //   x
+      // })
 
-      serialJSON['namei'] = namei
-      serialJSON['college_namei'] = college_namei
-      serialJSON['branchi'] = branchi
-      serialJSON['yeari'] = yeari
-      serialJSON['phonei'] = phonei
-      serialJSON['emaili'] = emaili
+      for (i = 1; i <= 2; i++) {
+        serialJSON['name' + i] = document.getElementById('name' + i).value
+        serialJSON['college' + i] = document.getElementById(
+          'college_name' + 1
+        ).value
+        serialJSON['branch' + i] = document.getElementById('branch' + i).value
+        serialJSON['email' + i] = document.getElementById('email' + i).value
+        serialJSON['phone' + i] = document.getElementById('phone' + i).value
 
-      sendData('quantumBreak', serialJSON)
+        serialJSON['year' + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value
+        serialJSON['vaccine' + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value
+        serialJSON['attend' + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value
+      }
+      // if x ==2(QB,NEXUS,TECHNO){serialJSON['slot'] = document.getElementById('slots').value}
+      // IF(X ==3)sQUABBLE{----}
+      // serialJSON['slot'] = document.getElementById('slots').value
+      // serialJSON['TeamOf] = x
+      // console.log(serialJSON)
+      // sendData('quantumBreak', serialJSON)
+      return false
     })
 }
 
@@ -170,18 +218,18 @@ let serialJSON = {}
 function sendData(event) {
   serialJSON['event'] = event
   $.ajax({
-    // url: 'https://script.google.com/macros/s/AKfycbxRr4zSHaIxsd9V0GRUHiG8nUKTqmENQg2jRwYs-x2XpUR-nnImuuWRsS9RATSP-mkk/exec',
-    url: 'https://script.google.com/macros/s/AKfycbwPzSobwBanm9baNVFXmZiCQB9EzSSu3Yr98N3Z-QX7ujgWm2h_12bo5eDu7lIe915-/exec',
+    url: 'https://script.google.com/macros/s/AKfycbxn_TTM4xDwu2zsMYvXtT8G0yxThk0_xRf82OtlmtX8szv_p1wDKjGkYK925syz1GDX/exec',
+
     type: 'POST',
     data: serialJSON,
 
     success: function (res) {
-      // console.log(res)
+      console.log(res)
       alert(res.returnStatus)
       window.location.reload()
     },
     error: function (res) {
-      // console.log(error)
+      console.log(res)
       // alert(res.returnStatus)
       alert('Error!Refresh the page.')
     },
