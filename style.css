@@ -108,7 +108,7 @@ h6 {
 }
 .about-text {
   font-family: "Inter", sans-serif;
-  font-weight: 100;
+  font-size: 15px;
 }
 
 .text-center {
@@ -251,6 +251,10 @@ nav #brand a:hover {
     opacity: 1;
     margin-top: 6px;
     margin-right: 4px;
+  }
+  .about-text {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
   }
 
   nav #brand {
@@ -882,6 +886,10 @@ textarea:focus {
   .countdown {
     font-size: 30px;
   }
+  #faq .faq .faq-image img{
+    margin-left: 45px;
+    margin-top:20px;
+}
 }
 
 @media (max-width: 320px) {
@@ -907,6 +915,9 @@ textarea:focus {
   }
   .footer-column {
     width: 80%;
+  }
+  #faq .faq .faq-image img{
+    margin-left: 40px;
   }
 }
 /* ḷogo */
