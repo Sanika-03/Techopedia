@@ -206,12 +206,13 @@ let serialJSON = {};
 function sendData(event) {
   serialJSON["event"] = event;
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbwTg9G0MAuKmSL78PPKbxv3FVSr64Ds-A5ctKVShsIkFOxqRMiE8ETDFLZEDyB8wP64Iw/exec",
+    url: "https://script.google.com/macros/s/AKfycbwGcLOZyqRfr1_877_olJ1rlOwcbyfxlfTPnRuu2db7NGqSfcPCqcbPqOt2CqaGxaikdw/exec",
 
     type: "POST",
     data: serialJSON,
 
     success: function (res) {
+      // console.log(res.returnStatus, res);
       alert(res.returnStatus);
       window.location.reload();
     },
