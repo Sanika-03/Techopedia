@@ -424,6 +424,7 @@ h6 {
 #previous-sponsors {
   margin-top: 104px;
   margin-bottom: 104px;
+  margin-left:51px;
 }
 .sponsor-container .card p {
   font-family: "Space Grotesk", sans-serif;
@@ -433,6 +434,16 @@ h6 {
   justify-content: space-around;
   flex-direction: row !important;
   align-items: center;
+}
+#previous-sponsors .email{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: normal;
+  color:#fff;
+  
+}
+#previous-sponsors .email span ,#previous-sponsors .email span a{
+text-decoration: underline;
+color:#C1CAE8;
 }
 
 .card {
@@ -497,6 +508,13 @@ h6 {
   .info ul {
     margin: 0 0 0 -22px;
     padding: 0;
+  }
+  #previous-sponsors{
+    margin-left:0px;
+
+  }
+  #previous-sponsors .email{
+    margin-left: 5px;
   }
 }
 
