@@ -39,8 +39,9 @@ if (document.getElementById("squabble") !== null) {
       if (x == 3) {
         serialJSON["slot"] = document.getElementById("slots").value;
       }
-      console.log(serialJSON);
-      // sendData('quantumBreak', serialJSON)
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("squabble", serialJSON);
       return false;
     });
 }
@@ -77,8 +78,9 @@ if (document.getElementById("inquisitive") !== null) {
         ).value;
       }
       serialJSON["slot"] = document.getElementById("slots").value;
-      console.log(serialJSON);
-      // sendData('quantumBreak', serialJSON)
+      serialJSON["total"] = 1;
+      // console.log(serialJSON);
+      sendData("inquisitive", serialJSON);
       return false;
     });
 }
@@ -115,8 +117,9 @@ if (document.getElementById("technopreneur") !== null) {
       if (x == 2) {
         serialJSON["slot"] = document.getElementById("slots").value;
       }
-      console.log(serialJSON);
-      // sendData('quantumBreak', serialJSON)
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("technopreneur", serialJSON);
       return false;
     });
 }
@@ -153,8 +156,9 @@ if (document.getElementById("nexus") !== null) {
       if (x == 2) {
         serialJSON["slot"] = document.getElementById("slots").value;
       }
-      console.log(serialJSON);
-      // sendData('quantumBreak', serialJSON)
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("nexus", serialJSON);
       return false;
     });
 }
@@ -191,8 +195,9 @@ if (document.getElementById("quantumBreak") !== null) {
       if (x == 2) {
         serialJSON["slot"] = document.getElementById("slots").value;
       }
-      console.log(serialJSON);
-      // sendData('quantumBreak', serialJSON)
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("quantumBreak", serialJSON);
       return false;
     });
 }
@@ -201,7 +206,7 @@ let serialJSON = {};
 function sendData(event) {
   serialJSON["event"] = event;
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbxn_TTM4xDwu2zsMYvXtT8G0yxThk0_xRf82OtlmtX8szv_p1wDKjGkYK925syz1GDX/exec",
+    url: "https://script.google.com/macros/s/AKfycbwTg9G0MAuKmSL78PPKbxv3FVSr64Ds-A5ctKVShsIkFOxqRMiE8ETDFLZEDyB8wP64Iw/exec",
 
     type: "POST",
     data: serialJSON,
@@ -211,7 +216,7 @@ function sendData(event) {
       window.location.reload();
     },
     error: function (res) {
-      console.log(res);
+      // console.log(res);
       alert("Error!Refresh the page.");
     },
   });
