@@ -278,7 +278,7 @@ nav #brand a:hover {
 
 /*--------------- hero section --------------- */
 .homeBg {
-  background: url(./Image/banner.png);
+  background: rgba(0, 0, 0, 0.205);
   backdrop-filter: blur(100px);
 }
 .test-header {
