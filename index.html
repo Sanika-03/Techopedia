@@ -21,45 +21,59 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk:wght@700&display=swap"
     rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- terminal effect -->
   <script src="t.min.js"></script>
   <!-- for on scroll animations -->
   <link rel="stylesheet" href="animate.css" />
   <script src="wow.min.js"></script>
+  <script>
+    window.addEventListener('scroll',(event) => {
+      let yOffset = window.pageYOffset;
+      if(yOffset >= 40){
+        document.getElementById('navBg').classList.remove('homeBg')
+      }
+      else{
+        document.getElementById('navBg').classList.add('homeBg')
+      }
+    });
+  </script>
 </head>
 
 <body>
   <div class="wrapper">
+    <nav class="sticky-top homeBg" id="navBg">
+      <span id="brand">
+        <a href="index.html"><img class="logo" src="./Image/IEEE SIESGST_white.png" alt=""></a>
+      </span>
+
+      <ul id="menu" class="menu pt-3">
+        <li class="nav">
+          <a href="#home">Home<span>.</span></a>
+        </li>
+        <li>
+          <a href="#events">Events<span>.</span></a>
+        </li>
+        <li>
+          <a href="#timeline">Timeline<span>.</span></a>
+        </li>
+        <li>
+          <a href="#faq">FAQ<span>.</span></a>
+        </li>
+        <li>
+          <a href="#sponsors">Sponsors<span>.</span></a>
+        </li>
+      </ul>
+
+      <div id="toggle">
+        <div class="span">menu</div>
+      </div>
+    </nav>
     <div class="test-header">
       <!--------------- navbar starts here --------------->
-      <nav>
-        <span id="brand">
-          <a href="index.html"><img class="logo" src="./Image/IEEE SIESGST_white.png" alt=""></a>
-        </span>
-
-        <ul id="menu" class="menu">
-          <li class="nav">
-            <a href="#home">Home<span>.</span></a>
-          </li>
-          <li>
-            <a href="#events">Events<span>.</span></a>
-          </li>
-          <li>
-            <a href="#timeline">Timeline<span>.</span></a>
-          </li>
-          <li>
-            <a href="#faq">FAQ<span>.</span></a>
-          </li>
-          <li>
-            <a href="#sponsors">Sponsors<span>.</span></a>
-          </li>
-        </ul>
-
-        <div id="toggle">
-          <div class="span">menu</div>
-        </div>
-      </nav>
-
+      <!--------------- navbar ends here --------------->
       <div class="mobile-nav" id="resize">
         <div class="close-btn">close</div>
         <ul id="menu">
@@ -80,8 +94,6 @@
           </li>
         </ul>
       </div>
-      <!--------------- navbar ends here --------------->
-
       <!--------------- hero section starts here --------------->
       <div class="hero" id="home">
         <div class="header container">
@@ -260,6 +272,7 @@
           </div>
         </div>
       </div>
+    </div>
 
  <!-- _____________________Timeline________________________ -->
 
@@ -457,8 +470,7 @@
 
 
         </div>
-    </div>
-    </section>
+      </section>
 
     <!--------------- footer starts here --------------->
     <div class="footer">
@@ -593,6 +605,4 @@
 
     });
   });
-
-
 </script>
