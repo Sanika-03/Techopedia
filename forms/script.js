@@ -7,7 +7,7 @@ document.getElementById("Team1Form").addEventListener("click", () => {
   document.getElementById("form2").style.display = "none";
 });
 
-if (document.getElementById("squabble") !== null) {
+if (document.getElementById("squabble")) {
   document
     .getElementById("squabble")
     .addEventListener("submit", (formresponse) => {
@@ -44,9 +44,7 @@ if (document.getElementById("squabble") !== null) {
       sendData("squabble", serialJSON);
       return false;
     });
-}
-
-if (document.getElementById("inquisitive") !== null) {
+} else if (document.getElementById("inquisitive")) {
   document.getElementById("form2").style.display = "none";
   document.getElementById("Team2Form").addEventListener("click", () => {
     document.getElementById("form2").style.display = "none";
@@ -83,9 +81,7 @@ if (document.getElementById("inquisitive") !== null) {
       sendData("inquisitive", serialJSON);
       return false;
     });
-}
-
-if (document.getElementById("technopreneur") !== null) {
+} else if (document.getElementById("technopreneur")) {
   document
     .getElementById("technopreneur")
     .addEventListener("submit", (formresponse) => {
@@ -122,9 +118,7 @@ if (document.getElementById("technopreneur") !== null) {
       sendData("technopreneur", serialJSON);
       return false;
     });
-}
-
-if (document.getElementById("nexus") !== null) {
+} else if (document.getElementById("nexus")) {
   document
     .getElementById("nexus")
     .addEventListener("submit", (formresponse) => {
@@ -161,9 +155,7 @@ if (document.getElementById("nexus") !== null) {
       sendData("nexus", serialJSON);
       return false;
     });
-}
-
-if (document.getElementById("quantumBreak") !== null) {
+} else if (document.getElementById("quantumBreak")) {
   document
     .getElementById("quantumBreak")
     .addEventListener("submit", (formresponse) => {
@@ -206,7 +198,7 @@ let serialJSON = {};
 function sendData(event) {
   serialJSON["event"] = event;
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbwGcLOZyqRfr1_877_olJ1rlOwcbyfxlfTPnRuu2db7NGqSfcPCqcbPqOt2CqaGxaikdw/exec",
+    url: "https://script.google.com/macros/s/AKfycbxBBWgyOaZ-3nfHrZ4ouF_QYN-fmEh4H15DgWIvKvaKY8rZtuD5F_FVM8R6TVdZ2DcgOA/exec",
 
     type: "POST",
     data: serialJSON,
@@ -222,3 +214,49 @@ function sendData(event) {
     },
   });
 }
+
+window.onload = function () {
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxBBWgyOaZ-3nfHrZ4ouF_QYN-fmEh4H15DgWIvKvaKY8rZtuD5F_FVM8R6TVdZ2DcgOA/exec",
+    type: "GET",
+    dataType: "json",
+
+    success: function (res) {
+      let pageSlot;
+      if (document.getElementById("squabble")) {
+        pageSlot = res.slotSquabble;
+      } else if (document.getElementById("inquisitive")) {
+        pageSlot = res.slotInqui;
+      } else if (document.getElementById("technopreneur")) {
+        pageSlot = res.slotTechno;
+      } else if (document.getElementById("nexus")) {
+        pageSlot = res.slotNexus;
+      } else if (document.getElementById("quantumBreak")) {
+        pageSlot = res.slotQb;
+      }
+
+      let htmlSlot = document.getElementById("slots");
+      let arraySlot = [];
+      for (z = 0; z <= htmlSlot.length; z++) {
+        if (htmlSlot.options[z]) {
+          arraySlot.push(htmlSlot.options[z].innerHTML);
+        }
+      }
+      var disableSlot = arraySlot.filter(function (n) {
+        return pageSlot.indexOf(n) == -1;
+      });
+      for (i = 0; i < disableSlot.length; i++) {
+        for (j = 0; j <= arraySlot.length; j++) {
+          if (arraySlot[j] == disableSlot[i]) {
+            document
+              .getElementById("slots")
+              .options[j].setAttribute("disabled", "");
+          }
+        }
+      }
+    },
+    error: function (res) {
+      alert("There has been a error! please refresh the page and try again.");
+    },
+  });
+};
