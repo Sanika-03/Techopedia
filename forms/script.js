@@ -1,195 +1,263 @@
-if (document.getElementById('squabble') !== null) {
-    document
-      .getElementById('squabble')
-      .addEventListener('submit', (formresponse) => {
-        document.getElementById('preloader').style.display = 'block'
-  
-        formresponse.preventDefault()
-        let name = document.getElementById('name').value
-        let college_name = document.getElementById('college_name').value
-        let branch = document.getElementById('branch_name').value
-        let year = document.getElementById('year').value
-        let phone = document.getElementById('phone').value
-        let email = document.getElementById('email').value
-        let offline = document.getElementById('offline').value
-        let vaccine = document.getElementById('vaccine').value
-       
-  
-        serialJSON['name'] = name
-        serialJSON['college_name'] = college_name
-        serialJSON['branch'] = branch
-        serialJSON['year'] = year
-        serialJSON['phone'] = phone
-        serialJSON['email'] = email
-        serialJSON['offline'] = offline
-        serialJSON['vaccine'] = vaccine
+let x;
+document.getElementById("form2").style.display = "none";
+document.getElementById("Team2Form").addEventListener("click", () => {
+  document.getElementById("form2").style.display = "block";
+});
+document.getElementById("Team1Form").addEventListener("click", () => {
+  document.getElementById("form2").style.display = "none";
+});
+
+if (document.getElementById("squabble")) {
+  document
+    .getElementById("squabble")
+    .addEventListener("submit", (formresponse) => {
+      document.getElementById("preloader").style.display = "block";
+      formresponse.preventDefault();
+      if (document.getElementById("form2").style.display == "none") {
+        x = 1;
+      } else {
+        x = 3;
+      }
+      for (i = 1; i <= x; i++) {
         
-        sendData('squabble', serialJSON)
-      })
-  }
-//   if (document.getElementById('inquisitive') !== null) {
-//     document
-//       .getElementById('inquisitive')
-//       .addEventListener('submit', (formresponse) => {
-//         document.getElementById('preloader').style.display = 'block'
-//         formresponse.preventDefault()
-//         let name = document.getElementById('name').value
-//         let college_name = document.getElementById('college_name').value
-//         let branch = document.getElementById('branch_name').value
-//         let year = document.getElementById('year').value
-//         let phone = document.getElementById('phone').value
-//         let email = document.getElementById('email').value
-  
-//         serialJSON['name'] = name
-//         serialJSON['college_name'] = college_name
-//         serialJSON['branch'] = branch
-//         serialJSON['year'] = year
-//         serialJSON['phone'] = phone
-//         serialJSON['email'] = email
-//         sendData('inquisitive', serialJSON)
-//       })
-//   }
-  
-//   if (document.getElementById('technopreneur') !== null) {
-//     document
-//       .getElementById('technopreneur')
-//       .addEventListener('submit', (formresponse) => {
-//         document.getElementById('preloader').style.display = 'block'
-//         formresponse.preventDefault()
-//         let name = document.getElementById('name').value
-//         let college_name = document.getElementById('college_name').value
-//         let branch = document.getElementById('branch_name').value
-//         let year = document.getElementById('year').value
-//         let phone = document.getElementById('phone').value
-//         let email = document.getElementById('email').value
-  
-//         serialJSON['name'] = name
-//         serialJSON['college_name'] = college_name
-//         serialJSON['branch'] = branch
-//         serialJSON['year'] = year
-//         serialJSON['phone'] = phone
-//         serialJSON['email'] = email
-//         sendData('technopreneur', serialJSON)
-//       })
-//   }
-  
-//   if (document.getElementById('labyrinth') !== null) {
-//     document
-//       .getElementById('labyrinth')
-//       .addEventListener('submit', (formresponse) => {
-//         document.getElementById('preloader').style.display = 'block'
-//         formresponse.preventDefault()
-//         let name = document.getElementById('name').value
-//         let college_name = document.getElementById('college_name').value
-//         let branch = document.getElementById('branch_name').value
-//         let year = document.getElementById('year').value
-//         let phone = document.getElementById('phone').value
-//         let email = document.getElementById('email').value
-  
-//         serialJSON['name'] = name
-//         serialJSON['college_name'] = college_name
-//         serialJSON['branch'] = branch
-//         serialJSON['year'] = year
-//         serialJSON['phone'] = phone
-//         serialJSON['email'] = email
-//         sendData('labyrinth', serialJSON)
-//       })
-//   }
-  
-//   if (document.getElementById('nexus') !== null) {
-//     document
-//       .getElementById('nexus')
-//       .addEventListener('submit', (formresponse) => {
-//         document.getElementById('preloader').style.display = 'block'
-//         formresponse.preventDefault()
-//         let name = document.getElementById('name').value
-//         let college_name = document.getElementById('college_name').value
-//         let branch = document.getElementById('branch_name').value
-//         let year = document.getElementById('year').value
-//         let phone = document.getElementById('phone').value
-//         let email = document.getElementById('email').value
-  
-//         let namei = document.getElementById('name1').value
-//         let college_namei = document.getElementById('college_name1').value
-//         let branchi = document.getElementById('branch_name1').value
-//         let yeari = document.getElementById('year1').value
-//         let phonei = document.getElementById('phone1').value
-//         let emaili = document.getElementById('email1').value
-  
-//         serialJSON['name'] = name
-//         serialJSON['college_name'] = college_name
-//         serialJSON['branch'] = branch
-//         serialJSON['year'] = year
-//         serialJSON['phone'] = phone
-//         serialJSON['email'] = email
-  
-//         serialJSON['namei'] = namei
-//         serialJSON['college_namei'] = college_namei
-//         serialJSON['branchi'] = branchi
-//         serialJSON['yeari'] = yeari
-//         serialJSON['phonei'] = phonei
-//         serialJSON['emaili'] = emaili
-  
-//         sendData('nexus', serialJSON)
-//       })
-//   }
-  
-//   if (document.getElementById('quantumBreak') !== null) {
-//     document
-//       .getElementById('quantumBreak')
-//       .addEventListener('submit', (formresponse) => {
-//         document.getElementById('preloader').style.display = 'block'
-//         formresponse.preventDefault()
-//         let name = document.getElementById('name').value
-//         let college_name = document.getElementById('college_name').value
-//         let branch = document.getElementById('branch_name').value
-//         let year = document.getElementById('year').value
-//         let phone = document.getElementById('phone').value
-//         let email = document.getElementById('email').value
-  
-//         let namei = document.getElementById('name1').value
-//         let college_namei = document.getElementById('college_name1').value
-//         let branchi = document.getElementById('branch_name1').value
-//         let yeari = document.getElementById('year1').value
-//         let phonei = document.getElementById('phone1').value
-//         let emaili = document.getElementById('email1').value
-  
-//         serialJSON['name'] = name
-//         serialJSON['college_name'] = college_name
-//         serialJSON['branch'] = branch
-//         serialJSON['year'] = year
-//         serialJSON['phone'] = phone
-//         serialJSON['email'] = email
-  
-//         serialJSON['namei'] = namei
-//         serialJSON['college_namei'] = college_namei
-//         serialJSON['branchi'] = branchi
-//         serialJSON['yeari'] = yeari
-//         serialJSON['phonei'] = phonei
-//         serialJSON['emaili'] = emaili
-  
-//         sendData('quantumBreak', serialJSON)
-//       })
-//   }
-  
-  let serialJSON = {}
-  function sendData(event) {
-    serialJSON['event'] = event
-    $.ajax({
-      // url: 'https://script.google.com/macros/s/AKfycbxRr4zSHaIxsd9V0GRUHiG8nUKTqmENQg2jRwYs-x2XpUR-nnImuuWRsS9RATSP-mkk/exec',
-      url: 'https://script.google.com/macros/s/AKfycbybtT2VZFwJSTgJSJeQAy1-xrHJSVgQlkVixQJLLbWZWX2No0NdcS3QoBOwJ3Xk8P2D/exec',
-      type: 'POST',
-      data: serialJSON,
-  
-      success: function (res) {
-        // console.log(res)
-        alert(res.returnStatus)
-        window.location.reload()
-      },
-      error: function (res) {
-        // console.log(error)
-        // alert(res.returnStatus)
-        alert('Error!Refresh the page.')
-      },
-    })
-  }
+        serialJSON["name" + i] = document.getElementById("name" + i).value;
+        serialJSON["email" + i] = document.getElementById("email" + i).value;
+        serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+        serialJSON["college" + i] = document.getElementById(
+          "college_name" + 1
+        ).value;
+        serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+        serialJSON["year" + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value;
+        serialJSON["attend" + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value;
+        serialJSON["vaccine" + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value;
+      }
+      if (x == 3) {
+        serialJSON["slot"] = document.getElementById("slots").value;
+      }
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("squabble", serialJSON);
+      return false;
+    });
+} else if (document.getElementById("inquisitive")) {
+  document.getElementById("form2").style.display = "none";
+  document.getElementById("Team2Form").addEventListener("click", () => {
+    document.getElementById("form2").style.display = "none";
+  });
+  document.getElementById("Team1Form").addEventListener("click", () => {
+    document.getElementById("form2").style.display = "none";
+  });
+  document
+    .getElementById("inquisitive")
+    .addEventListener("submit", (formresponse) => {
+      document.getElementById("preloader").style.display = "block";
+      formresponse.preventDefault();
+      for (i = 1; i <= 1; i++) {
+        serialJSON["name" + i] = document.getElementById("name" + i).value;
+        serialJSON["email" + i] = document.getElementById("email" + i).value;
+        serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+        serialJSON["college" + i] = document.getElementById(
+          "college_name" + 1
+        ).value;
+        serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+        serialJSON["year" + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value;
+        serialJSON["attend" + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value;
+        serialJSON["vaccine" + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value;
+      }
+      serialJSON["slot"] = document.getElementById("slots").value;
+      serialJSON["total"] = 1;
+      // console.log(serialJSON);
+      sendData("inquisitive", serialJSON);
+      return false;
+    });
+} else if (document.getElementById("technopreneur")) {
+  document
+    .getElementById("technopreneur")
+    .addEventListener("submit", (formresponse) => {
+      document.getElementById("preloader").style.display = "block";
+      formresponse.preventDefault();
+      if (document.getElementById("form2").style.display == "none") {
+        x = 1;
+      } else {
+        x = 2;
+      }
+      for (i = 1; i <= x; i++) {
+        serialJSON["name" + i] = document.getElementById("name" + i).value;
+        serialJSON["email" + i] = document.getElementById("email" + i).value;
+        serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+        serialJSON["college" + i] = document.getElementById(
+          "college_name" + 1
+        ).value;
+        serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+        serialJSON["year" + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value;
+        serialJSON["attend" + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value;
+        serialJSON["vaccine" + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value;
+      }
+      if (x == 2) {
+        serialJSON["slot"] = document.getElementById("slots").value;
+      }
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("technopreneur", serialJSON);
+      return false;
+    });
+} else if (document.getElementById("nexus")) {
+  document
+    .getElementById("nexus")
+    .addEventListener("submit", (formresponse) => {
+      document.getElementById("preloader").style.display = "block";
+      formresponse.preventDefault();
+      if (document.getElementById("form2").style.display == "none") {
+        x = 1;
+      } else {
+        x = 2;
+      }
+      for (i = 1; i <= x; i++) {
+        serialJSON["name" + i] = document.getElementById("name" + i).value;
+        serialJSON["email" + i] = document.getElementById("email" + i).value;
+        serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+        serialJSON["college" + i] = document.getElementById(
+          "college_name" + 1
+        ).value;
+        serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+        serialJSON["year" + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value;
+        serialJSON["attend" + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value;
+        serialJSON["vaccine" + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value;
+      }
+      if (x == 2) {
+        serialJSON["slot"] = document.getElementById("slots").value;
+      }
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("nexus", serialJSON);
+      return false;
+    });
+} else if (document.getElementById("quantumBreak")) {
+  document
+    .getElementById("quantumBreak")
+    .addEventListener("submit", (formresponse) => {
+      document.getElementById("preloader").style.display = "block";
+      formresponse.preventDefault();
+      if (document.getElementById("form2").style.display == "none") {
+        x = 1;
+      } else {
+        x = 2;
+      }
+      for (i = 1; i <= x; i++) {
+        serialJSON["name" + i] = document.getElementById("name" + i).value;
+        serialJSON["email" + i] = document.getElementById("email" + i).value;
+        serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+        serialJSON["college" + i] = document.getElementById(
+          "college_name" + 1
+        ).value;
+        serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+        serialJSON["year" + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value;
+        serialJSON["attend" + i] = document.querySelector(
+          `input[name="attend${i}"]:checked`
+        ).value;
+        serialJSON["vaccine" + i] = document.querySelector(
+          `input[name="vaccine${i}"]:checked`
+        ).value;
+      }
+      if (x == 2) {
+        serialJSON["slot"] = document.getElementById("slots").value;
+      }
+      serialJSON["total"] = x;
+      // console.log(serialJSON);
+      sendData("quantumBreak", serialJSON);
+      return false;
+    });
+}
+
+let serialJSON = {};
+function sendData(event) {
+  serialJSON["event"] = event;
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxBBWgyOaZ-3nfHrZ4ouF_QYN-fmEh4H15DgWIvKvaKY8rZtuD5F_FVM8R6TVdZ2DcgOA/exec",
+
+    type: "POST",
+    data: serialJSON,
+
+    success: function (res) {
+      // console.log(res.returnStatus, res);
+      alert(res.returnStatus);
+      window.location.reload();
+    },
+    error: function (res) {
+      // console.log(res);
+      alert("Error!Refresh the page.");
+    },
+  });
+}
+
+window.onload = function () {
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxBBWgyOaZ-3nfHrZ4ouF_QYN-fmEh4H15DgWIvKvaKY8rZtuD5F_FVM8R6TVdZ2DcgOA/exec",
+    type: "GET",
+    dataType: "json",
+
+    success: function (res) {
+      let pageSlot;
+      if (document.getElementById("squabble")) {
+        pageSlot = res.slotSquabble;
+      } else if (document.getElementById("inquisitive")) {
+        pageSlot = res.slotInqui;
+      } else if (document.getElementById("technopreneur")) {
+        pageSlot = res.slotTechno;
+      } else if (document.getElementById("nexus")) {
+        pageSlot = res.slotNexus;
+      } else if (document.getElementById("quantumBreak")) {
+        pageSlot = res.slotQb;
+      }
+
+      let htmlSlot = document.getElementById("slots");
+      let arraySlot = [];
+      for (z = 0; z <= htmlSlot.length; z++) {
+        if (htmlSlot.options[z]) {
+          arraySlot.push(htmlSlot.options[z].innerHTML);
+        }
+      }
+      var disableSlot = arraySlot.filter(function (n) {
+        return pageSlot.indexOf(n) == -1;
+      });
+      for (i = 0; i < disableSlot.length; i++) {
+        for (j = 0; j <= arraySlot.length; j++) {
+          if (arraySlot[j] == disableSlot[i]) {
+            document
+              .getElementById("slots")
+              .options[j].setAttribute("disabled", "");
+          }
+        }
+      }
+    },
+    error: function (res) {
+      alert("There has been a error! please refresh the page and try again.");
+    },
+  });
+};
