@@ -17,7 +17,7 @@ ul,
 li,
 a {
   text-decoration: none !important;
-  color: white !important;
+  /* color: white !important; */
   list-style: none !important;
 }
 
@@ -108,14 +108,34 @@ h6 {
 }
 .about-text {
   font-family: "Inter", sans-serif;
-  font-weight: 100;
+  font-size: 15px;
+  color: #535A71;
 }
-
-.text-center {
+.event-bg1{
+  background: rgba(27, 68, 130, 0.55);
+  /* filter: blur(50px); */
+  /* opacity: 0.3 */
+}
+.event-bg2{
+  background: rgba(27, 80, 130, 0.55);
+}
+.event-bg3{
+  background: rgba(84, 27, 130, 0.55);
+}
+.event-bg4{
+  background: rgba(66, 27, 130, 0.55);
+}
+.event-bg5{
+  background: rgba(29, 27, 130, 0.55);
+}
+.event-bg6{
+  background: rgba(29, 27, 130, 0.9);
+}
+/* .text-center {
   font-style: normal;
   font-weight: bold;
   color: #c1cae8;
-}
+} */
 
 /* _______________________ScrollBar________________________ */
 ::-webkit-scrollbar {
@@ -143,6 +163,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color:#fff;
 }
 
 .menu {
@@ -160,7 +181,7 @@ nav #brand {
   font-weight: bold;
 }
 
-nav #brand a {
+nav #brand a , nav .menu a {
   color: #fff;
   transition: all 0.3s ease-out;
 }
@@ -250,6 +271,10 @@ nav #brand a:hover {
     opacity: 1;
     margin-top: 6px;
     margin-right: 4px;
+  }
+  .about-text {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
   }
 
   nav #brand {
@@ -363,13 +388,25 @@ h6 {
 .event-info {
   text-align: center;
 }
-.Event-heading {
+.event-img{
+  width: 648px;
+  height: 502px;
+  object-fit: cover;
+  box-shadow: 27px 29px 100px rgba(0, 0, 13, 0.7);
+}
+/* .Event-heading {
   margin-bottom: 30px;
   font-family: "Space Grotesk", sans-serif;
   color: #c1cae8;
   font-weight: 600;
   font-size: 30px;
   text-align: center;
+} */
+.event-title{
+  font-family: "Space Grotesk", sans-serif;
+  color: #c1cae8;
+  font-weight: 600;
+  font-size: 30px;
 }
 .Event-para {
   color: #535a71 !important;
@@ -379,6 +416,12 @@ h6 {
   margin-right: 0;
   font-weight: 400 !important;
   backdrop-filter: url();
+}
+.event-content{
+  color: #535a71 !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 400 !important;
+
 }
 
 .event-info div {
@@ -419,6 +462,7 @@ h6 {
 #previous-sponsors {
   margin-top: 104px;
   margin-bottom: 104px;
+  margin-left:51px;
 }
 .sponsor-container .card p {
   font-family: "Space Grotesk", sans-serif;
@@ -428,6 +472,16 @@ h6 {
   justify-content: space-around;
   flex-direction: row !important;
   align-items: center;
+}
+#previous-sponsors .email{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: normal;
+  color:#fff;
+  
+}
+#previous-sponsors .email span ,#previous-sponsors .email span a{
+text-decoration: underline;
+color:#C1CAE8;
 }
 
 .card {
@@ -463,7 +517,7 @@ h6 {
 
 .info li {
   font-weight: lighter;
-  color: #fff;
+  /* color: #fff; */
   font-size: 18px;
   padding-left: 20px;
 }
@@ -492,6 +546,13 @@ h6 {
   .info ul {
     margin: 0 0 0 -22px;
     padding: 0;
+  }
+  #previous-sponsors{
+    margin-left:0px;
+
+  }
+  #previous-sponsors .email{
+    margin-left: 5px;
   }
 }
 
@@ -861,12 +922,7 @@ textarea:focus {
 .accordion-item-body-content {
   padding: 1rem;
   line-height: 1.5rem;
-  background: linear-gradient(
-    180deg,
-    #000516 0%,
-    #0a1640b4 99.97%,
-    #2a2e3d 99.98%
-  );
+  background: transparent;
 }
 
 @media (max-width: 768px) {
@@ -886,6 +942,10 @@ textarea:focus {
   .countdown {
     font-size: 30px;
   }
+  #faq .faq .faq-image img{
+    margin-left: 45px;
+    margin-top:20px;
+}
 }
 
 @media (max-width: 320px) {
@@ -911,6 +971,9 @@ textarea:focus {
   }
   .footer-column {
     width: 80%;
+  }
+  #faq .faq .faq-image img{
+    margin-left: 40px;
   }
 }
 /* ḷogo */
@@ -986,86 +1049,118 @@ textarea:focus {
 }
 
 /* Footer  */
+#explore h3{
+  margin-bottom: 30px;
+  color:#C1CAE8;
+  font-size: 20px;
+}
+#explore h4{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  
+}
+#explore h4 a {
+  color: #535A71;
+  text-decoration: none;
+}
 .social-links {
   margin-top: 30px;
   display: flex;
   text-align: center;
 }
-.social-links li,
-.social-links li a {
+.social-links li ,.social-links li a {
   list-style: none;
   text-align: center;
+  
 }
-.follow-us ul {
+.follow-us ul{
   width: 110%;
   margin: auto;
 }
-#personal h3 {
-  margin-bottom: 30px;
-  color: #c1cae8;
-}
-#personal h4 {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-}
-#personal h4 a {
-  color: #535a71;
-  text-decoration: none;
-}
-.follow-us,
-.Reach-us {
+
+#explore h3, .follow-us , .Reach-us{
   text-align: center;
-  color: #c1cae8;
+  color:#C1CAE8;
   margin-bottom: 30px;
+  font-size: 20px;
 }
-#address h4 {
-  width: 75%;
-  color: #535a71;
-  font-family: "Inter", sans-serif;
+#explore h4{
+  text-align : center;
+  color: #535A71;
+}
+#contact-info h4{
+  
+margin:auto;
+width:40%;
+padding-bottom: 5px;
+ color: #535A71;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
 }
-.copyright {
+.copyright{
   font-size: 15px;
-  color: #535a71;
+  color: #535A71;
   text-align: center;
 }
-@media (max-width: 768px) {
+.social-links li img{
+  background-color:#000516 ;
+}
+.social-links img:hover{
+  box-shadow: 0px 1px 100px 0px #fff;
+  /* background-color:#fff */
+  border: #0B001D solid .05px;
+  border-radius:5px;
+}
+@media (max-width:768px){
   .social-links li a img {
     margin-left: -10px;
   }
-  #address h4 {
-    margin-left: 69px;
-  }
-  .footer-column {
-    width: 80%;
+  
+  .social-media ul{
+    width: 60%;
     margin: auto;
   }
-  .Reach-us {
+  .Reach-us{
     margin-left: 20px;
   }
+  
 }
-@media (max-width: 950px) {
-  #personal {
-    width: 30%;
+@media (max-width:988px){
+  
+  #explore h3{
+    text-align: center;
+  }
+  #explore h4{
+    text-align: center;
+  }
+  .follow-us ul{
+    width:64%;
+  }
+  .social-links li{
+    width: 65%;
     margin: auto;
   }
-  .follow-us ul {
-    width: 64%;
-  }
-  #address h4 {
-    width: 22%;
+  #contact-info h4{
+    width: 21%;
     margin: auto;
     padding-top: 10px;
   }
 }
-@media (max-width: 328px) {
-  .social-links li {
-    margin-left: 35px;
+@media (max-width:441px){
+  .social-links li{
+    margin-left: 0px;
   }
-  #address h4 {
-    margin-left: 40px;
-  }
+  
   .social-links li a img {
     margin-left: -20px;
+  }
+  .social-media ul {
+    width: 79%;
+    margin: auto;}
+
+  #contact-info h4{
+   width: 42%;
+    margin: auto;
+    padding-top: 10px;
   }
 }
