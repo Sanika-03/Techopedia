@@ -913,17 +913,13 @@ textarea:focus {
   border-radius: 20px;
 }
 
-/* .accordion-item-header::before {
-  content: "\2193";
+.accordion-item-header::before {
+  content: "";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
 }
-.accordion-item-header.active a:before {
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	transform: rotate(180deg);
-}  */
+
 
 .accordion-item-body {
   max-height: 0;
