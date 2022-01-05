@@ -664,9 +664,10 @@ textarea:focus {
   font-family: "Inter", sans-serif;
   width: 80%;
   margin: auto;
-  
+}
 
-
+.phn1 {
+  color: #535A71;
 }
 
 
