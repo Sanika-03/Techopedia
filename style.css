@@ -109,13 +109,33 @@ h6 {
 .about-text {
   font-family: "Inter", sans-serif;
   font-size: 15px;
+  color: #535A71;
 }
-
-.text-center {
+.event-bg1{
+  background: rgba(27, 68, 130, 0.55);
+  /* filter: blur(50px); */
+  /* opacity: 0.3 */
+}
+.event-bg2{
+  background: rgba(27, 80, 130, 0.55);
+}
+.event-bg3{
+  background: rgba(84, 27, 130, 0.55);
+}
+.event-bg4{
+  background: rgba(66, 27, 130, 0.55);
+}
+.event-bg5{
+  background: rgba(29, 27, 130, 0.55);
+}
+.event-bg6{
+  background: rgba(29, 27, 130, 0.9);
+}
+/* .text-center {
   font-style: normal;
   font-weight: bold;
   color: #c1cae8;
-}
+} */
 
 /* _______________________ScrollBar________________________ */
 ::-webkit-scrollbar {
