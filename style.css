@@ -368,13 +368,25 @@ h6 {
 .event-info {
   text-align: center;
 }
-.Event-heading {
+.event-img{
+  width: 648px;
+  height: 502px;
+  object-fit: cover;
+  box-shadow: 27px 29px 100px rgba(0, 0, 13, 0.7);
+}
+/* .Event-heading {
   margin-bottom: 30px;
   font-family: "Space Grotesk", sans-serif;
   color: #c1cae8;
   font-weight: 600;
   font-size: 30px;
   text-align: center;
+} */
+.event-title{
+  font-family: "Space Grotesk", sans-serif;
+  color: #c1cae8;
+  font-weight: 600;
+  font-size: 30px;
 }
 .Event-para {
   color: #535a71 !important;
@@ -384,6 +396,12 @@ h6 {
   margin-right: 0;
   font-weight: 400 !important;
   backdrop-filter: url();
+}
+.event-content{
+  color: #535a71 !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 400 !important;
+
 }
 
 .event-info div {
