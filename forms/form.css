@@ -666,10 +666,14 @@ textarea:focus {
   margin: auto;
 }
 
-.phn1 {
+/* .phn1 {
   color: #535A71;
 }
 
+a.phn1:hover {
+  color: #440079;
+}
+ */
 
 .Event-about1 {
     /* font-family: "Inter", sans-serif;
