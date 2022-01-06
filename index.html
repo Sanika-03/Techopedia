@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk:wght@700&display=swap"
     rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- terminal effect -->
@@ -103,44 +103,168 @@
           </p>
         </div>
       </div>
-      <p class="countdown " id="demo"></p>
-      <!-- <div class="scroll-down"></div> -->
+      
+      <div class="countdown" id="demo">
+      <div id="timer" class=" d-flex 
+        align-items-center justify-content-center">
+        <div id="days" class="align-items-center flex-column d-flex justify-content-center"></div>
+        <div id="hours" class="align-items-center flex-column d-flex justify-content-center"></div>
+        <div id="minutes" class="align-items-center flex-column d-flex justify-content-center"></div>
+        <div id="seconds" class="align-items-center flex-column d-flex justify-content-center"></div>
+      </div>
+    </div>
+    
       <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Jan 30, 2022 15:37:25").getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-          // Get today's date and time
-          var now = new Date().getTime();
-
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-          // Output the result in an element with id="demo"
-          document.getElementById("demo").innerHTML = days + "D " + hours + "H "
-            + minutes + "M " + seconds + "S ";
-
-          // If the count down is over, write some text 
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
-
+        function makeTimer() {
+          var endTime = new Date("Jan 30, 2022 15:37:25");
+          var endTime = (Date.parse(endTime)) / 1000;
+          var now = new Date();
+          var now = (Date.parse(now) / 1000);
+          var timeLeft = endTime - now;
+          var days = Math.floor(timeLeft / 86400);
+          var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+          var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+          var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+          if (hours < "10") { hours = "0" + hours; }
+          if (minutes < "10") { minutes = "0" + minutes; }
+          if (seconds < "10") { seconds = "0" + seconds; }
+          $("#days").html(days + "<span>Days</span>");
+          $("#hours").html(hours + "<span>Hours</span>");
+          $("#minutes").html(minutes + "<span>Minutes</span>");
+          $("#seconds").html(seconds + "<span>Seconds</span>");
+        }
+        setInterval(function () { makeTimer(); }, 0);
       </script>
+      <!-- <div class="scroll-down"></div> -->
+
       <!--------------- hero section ends here --------------->
     </div>
+    <!-----EventsSection----------->
+    <div class="events" id="events">
+      <h3 class="text-center pb-5 pt-1">OUR EVENTS.</h3>
+      <div>
+        <div class="row  squabble  d-flex justify-content-center align-items-center pb-md-5 pb-lg-0">
+          <div class="col-md-6 event-cover">
+            <img src="./Image/QB.jpg" class=" d-block w-100 img-fluid" />
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 pb-md-5 pb-lg-0">
+              <h1 class="event-title mb-3">SQUABBLE</h1>
+              <p class="event-content"> It is a National Level Debate Competition and a platform
+                to showcase your oratory skills with a technical perspective which will
+                consist of group discussion and one-on-one debate with time limitations.</p>
+              <div class="Event-button">
+                <button type="submit" class="btn  btn-lg draw-border">
+                  <a href="./forms/squabble.html">Participate</a>
+                </button>
+              </div>
+            </div>
 
+          </div>
+        </div>
+        <div class="row inquisitive d-flex justify-content-center align-items-center pb-md-5 pb-lg-0">
+          <div class="col-md-6 event-cover">
+            <img src="./Image/Labyrinth.png" class=" d-block w-100 img-fluid" />
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 pb-md-5 pb-lg-0">
+              <h1 class="event-title mb-3">INQUISITIVE</h1>
+              <p class="event-content"> It is a National level Quiz Competition where the
+                participants will get to validate their cerebral capacity by engaging in a
+                quiz on the occurrences, technologies, advancements and affairs of the
+                present time.</p>
+              <div class="Event-button">
+                <button type="submit" class="btn  btn-lg draw-border">
+                  <a href="./forms/inquisitive.html">Participate</a>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row technopreneur d-flex justify-content-center align-items-center pb-md-5 pb-lg-0">
+          <div class="col-md-6 event-cover">
+            <img src="./Image/Technoprenuer.png" class=" d-block w-100 img-fluid" />
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 pb-md-5 pb-lg-0">
+              <h1 class="event-title mb-3">TECHNOPRENEUR</h1>
+              <p class="event-content"> A National level event in collaboration with EDC
+                SIESGST where the participants, through their entrepreneurial skills,
+                will try their best hand at selling products from the past century which
+                hold very less value in today's world.</p>
+              <div class="Event-button">
+                <button type="submit" class="btn  btn-lg draw-border">
+                  <a href="./forms/inquisitive.html">Participate</a>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row QB d-flex justify-content-center align-items-center pb-md-5 pb-lg-0">
+          <div class="col-md-6 event-cover">
+            <img src="./Image/QB.jpg" class=" d-block w-100 img-fluid" />
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 pb-md-5 pb-lg-0">
+              <h1 class="event-title mb-3">QUANTUM BREAK</h1>
+              <p class="event-content"> A team of two that focuses on a rescue endeavour.
+                Your teammate is kept as a hostage and you have to rescue them going
+                unnoticed by the abductors.</p>
+              <div class="Event-button">
+                <button type="submit" class="btn  btn-lg draw-border">
+                  <a href="./forms/inquisitive.html">Participate</a>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row nexus d-flex justify-content-center align-items-center pb-md-5 pb-lg-0">
+          <div class="col-md-6 event-cover">
+            <img src="./Image/inqus.jpg" class=" d-block w-100 img-fluid" />
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 pb-md-5 pb-lg-0">
+              <h1 class="event-title mb-3">NEXUS</h1>
+              <p class="event-content"> A team of two aims at solving errors in circuits and debugging
+                codes to make them right. Participants can test their technical creativity
+                and ability to brainstorm ideas and solutions.</p>
+              <div class="Event-button">
+                <button type="submit" class="btn  btn-lg draw-border">
+                  <a href="./forms/inquisitive.html">Participate</a>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row labyrinth d-flex justify-content-center align-items-center pb-md-5 pb-lg-0">
+          <div class="col-md-6 event-cover">
+            <img src="./Image/Technoprenuer.png" class="d-block w-100 img-fluid" />
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 pb-md-5 pb-lg-0">
+              <h1 class="event-title mb-3">LABYRINTH</h1>
+              <p class="event-content"> A game that entails a mystifying scheme of occurrences
+                based on the choices made by the competitors. There is no right or wrong
+                choice in this game, but there is always a better choice (red pill/ blue pill
+                situation).</p>
+              <div class="Event-button">
+                <button type="submit" class="btn  btn-lg draw-border">
+                  <a href="./forms/inquisitive.html">Participate</a>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------Event Section ends here------->
     <!--------------- projects section starts here --------------->
-    <div class="event-container" id="events">
+    <!-- <div class="event-container" id="events">
       <h3 class="text-center">OUR EVENTS.</h3>
       <div class="Events">
         <div class="row squabble">
@@ -272,15 +396,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
- <!-- _____________________Timeline________________________ -->
+    <!-- _____________________Timeline________________________ -->
 
-      <div class="bg" id="timeline">
-        <h3 class="text-center">Timeline.</h3>
-        <div class="container-timeline">
-          <div class="timeline">
-            <div class="vl">
+    <div class="bg" id="timeline">
+      <h3 class="text-center pt-2 pb-2">TIMELINE.</h3>
+      <div class="container-timeline">
+        <div class="timeline">
+          <div class="vl">
             <ul class=" mx-4">
               <li>
                 <div class="timeline-content">
@@ -330,147 +454,140 @@
               </li>
             </ul>
           </div>
-          </div>
         </div>
       </div>
-      <!-- ****************FAQ STARTS HERE ******************* -->
-      <div class="container" width="80%" id="faq">
-        <h3 class="text-center">Frequently Asked Questions.</h3>
-        <div class="row faq">
-          <div class="faq-image col-lg-5 mx-1">
-            <img src="./Image/FAQ.jpg" alt="">
-          </div>
-          <div class="col-lg-6">
-            <div class="accordion">
-              <div class="accordion-item-faq">
-                <div class="accordion-item-header">Lorem ipsum dolor sit amet?</div>
-                <div class="accordion-item-body">
-                  <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </div>
+    </div>
+    <!-- ****************FAQ STARTS HERE ******************* -->
+    <div class="container" width="80%" id="faq">
+      <h3 class="text-center pb-4 ">FREQUENTLY ASKED QUESTIONS.</h3>
+      <div class="row faq">
+        <div class="faq-image col-lg-6 align-items-center">
+          <img src="./Image/istockphoto-1309966216-170667a.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="accordion">
+            <div class="accordion-item-faq">
+              <div class="accordion-item-header active">What is Techopedia?</div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content"> Techopedia is the annual technical fest of IEEE SIES GST. This year we arecelebrating its tenth edition.
                 </div>
               </div>
-              <div class="accordion-item-faq">
-                <div class="accordion-item-header">Lorem ipsum dolor sit amet?</div>
-                <div class="accordion-item-body">
-                  <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </div>
+            </div>
+            <div class="accordion-item-faq">
+              <div class="accordion-item-header">What does the theme 'Epoch' imply?</div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">To celebrate the glory of Techopdia has achieved over ten years
+                  we dereived that nothing is grander than the concept of time. For Techopedia 10.0 we are looking to
+                  cruise through time and create a perceptive experience for the senses. Manuvering through the past
+                  over the present to the future is our endeavor.
                 </div>
               </div>
-              <div class="accordion-item-faq">
-                <div class="accordion-item-header">Lorem ipsum dolor sit amet?</div>
-                <div class="accordion-item-body">
-                  <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </div>
+            </div>
+            <div class="accordion-item-faq">
+              <div class="accordion-item-header">What are benefits of participating in this events?</div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">You'll get a chance to win exciting cash prizes coupons,
+                  goodies and many more. We will also be providing participation certificates.
                 </div>
               </div>
-              <div class="accordion-item-faq">
-                <div class="accordion-item-header">Lorem ipsum dolor sit amet?</div>
-                <div class="accordion-item-body">
-                  <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </div>
+            </div>
+            <div class="accordion-item-faq">
+              <div class="accordion-item-header">What is the registration fee?</div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
               </div>
-              <div class="accordion-item-faq">
-                <div class="accordion-item-header">Lorem ipsum dolor sit amet?</div>
-                <div class="accordion-item-body">
-                  <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </div>
+            </div>
+            <div class="accordion-item-faq">
+              <div class="accordion-item-header">How will I stay up-to-date with the event timeline?</div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">You can check dates on our social media pages and our team will
+                  inform you via WhatsApp groups.
                 </div>
               </div>
-              <div class="accordion-item-faq">
-                <div class="accordion-item-header">Lorem ipsum dolor sit amet?</div>
-                <div class="accordion-item-body">
-                  <div class="accordion-item-body-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </div>
+            </div>
+            <div class="accordion-item-faq">
+              <div class="accordion-item-header">Is On-day registration open?</div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">On-day registration is not available.
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-      </div>
 
-      <!--------------- sponsor section --------------->
-      <section class="sponsors" id="sponsors">
-        <h3 class="text-center">OUR SPONSORS.</h3>
-        <div class="sponsor-container row ">
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://www.mycaptain.in/"><img src="./Image/mycaptain.png" class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Official Education and Internship Partner</p>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://www.geeksforgeeks.org/"><img src="./Image/geeksforgeeks.png " class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Chief Education Partner</p>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://www.attiitude.com/"><img src="./Image/attitude.png" class="" alt="..."
-                style="width: 15rem;"></a>
-            <P>Clothing Partner</P>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://streamyard.com/"><img src="./Image/streamYard.png" class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Streaming Partner</p>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://www.infigonfutures.com/"><img src="./Image/infigon.png" class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Cheif Education Partner</p>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://www.myaugeo.com/"><img src="./Image/augeo.png" class="" alt="..."
-                style="width: 12rem;"></a>
-            <p>Educational Partner</p>
-          </div>
-          <!-- <div class="card col-lg-4 col-md-6 col-12 p-3" >
+      </div>
+    </div>
+
+    <!--------------- sponsor section --------------->
+    <section class="sponsors" id="sponsors">
+      <h3 class="text-center">OUR SPONSORS.</h3>
+      <div class="sponsor-container row ">
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://www.mycaptain.in/"><img src="./Image/mycaptain.png" class="" alt="..."
+              style="width: 15rem;"></a>
+          <p>Official Education and Internship Partner</p>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://www.geeksforgeeks.org/"><img src="./Image/geeksforgeeks.png " class="" alt="..."
+              style="width: 15rem;"></a>
+          <p>Chief Education Partner</p>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://www.attiitude.com/"><img src="./Image/attitude.png" class="" alt="..."
+              style="width: 15rem;"></a>
+          <P>Clothing Partner</P>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://streamyard.com/"><img src="./Image/streamYard.png" class="" alt="..."
+              style="width: 15rem;"></a>
+          <p>Streaming Partner</p>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://www.infigonfutures.com/"><img src="./Image/infigon.png" class="" alt="..."
+              style="width: 15rem;"></a>
+          <p>Cheif Education Partner</p>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://www.myaugeo.com/"><img src="./Image/augeo.png" class="" alt="..." style="width: 12rem;"></a>
+          <p>Educational Partner</p>
+        </div>
+        <!-- <div class="card col-lg-4 col-md-6 col-12 p-3" >
           <img src="" class="" alt="..." style="width: 15rem;">
         </div> -->
+      </div>
+    </section>
+
+    <section class="sponsors" id="previous-sponsors">
+      <h3 class="text-center">PREVIOUS SPONSORS.</h3>
+      <div class="sponsor-container row ">
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+
+          <a href="https://ieeebombay.org/"><img src="./Image/IEEEBombay.jpeg" class="" alt="..."
+              style="width: 15rem;"></a>
+          <p>Technical Sponsor</p>
         </div>
-      </section>
-
-      <section class="sponsors" id="previous-sponsors">
-        <h3 class="text-center">PREVIOUS SPONSORS.</h3>
-        <div class="sponsor-container row ">
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-
-            <a href="https://ieeebombay.org/"><img src="./Image/IEEEBombay.jpeg" class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Technical Sponsor</p>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://netcredential.com/"><img src="./Image/NetCredential.jpeg " class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Certificate Partner</p>
-          </div>
-          <div class="card col-lg-4 col-md-6 col-12 p-3">
-            <a href="https://www.outscal.com/"><img src="./Image/image3.png" class="" alt="..."
-                style="width: 15rem;"></a>
-            <p>Events Partner</p>
-          </div>
-
-
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://netcredential.com/"><img src="./Image/NetCredential.jpeg " class="" alt="..."
+              style="width: 15rem;"></a>
+          <p>Certificate Partner</p>
         </div>
-      </section>
+        <div class="card col-lg-4 col-md-6 col-12 p-3">
+          <a href="https://www.outscal.com/"><img src="./Image/image3.png" class="" alt="..." style="width: 15rem;"></a>
+          <p>Events Partner</p>
+        </div>
+
+
+      </div>
+      <div class="email text-center">
+        Want to sponsor us ? Drop a mail at <span><a href="mailto: ieee@siesgst.ac.in">
+            ieee@siesgst.ac.in
+          </a></span>
+      </div>
+    </section>
 
     <!--------------- footer starts here --------------->
     <div class="footer">
@@ -496,10 +613,11 @@
 
               <ul class="social-links">
                 <li id="insta" class="wow fadeInUp" data-wow-delay="0.6s"><a target="_blank"
-                    href="https://www.instagram.com/ieeesiesgst/?hl=en"><img src="./Image/InstagramLogo.png" alt=""></a>
+                    href="https://www.instagram.com/ieeesiesgst/?hl=en"><img src="./Image/InstagramLogo (1).png"
+                      alt=""></a>
                 </li>
                 <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
-                    href="https://www.youtube.com/c/IEEESIESGST"><img src="./Image/LinkedinLogo.png" alt=""></a></li>
+                    href="https://www.linkedin.com/company/ieee-gst/mycompany/"><img src="./Image/LinkedinLogo.png" alt=""></a></li>
 
                 <li class="wow fadeInUp" data-wow-delay="0.8s"><a target="_blank"
                     href="https://twitter.com/_ieeesiesgst?s=09"><img src="./Image/twitter logo.png" alt=""></li>
@@ -509,7 +627,8 @@
                     href="https://www.facebook.com/groups/714385779076148/?ref=share"><img
                       src="./Image/FacebookLogo.png" alt=""></a></li>
                 <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
-                    href="https://www.youtube.com/c/IEEESIESGST"><img src="./Image/SpotifyLogo.png" alt=""></a></li>
+                    href="https://open.spotify.com/show/08snSfTbCS9EcxWTDIJYuV?si=s5eliMbwTPeOXAC2ZG8MDg&utm_source=copy-link"><img
+                      src="./Image/SpotifyLogo.png" alt=""></a></li>
                 <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
                     href="https://www.youtube.com/c/IEEESIESGST"><img src="./Image/github logo.png" alt=""></a></li>
               </ul>
@@ -580,7 +699,7 @@
 
     // nav animation ends
 
-   
+
   </script>
 </body>
 
@@ -595,12 +714,13 @@
         accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
         accordionItemHeader.style.backgroundColor = "#000516";
         accordionItemHeader.style.border = "#fff solid 1px";
+        accordionItemHeaders.style.before.content = "\2193";
       }
       else {
         accordionItemBody.style.maxHeight = 0;
         accordionItemHeader.style.backgroundColor = "transparent";
         accordionItemHeader.style.border = "#fff solid 1px";
-
+        accordionItemHeaders.style.before.content = "";
       }
 
     });

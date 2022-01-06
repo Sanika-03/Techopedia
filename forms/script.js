@@ -19,6 +19,7 @@ if (document.getElementById("squabble")) {
         x = 3;
       }
       for (i = 1; i <= x; i++) {
+        
         serialJSON["name" + i] = document.getElementById("name" + i).value;
         serialJSON["email" + i] = document.getElementById("email" + i).value;
         serialJSON["phone" + i] = document.getElementById("phone" + i).value;
