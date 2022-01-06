@@ -1,10 +1,76 @@
+function requireNot(iStart, iEnd) {
+  for (i = iStart; i <= iEnd; i++) {
+    serialJSON["name" + i] = document
+      .getElementById("name" + i)
+      .removeAttribute("required");
+    serialJSON["email" + i] = document
+      .getElementById("email" + i)
+      .removeAttribute("required");
+    serialJSON["phone" + i] = document
+      .getElementById("phone" + i)
+      .removeAttribute("required");
+    serialJSON["college" + i] = document
+      .getElementById("college_name" + 1)
+      .removeAttribute("required");
+    serialJSON["branch" + i] = document
+      .getElementById("branch" + i)
+      .removeAttribute("required");
+    serialJSON["year" + i] = document
+      .querySelector(`input[name="firstRadio${i}"]:checked`)
+      .removeAttribute("required");
+  }
+}
+function requireYes(iStart, iEnd) {
+  for (i = iStart; i <= iEnd; i++) {
+    serialJSON["name" + i] = document
+      .getElementById("name" + i)
+      .setAttribute("required", "");
+    serialJSON["email" + i] = document
+      .getElementById("email" + i)
+      .setAttribute("required", "");
+    serialJSON["phone" + i] = document
+      .getElementById("phone" + i)
+      .setAttribute("required", "");
+    serialJSON["college" + i] = document
+      .getElementById("college_name" + 1)
+      .setAttribute("required", "");
+    serialJSON["branch" + i] = document
+      .getElementById("branch" + i)
+      .setAttribute("required", "");
+    serialJSON["year" + i] = document
+      .getElementById(`FE${i}`)
+      .setAttribute("required", "");
+  }
+}
 let x;
 document.getElementById("form2").style.display = "none";
+
 document.getElementById("Team2Form").addEventListener("click", () => {
   document.getElementById("form2").style.display = "block";
+  if (document.getElementById("squabble")) {
+    requireYes(2, 3);
+  } else if (
+    document.getElementById("technopreneur") ||
+    document.getElementById("nexus") ||
+    document.getElementById("quantumBreak")
+  ) {
+    requireYes(1, 1);
+  }
+  document.getElementById("slots").setAttribute("required", "");
 });
+
 document.getElementById("Team1Form").addEventListener("click", () => {
   document.getElementById("form2").style.display = "none";
+  if (document.getElementById("squabble")) {
+    requireNot(2, 3);
+  } else if (
+    document.getElementById("technopreneur") ||
+    document.getElementById("nexus") ||
+    document.getElementById("quantumBreak")
+  ) {
+    requireNot(1, 1);
+  }
+  document.getElementById("slots").removeAttribute("required");
 });
 
 if (document.getElementById("squabble")) {
@@ -19,7 +85,6 @@ if (document.getElementById("squabble")) {
         x = 3;
       }
       for (i = 1; i <= x; i++) {
-        
         serialJSON["name" + i] = document.getElementById("name" + i).value;
         serialJSON["email" + i] = document.getElementById("email" + i).value;
         serialJSON["phone" + i] = document.getElementById("phone" + i).value;
@@ -29,12 +94,6 @@ if (document.getElementById("squabble")) {
         serialJSON["branch" + i] = document.getElementById("branch" + i).value;
         serialJSON["year" + i] = document.querySelector(
           `input[name="year${i}"]:checked`
-        ).value;
-        serialJSON["attend" + i] = document.querySelector(
-          `input[name="attend${i}"]:checked`
-        ).value;
-        serialJSON["vaccine" + i] = document.querySelector(
-          `input[name="vaccine${i}"]:checked`
         ).value;
       }
       if (x == 3) {
@@ -69,12 +128,6 @@ if (document.getElementById("squabble")) {
         serialJSON["year" + i] = document.querySelector(
           `input[name="year${i}"]:checked`
         ).value;
-        serialJSON["attend" + i] = document.querySelector(
-          `input[name="attend${i}"]:checked`
-        ).value;
-        serialJSON["vaccine" + i] = document.querySelector(
-          `input[name="vaccine${i}"]:checked`
-        ).value;
       }
       serialJSON["slot"] = document.getElementById("slots").value;
       serialJSON["total"] = 1;
@@ -103,12 +156,6 @@ if (document.getElementById("squabble")) {
         serialJSON["branch" + i] = document.getElementById("branch" + i).value;
         serialJSON["year" + i] = document.querySelector(
           `input[name="year${i}"]:checked`
-        ).value;
-        serialJSON["attend" + i] = document.querySelector(
-          `input[name="attend${i}"]:checked`
-        ).value;
-        serialJSON["vaccine" + i] = document.querySelector(
-          `input[name="vaccine${i}"]:checked`
         ).value;
       }
       if (x == 2) {
@@ -141,12 +188,6 @@ if (document.getElementById("squabble")) {
         serialJSON["year" + i] = document.querySelector(
           `input[name="year${i}"]:checked`
         ).value;
-        serialJSON["attend" + i] = document.querySelector(
-          `input[name="attend${i}"]:checked`
-        ).value;
-        serialJSON["vaccine" + i] = document.querySelector(
-          `input[name="vaccine${i}"]:checked`
-        ).value;
       }
       if (x == 2) {
         serialJSON["slot"] = document.getElementById("slots").value;
@@ -178,12 +219,6 @@ if (document.getElementById("squabble")) {
         serialJSON["year" + i] = document.querySelector(
           `input[name="year${i}"]:checked`
         ).value;
-        serialJSON["attend" + i] = document.querySelector(
-          `input[name="attend${i}"]:checked`
-        ).value;
-        serialJSON["vaccine" + i] = document.querySelector(
-          `input[name="vaccine${i}"]:checked`
-        ).value;
       }
       if (x == 2) {
         serialJSON["slot"] = document.getElementById("slots").value;
@@ -194,12 +229,42 @@ if (document.getElementById("squabble")) {
       return false;
     });
 }
-
+// else if (document.getElementById("labyrinth")) {
+//   document.getElementById("form2").style.display = "none";
+//   document.getElementById("Team2Form").addEventListener("click", () => {
+//     document.getElementById("form2").style.display = "none";
+//   });
+//   document.getElementById("Team1Form").addEventListener("click", () => {
+//     document.getElementById("form2").style.display = "none";
+//   });
+//   document
+//     .getElementById("labyrinth")
+//     .addEventListener("submit", (formresponse) => {
+//       document.getElementById("preloader").style.display = "block";
+//       formresponse.preventDefault();
+//       for (i = 1; i <= 1; i++) {
+//         serialJSON["name" + i] = document.getElementById("name" + i).value;
+//         serialJSON["email" + i] = document.getElementById("email" + i).value;
+//         serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+//         serialJSON["college" + i] = document.getElementById(
+//           "college_name" + 1
+//         ).value;
+//         serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+//         serialJSON["year" + i] = document.querySelector(
+//           `input[name="year${i}"]:checked`
+//         ).value;
+//       }
+//       serialJSON["total"] = 1;
+//       console.log(serialJSON);
+//       // sendData("labyrinth", serialJSON);
+//       return false;
+//     });
+// }
 let serialJSON = {};
 function sendData(event) {
   serialJSON["event"] = event;
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbxBBWgyOaZ-3nfHrZ4ouF_QYN-fmEh4H15DgWIvKvaKY8rZtuD5F_FVM8R6TVdZ2DcgOA/exec",
+    url: "https://script.google.com/macros/s/AKfycby2gQaJzcZGs6htazHbXCgGybHc9cqt4X-tjepHg6_RI3kvzAbRnT8mgbISgeC8IifM_w/exec",
 
     type: "POST",
     data: serialJSON,
@@ -218,7 +283,7 @@ function sendData(event) {
 
 window.onload = function () {
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbxBBWgyOaZ-3nfHrZ4ouF_QYN-fmEh4H15DgWIvKvaKY8rZtuD5F_FVM8R6TVdZ2DcgOA/exec",
+    url: "https://script.google.com/macros/s/AKfycby2gQaJzcZGs6htazHbXCgGybHc9cqt4X-tjepHg6_RI3kvzAbRnT8mgbISgeC8IifM_w/exec",
     type: "GET",
     dataType: "json",
 
@@ -238,7 +303,7 @@ window.onload = function () {
 
       let htmlSlot = document.getElementById("slots");
       let arraySlot = [];
-      for (z = 0; z <= htmlSlot.length; z++) {
+      for (z = 1; z <= htmlSlot.length; z++) {
         if (htmlSlot.options[z]) {
           arraySlot.push(htmlSlot.options[z].innerHTML);
         }
@@ -251,7 +316,7 @@ window.onload = function () {
           if (arraySlot[j] == disableSlot[i]) {
             document
               .getElementById("slots")
-              .options[j].setAttribute("disabled", "");
+              .options[j + 1].setAttribute("disabled", "");
           }
         }
       }
