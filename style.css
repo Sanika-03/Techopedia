@@ -914,7 +914,11 @@ textarea:focus {
   line-height: 1.5rem;
   background: transparent;
 }
-
+@media(max-width: 996px) and (min-width: 768px){
+  .faq img{
+    margin-left:70px;
+  }
+}
 @media (max-width: 768px) {
   .squabble,
   .inquisitive,
@@ -983,6 +987,7 @@ textarea:focus {
     margin-top:20px;
     margin: 0 auto;
 }
+
 }
 
 @media (max-width: 320px) {
@@ -1082,50 +1087,6 @@ textarea:focus {
   text-decoration: none;
 }
 
-.draw-border {
-  box-shadow: inset 0 0 0 4px #1d2223;
-  color: #1d2223;
-  transition: color 0.25s 0.0833333333s;
-  position: relative;
-}
-.draw-border::before,
-.draw-border::after {
-  border: 0 solid transparent;
-  border-radius: 5px;
-  box-sizing: border-box;
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 0;
-  right: 0;
-}
-.draw-border::before {
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-}
-.draw-border::after {
-  border-top-width: 1px;
-  border-right-width: 1px;
-}
-.draw-border:hover {
-  color: #fff;
-}
-.draw-border:hover::before,
-.draw-border:hover::after {
-  border-color: #fff;
-  transition: border-color 0s, width 0.25s, height 0.25s;
-  width: 100%;
-  height: 100%;
-}
-.draw-border:hover::before {
-  transition-delay: 0s, 0s, 0.25s;
-}
-.draw-border:hover::after {
-  transition-delay: 0s, 0.25s, 0s;
-}
-
 /* navbar hover */
 .menu li:after {
   content: "";
@@ -1146,6 +1107,9 @@ textarea:focus {
 }
 
 /* Footer  */
+.explore{
+  margin-bottom: 30px;
+}
 #personal h3{
   margin-bottom: 30px;
   color:#C1CAE8;
@@ -1180,6 +1144,9 @@ textarea:focus {
   color:#C1CAE8;
   margin-bottom: 30px;
   font-size: 20px;
+}
+.follow-us{
+  margin-bottom: 50px;
 }
 #explore h4{
   text-align : center;
@@ -1217,7 +1184,9 @@ padding-bottom: 5px;
     width: 60%;
     margin: auto;
   }
-  
+  .social-links{
+    margin-left:-12px;
+  }
 }
 @media (max-width:988px){
   
@@ -1309,6 +1278,15 @@ padding-bottom: 5px;
     width: 300px;
     height: 240px !important;
     z-index: 1;
+  }
+}
+@media(max-width:320px){
+  .social-links{
+    margin-left: -21px;
+
+  }
+  .social-links li{
+    margin-right: 10px;
   }
 }
 /* countdown timer  */
