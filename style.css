@@ -40,13 +40,16 @@ h6 {
 }
 
 
-#timeline,
 #events,
 #faq,
-#sponsors,
 #previous-sponsors {
-  scroll-margin: 30px;
+  scroll-margin: 80px;
   font-family: "Space Grotesk" , sans-serif;
+}
+
+#sponsors,
+#timeline{
+  scroll-margin: 30px;
 }
 
 .squabble,
@@ -114,10 +117,10 @@ h6 {
 }
 .about-text {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 10px;
-  /* font-weight: bold; */
-  color: #c1cae8;
+  font-weight: 400 !important;
+  color: #c1cae8a2;
 }
 .text-center {
   font-style: normal;
@@ -128,6 +131,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
 }
 /* _______________________ScrollBar________________________ */
 ::-webkit-scrollbar {
@@ -907,12 +911,13 @@ textarea:focus {
 }
 
 .accordion-item-header {
-  padding: 0.5rem 3rem 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   min-height: 3.5rem;
   line-height: 1.25rem;
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   cursor: pointer;
   color: #ffffff;
@@ -1165,10 +1170,10 @@ textarea:focus {
   transition: all 0.3s ease-in;
   bottom: 40%;
 }
-.nav:hover {
-  width: 4%;
-  height: 1px;
-  background-color: #fff;
+.nav a:hover {
+  color:#C1CAE8 !important;
+  transition: 0.3s ease-in;
+  font-size: 17px;
 }
 .menu li a:hover::after {
   color: #1d2223;
