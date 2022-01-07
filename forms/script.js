@@ -10,13 +10,13 @@ function requireNot(iStart, iEnd) {
       .getElementById("phone" + i)
       .removeAttribute("required");
     serialJSON["college" + i] = document
-      .getElementById("college_name" + 1)
+      .getElementById("college_name" + i)
       .removeAttribute("required");
     serialJSON["branch" + i] = document
       .getElementById("branch" + i)
       .removeAttribute("required");
     serialJSON["year" + i] = document
-      .querySelector(`input[name="firstRadio${i}"]:checked`)
+      .getElementById(`FE${i}`)
       .removeAttribute("required");
   }
 }
@@ -32,7 +32,7 @@ function requireYes(iStart, iEnd) {
       .getElementById("phone" + i)
       .setAttribute("required", "");
     serialJSON["college" + i] = document
-      .getElementById("college_name" + 1)
+      .getElementById("college_name" + i)
       .setAttribute("required", "");
     serialJSON["branch" + i] = document
       .getElementById("branch" + i)

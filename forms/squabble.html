@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Techopedia 10.0 | IEEE SIESGST </title>
-  <!-- stylesheet -->
-  <!-- <link rel="stylesheet" href="form.css" /> -->
   <!-- bootstrap cdns -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -24,13 +22,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- terminal effect -->
-<!--   <script src="t.min.js"></script> -->
-  <!-- for on scroll animations -->
-<!--   <link rel="stylesheet" href="animate.css" /> -->
-  <!-- <link rel="stylesheet" href="event.css"> -->
   <link rel="stylesheet" href="style.css">
-<!--   <script src="wow.min.js"></script> -->
   <script>
     window.addEventListener('scroll', (event) => {
       let yOffset = window.pageYOffset;
@@ -124,11 +116,6 @@
 
       <div class="event">
         <h1 class="Event-heading">Squabble</h1>
-        <!-- <h5 class="Event-about">Rounds: 3</h5>
-        <h5 class="Event-about">Max team of: 2</h5>
-        <h5 class="Event-about">Event Heads: <span class="Event-about1"> &nbsp Ojas Vighne <a href="tel:9137723348" class="phn">(+91 9137723348)</a> &nbsp &nbsp Shivam Pandey <a href="tel:8433777820" class="phn">(+91 8433777820)</a></span>
-         
-        </h5> -->
         <p class="Event-para">
           Storyline: Welcome to a series of debates incorporating time in a mind-boggling manner. From the futuristic
           2040 to an apocalyptic 2050, travel through time and experience unexpected twists and turns as you watch the
@@ -180,39 +167,33 @@
               </li>
             </ul>
             <form id="squabble" action="#" class="form">
-              <!-- <div id="member1"></div> <div id="member2"></div> -->
               <div class="underline">
                 <u>Team Member 1</u>
               </div>
               <div class="form-component">
                 <label class="label" for="name">Name</label>
                 <input type="text" id="name1" class="form-control form-input p-5" name="name"
-                  placeholder="Enter your Full Name" />
+                  placeholder="Enter your Full Name" required />
               </div>
-
               <div class="form-component">
                 <label class="label" for="name">Email Id</label>
-                <input type="email" class="form-control" id="email1" name="email" placeholder="Enter your Email" />
+                <input type="email" class="form-control" id="email1" name="email" placeholder="Enter your Email"  required/>
               </div>
-
               <div class="form-component">
                 <label class="label" for="name">Phone No.</label>
                 <input type="tel" class="form-control" id="phone1" name="phone" placeholder="Enter your Phone Number"
-                  pattern="[7-9]{1}[0-9]{9}" />
+                  pattern="[7-9]{1}[0-9]{9}" required/>
               </div>
-
               <div class="form-component">
                 <label class="label" for="college_name">College Name</label>
                 <input type="text" class="form-control" id="college_name1" name="college_name"
-                  placeholder="Enter your College Name" />
+                  placeholder="Enter your College Name" required/>
               </div>
-
               <div class="form-component">
                 <label class="label" for="branch_name">Branch</label></br>
-
-                <select class="branch1" id="branch1" name="branch">
+                <select class="branch1" id="branch1" name="branch" required>
                   <option value="" disabled selected>Select your branch</option>
-                  <option value="CE" class="my-3">Computer Engineering</option>
+                  <option value="CE">Computer Engineering</option>
                   <option value="IT">Information Technology</option>
                   <option value="EXTC">Electronics & Telecommunication</option>
                   <option value="ECS">Electronics & Computer Science</option>
@@ -220,17 +201,13 @@
                   <option value="PPT">Printing & Packaging Technology</option>
                   <option value="AI & Data Science">Artificial Intelligence & Data Science</option>
                   <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
-                  <option value="CS & Engineering" class="p-2">Computer Science & Engineering</option>
+                  <option value="CS & Engineering">Computer Science & Engineering</option>
                 </select>
               </div>
-
-
-
               <div class="form-component">
                 <label class="label" for="name">Year</label>
-
                 <div id="year1" name="year1">
-                  <input type="radio" id="FE1" name="year1" value="FE" />
+                  <input type="radio" id="FE1" name="year1" value="FE" required/>
                   <label for="FE">FE</label><br />
                   <input type="radio" id="SE1" name="year1" value="SE" />
                   <label for="SE">SE</label><br />
@@ -240,219 +217,123 @@
                   <label for="BE">BE</label><br />
                 </div>
               </div>
-
-<!--               <div class="form-component">
-                <label class="label" for="name">Will you be able to attend offline events?</label>
-
-                <div id="attend1">
-                  <input type="radio" name="attend1" value="Yes" />
-                  <label for="yes">Yes</label><br />
-                  <input type="radio" name="attend1" value="No" />
-                  <label for="no">No</label><br />
-                </div><br />
-
+              <!-------------------------------------------Member 2 ----------------------------------->
+              <div id="form2">
+                <div class="underline">
+                  <u>Team Member 2</u>
+                </div>
                 <div class="form-component">
-                  <label class="label" for="name">Vaccination Status</label>
-
-                  <div id="vaccine1">
-                    <input type="radio" name="vaccine1" value="Fully Vaccinated" />
-                    <label>Fully Vaccinated</label><br />
-                    <input type="radio" name="vaccine1" value="Partially Vaccinated" />
-                    <label>Partially Vaccinated</label><br />
-                    <input type="radio" name="vaccine1" value="No Vaccine Yet" />
-                    <label>Not Vaccinated</label><br />
-                  </div>
-                </div> -->
-
-
-
-                <!-- -----------------------------------------Member 2---- -->
-                <!-- <div id="form2"></div> -->
-                <div id="form2">
-                  <div class="underline">
-                    <u>Team Member 2</u>
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name">Name</label>
-                    <input type="text" class="form-control form-input" name="name2" placeholder="Enter your Full Name"
-                      id="name2" />
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name">Email Id</label>
-                    <input type="email" id="email2" class="form-control" name="email2" placeholder="Enter your Email" />
-                  </div>
-
-
-                  <div class="form-component">
-                    <label class="label" for="name">Phone No.</label>
-                    <input type="tel" id="phone2" class="form-control" name="phone"
-                      placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" />
-                  </div>
-
-
-                  <div class="form-component">
-                    <label class="label" for="college_name">College Name</label>
-                    <input type="text" class="form-control" id="college_name2" name="college_name2"
-                      placeholder="Enter your College Name" />
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="branch_name">Branch</label></br>
-
-                    <select class="branch1" id="branch1" name="branch">
-                      <option value="" disabled selected>Select your branch</option>
-                      <option value="CE" class="my-3">Computer Engineering</option>
-                      <option value="IT">Information Technology</option>
-                      <option value="EXTC">Electronics & Telecommunication</option>
-                      <option value="ECS">Electronics & Computer Science</option>
-                      <option value="MECH">Mechanical Engineering</option>
-                      <option value="PPT">Printing & Packaging Technology</option>
-                      <option value="AI & Data Science">Artificial Intelligence & Data Science</option>
-                      <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
-                      <option value="CS & Engineering" class="p-2">Computer Science & Engineering</option>
-                    </select>
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name">Year</label>
-
-                    <div id="year2" name="year2">
-                      <input type="radio" id="FE2" name="year2" value="FE" />
-                      <label for="FE">FE</label><br />
-                      <input type="radio" id="SE2" name="year2" value="SE" />
-                      <label for="SE">SE</label><br />
-                      <input type="radio" id="TE2" name="year2" value="TE" />
-                      <label for="TE">TE</label><br />
-                      <input type="radio" id="BE2" name="year2" value="BE" />
-                      <label for="BE">BE</label>
-                    </div>
-                  </div>
-<!--                   <div class="form-component">
-                    <label class="label" for="name">Will you be able to attend offline events?</label>
-
-                    <div id="attend2">
-                      <input type="radio" name="attend2" value="Yes" />
-                      <label for="yes">Yes</label><br />
-                      <input type="radio" name="attend2" value="No" />
-                      <label for="no">No</label><br />
-                    </div>
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name2">Vaccination Status</label>
-
-                    <div id="vaccine2">
-                      <input type="radio" name="vaccine2" value="Fully Vaccinated" />
-                      <label>Fully Vaccinated</label><br />
-                      <input type="radio" name="vaccine2" value="Partially Vaccinated" />
-                      <label>Partially Vaccinated</label><br />
-                      <input type="radio" name="vaccine2" value="No Vaccine Yet" />
-                      <label>Not Vaccinated</label><br />
-                    </div>
-                  </div> -->
-
-                  <div class="underline">
-                    <u>Team Member 3</u>
-                  </div>
-
-
-                  <div class="form-component">
-                    <label class="label" for="name">Name</label>
-                    <input type="text" class="form-control form-input" name="name3" placeholder="Enter your Full Name"
-                      id="name3" />
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name">Email ID</label>
-                    <input type="email" id="email3" class="form-control" name="email3" placeholder="Enter your Email" />
-                  </div>
-
-
-                  <div class="form-component">
-                    <label class="label" for="name">Phone No.</label>
-                    <input type="tel" id="phone3" class="form-control" name="phone3"
-                      placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" />
-                  </div>
-
-
-                  <div class="form-component">
-                    <label class="label" for="college_name">College Name</label>
-                    <input type="text" class="form-control" id="college_name3" name="college_name3"
-                      placeholder="Enter your College Name" />
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="branch_name">Branch</label></br>
-
-                    <select class="branch1" id="branch1" name="branch">
-                      <option value="" disabled selected>Select your branch</option>
-                      <option value="CE" class="my-3">Computer Engineering</option>
-                      <option value="IT">Information Technology</option>
-                      <option value="EXTC">Electronics & Telecommunication</option>
-                      <option value="ECS">Electronics & Computer Science</option>
-                      <option value="MECH">Mechanical Engineering</option>
-                      <option value="PPT">Printing & Packaging Technology</option>
-                      <option value="AI & Data Science">Artificial Intelligence & Data Science</option>
-                      <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
-                      <option value="CS & Engineering" class="p-2">Computer Science & Engineering</option>
-                    </select>
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name">Year</label>
-
-                    <div id="year3" name="year3">
-                      <input type="radio" id="FE3" name="year3" value="FE" />
-                      <label for="FE">FE</label><br />
-                      <input type="radio" id="SE3" name="year3" value="SE" />
-                      <label for="SE">SE</label><br />
-                      <input type="radio" id="TE3" name="year3" value="TE" />
-                      <label for="TE">TE</label><br />
-                      <input type="radio" id="BE3" name="year3" value="BE" />
-                      <label for="BE">BE</label><br />
-                    </div>
-                  </div>
-<!--                   <div class="form-component">
-                    <label class="label" for="name">Will you be able to attend offline events?</label>
-
-                    <div id="attend3">
-                      <input type="radio" name="attend3" value="Yes" />
-                      <label for="yes">YES</label><br />
-                      <input type="radio" name="attend3" value="No" />
-                      <label for="no">NO</label><br />
-                    </div>
-                  </div>
-
-                  <div class="form-component">
-                    <label class="label" for="name2">Vaccination Status</label>
-
-                    <div id="vaccine3">
-                      <input type="radio" name="vaccine3" value="Fully Vaccinated" />
-                      <label>Fully Vaccinated</label><br />
-                      <input type="radio" name="vaccine3" value="Partially Vaccinated" />
-                      <label>Partially Vaccinated</label><br />
-                      <input type="radio" name="vaccine3" value="No Vaccine Yet" />
-                      <label>Not Vaccinated</label><br />
-                    </div>
-                  </div> -->
-
-                  <div class="form-component">
-                    <label class="label" for="branch_name">Slots</label></br>
-                    <select id="slots" name="slots">
-                      <option value="" disabled selected>Select your slot</option>
-                      <option value="9 to 10">9 to 10</option>
-                      <option value="10 to 11">10 to 11</option>
-                      <option value="11 to 12">11 to 12</option>
-                      <option value="12 to 1">12 to 1</option>
-                    </select>
+                  <label class="label" for="name">Name</label>
+                  <input type="text" class="form-control form-input" name="name2" placeholder="Enter your Full Name"
+                    id="name2" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="name">Email Id</label>
+                  <input type="email" id="email2" class="form-control" name="email2" placeholder="Enter your Email" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="name">Phone No.</label>
+                  <input type="tel" id="phone2" class="form-control" name="phone"
+                    placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="college_name">College Name</label>
+                  <input type="text" class="form-control" id="college_name2" name="college_name2"
+                    placeholder="Enter your College Name" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="branch_name">Branch</label></br>
+                  <select class="branch1" id="branch2" name="branch">
+                    <option value="" disabled selected>Select your branch</option>
+                    <option value="CE" class="my-3">Computer Engineering</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="EXTC">Electronics & Telecommunication</option>
+                    <option value="ECS">Electronics & Computer Science</option>
+                    <option value="MECH">Mechanical Engineering</option>
+                    <option value="PPT">Printing & Packaging Technology</option>
+                    <option value="AI & Data Science">Artificial Intelligence & Data Science</option>
+                    <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
+                    <option value="CS & Engineering" class="p-2">Computer Science & Engineering</option>
+                  </select>
+                </div>
+                <div class="form-component">
+                  <label class="label" for="name">Year</label>
+                  <div id="year2" name="year2">
+                    <input type="radio" id="FE2" name="year2" value="FE" />
+                    <label for="FE">FE</label><br />
+                    <input type="radio" id="SE2" name="year2" value="SE" />
+                    <label for="SE">SE</label><br />
+                    <input type="radio" id="TE2" name="year2" value="TE" />
+                    <label for="TE">TE</label><br />
+                    <input type="radio" id="BE2" name="year2" value="BE" />
+                    <label for="BE">BE</label>
                   </div>
                 </div>
-                <div class="button-group">
-                  <button type="submit" class="button">Register</button>
+                <div class="underline">
+                  <u>Team Member 3</u>
                 </div>
+                <div class="form-component">
+                  <label class="label" for="name">Name</label>
+                  <input type="text" class="form-control form-input" name="name3" placeholder="Enter your Full Name"
+                    id="name3" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="name">Email ID</label>
+                  <input type="email" id="email3" class="form-control" name="email3" placeholder="Enter your Email" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="name">Phone No.</label>
+                  <input type="tel" id="phone3" class="form-control" name="phone3"
+                    placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="college_name">College Name</label>
+                  <input type="text" class="form-control" id="college_name3" name="college_name3"
+                    placeholder="Enter your College Name" />
+                </div>
+                <div class="form-component">
+                  <label class="label" for="branch_name">Branch</label></br>
+                  <select class="branch1" id="branch3" name="branch">
+                    <option value="" disabled selected>Select your branch</option>
+                    <option value="CE" class="my-3">Computer Engineering</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="EXTC">Electronics & Telecommunication</option>
+                    <option value="ECS">Electronics & Computer Science</option>
+                    <option value="MECH">Mechanical Engineering</option>
+                    <option value="PPT">Printing & Packaging Technology</option>
+                    <option value="AI & Data Science">Artificial Intelligence & Data Science</option>
+                    <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
+                    <option value="CS & Engineering" class="p-2">Computer Science & Engineering</option>
+                  </select>
+                </div>
+                <div class="form-component">
+                  <label class="label" for="name">Year</label>
 
+                  <div id="year3" name="year3">
+                    <input type="radio" id="FE3" name="year3" value="FE" />
+                    <label for="FE">FE</label><br />
+                    <input type="radio" id="SE3" name="year3" value="SE" />
+                    <label for="SE">SE</label><br />
+                    <input type="radio" id="TE3" name="year3" value="TE" />
+                    <label for="TE">TE</label><br />
+                    <input type="radio" id="BE3" name="year3" value="BE" />
+                    <label for="BE">BE</label><br />
+                  </div>
+                </div>
+                <div class="form-component">
+                  <label class="label" for="branch_name">Slots</label></br>
+                  <select id="slots" name="slots">
+                    <option value="" disabled selected>Select your slot</option>
+                    <option value="9 to 10">9 to 10</option>
+                    <option value="10 to 11">10 to 11</option>
+                    <option value="11 to 12">11 to 12</option>
+                    <option value="12 to 1">12 to 1</option>
+                  </select>
+                </div>
+              </div>
+              <div class="button-group">
+                <button type="submit" class="button">Register</button>
+              </div>
             </form>
           </section>
         </div>
