@@ -249,7 +249,7 @@ nav #brand a:hover {
 }
 
 #resize li:nth-child(1) {
-  margin-top: 140px;
+  margin-top: 100px;
 }
 
 #resize #menu li a {
@@ -295,7 +295,7 @@ nav #brand a:hover {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   #resize {
     visibility: hidden !important;
   }
