@@ -18,7 +18,7 @@ ul,
 li,
 a {
   text-decoration: none !important;
-  /* color: white !important; */
+  color: white !important;
   list-style: none !important;
 }
 
@@ -47,7 +47,6 @@ h6 {
 #previous-sponsors {
   scroll-margin: 30px;
   font-family: "Space Grotesk" , sans-serif;
-  /* font-weight: bold; */
 }
 
 .squabble,
@@ -58,6 +57,8 @@ h6 {
 .nexus {
   align-items: center;
   max-width: 100vw;
+  margin-bottom: 60px !important;
+  position: relative;
 }
 .inquisitive::before,
 .QB::before,
@@ -68,6 +69,7 @@ h6 {
   width: 60vw;
   height: 60vw;
   left: -520px;
+  z-index: -1;
   background: radial-gradient(
     #421b82,
     #431b82a4,
@@ -83,13 +85,15 @@ h6 {
 .squabble::before,
 .technopreneur::before,
 .nexus::before {
-  content: "";
   position: absolute;
-  border-radius: 700px;
-  overflow: hidden;
-  /* width: 60vw;
+  content: "";
+  right: -500px;
+  transform: translateY(-50%);
+  width: 60vw;
   height: 60vw;
-  right: -400px; */
+  border-radius: 700px;
+  z-index: -1;
+  top: 200px;
   background: radial-gradient(
     #1b3f82,
     #1d1b82a2,
@@ -106,7 +110,7 @@ h6 {
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
 }
 .about-text {
   font-family: "Inter", sans-serif;
@@ -115,11 +119,11 @@ h6 {
   /* font-weight: bold; */
   color: #c1cae8;
 }
-/* .text-center {
+.text-center {
   font-style: normal;
   font-weight: bold;
   color: #c1cae8;
-} */
+}
 .events{
   display: flex;
   flex-direction: column;
@@ -157,7 +161,7 @@ nav {
 .menu {
   display: flex;
   width: 40%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -370,6 +374,7 @@ h6 {
   width: 648px;
   height: 502px;
   object-fit: cover;
+  z-index: 1;
   box-shadow: 27px 29px 100px rgba(0, 0, 13, 0.7);
 }
 
@@ -437,14 +442,11 @@ h6 {
   font-weight: bold;
   font-family: "Space Grotesk", sans-serif;
 }
-#sponsors {
-  margin-top: 104px;
-  margin-bottom: 104px;
-}
+#sponsors,
 #previous-sponsors {
-  margin-top: 104px;
-  margin-bottom: 104px;
-  margin-left:51px;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 50px 0;
 }
 .sponsor-container .card p {
   font-family: "Space Grotesk", sans-serif;
@@ -454,9 +456,7 @@ h6 {
   justify-content: space-around;
   flex-direction: row !important;
   align-items: center;
-}
-#sponsors h3{
-  margin-left: 44px;
+  padding-top: 20px;
 }
 
 #previous-sponsors .email{
@@ -476,11 +476,18 @@ color:#C1CAE8;
   align-items: center;
 }
 
+.sponsor-image {
+  mix-blend-mode: screen;
+  width: 240px;
+}
+
 /*--------------- footer section --------------- */
 .collab {
   text-align: right;
 }
-
+.explore {
+  margin: 20px 0;
+}
 .collab p {
   font-weight: lighter !important;
   margin-bottom: 20px;
@@ -529,10 +536,6 @@ color:#C1CAE8;
     text-align: center;
   }
 
-  .info ul {
-    margin: 0 0 0 -22px;
-    padding: 0;
-  }
   #previous-sponsors{
     margin-left:0px;
 
@@ -860,6 +863,11 @@ textarea:focus {
   .timeline {
     margin-left: 15px;
   }
+  .explore {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
 }
 
 /*************** FAQ **************/
@@ -944,16 +952,65 @@ textarea:focus {
   .labyrinth,
   .nexus {
     background-size: 800px;
-    margin-top: 0px;
+    margin-bottom: 0px !important;
     padding-top: 0px;
   }
+.inquisitive::before,
+.QB::before,
+.labyrinth::before {
+  content: "";
+  position: absolute;
+  border-radius: 700px;
+  width: 80vw;
+  height: 60vw;
+  left: -300px;
+  z-index: -1;
+  background: radial-gradient(
+    #421b82,
+    #431b82a4,
+    #431b8263,
+    #431b8248,
+    #431b822a,
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+.squabble::before,
+.technopreneur::before,
+.nexus::before {
+  position: absolute;
+  content: "";
+  right: -230px;
+  transform: translateY(-50%);
+  width: 60vw;
+  height: 60vw;
+  border-radius: 700px;
+  z-index: -1;
+  top: 200px;
+  background: radial-gradient(
+    #1b3f82,
+    #1d1b82a2,
+    #1d1b8286,
+    #1d1b825d,
+    #1d1b823f,
+    transparent,
+    transparent,
+    transparent
+  );
+}
   .project {
     height: 300px;
   }
-
-  #faq .faq .faq-image img{
+  .faq-image{
+    text-align: center;
+    width: 80% !important;
+  }
+  .faq-image img{
     margin-left: 45px;
     margin-top:20px;
+    margin: 0 auto;
 }
 }
 
@@ -968,6 +1025,7 @@ textarea:focus {
   .QB,
   .labyrinth,
   .nexus {
+    z-index: 0;
     background-size: 600px;
     margin-top: -90px;
   }
@@ -975,7 +1033,6 @@ textarea:focus {
     margin-bottom: 20px !important;
   }
   .social-links {
-    flex-wrap: wrap;
     width: 90%;
   }
   .footer-column {
@@ -991,7 +1048,7 @@ textarea:focus {
  .event-cover img{
    width: 300px;
    height: 240px;
-   mix-blend-mode: lighten;
+   z-index: 1;
  }
 
  .inquisitive::after,
@@ -1000,9 +1057,11 @@ textarea:focus {
   content: "";
   position: absolute;
   border-radius: 700px;
-  width: 80vw;
-  height: 80vw;
+  width: 90vw;
+  height: 90vw;
+  top: 150px;
   left: -140px;
+  z-index: -1;
   background: radial-gradient(
     #421b82,
     #431b82a4,
@@ -1017,13 +1076,16 @@ textarea:focus {
 
 .squabble::before,
 .technopreneur::before,
-.nexus::before  {
-  content: "";
+.nexus::before {
   position: absolute;
+  content: "";
+  right: -150px;
+  transform: translateY(-50%);
+  width: 90vw;
+  height: 90vw;
   border-radius: 700px;
-  width: 80vw;
-  height: 80vw;
-  left: -140px;
+  z-index: -1;
+  top: 350px;
   background: radial-gradient(
     #1b3f82,
     #1d1b82a2,
@@ -1036,6 +1098,9 @@ textarea:focus {
   );
 }
 
+.sponsor-image{
+  width: 200px;
+}
 }
 /* ḷogo */
 .logo {
@@ -1100,7 +1165,7 @@ textarea:focus {
   transition: all 0.3s ease-in;
   bottom: 40%;
 }
-.menu li:hover::after {
+.nav:hover {
   width: 4%;
   height: 1px;
   background-color: #fff;
@@ -1273,13 +1338,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#073455", en
   }
   #previous-sponsors h3{
     margin-top: -60px;
-    margin-bottom: 55px;
-  }
-  .sponsors h3{
-    margin-left: 44px;
-  }
-  .sponsor-container{
-    margin-left: 30px;
+    margin-bottom: 50px;
   }
   
 }
