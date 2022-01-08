@@ -24,13 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- terminal effect -->
-<!--     <script src="t.min.js"></script> -->
-    <!-- for on scroll animations -->
-<!--     <link rel="stylesheet" href="animate.css" /> -->
-    <!-- <link rel="stylesheet" href="event.css"> -->
     <link rel="stylesheet" href="style.css">
-<!--     <script src="wow.min.js"></script> -->
     <script>
         window.addEventListener('scroll', (event) => {
             let yOffset = window.pageYOffset;
@@ -160,7 +154,10 @@
                                     </button>
                                 </li>
                             </ul>
-                            <form id="inquisitive" action="#" class="form">
+                            <form id="labyrinth" action="#" class="form">
+                                <div class="underline">
+                                    <u>Team Member 1</u>
+                                </div>
                                 <div class="form-component">
                                     <label class="label" for="name">Name</label>
                                     <input type="text" id="name1" class="form-control form-input" name="name"
@@ -199,8 +196,6 @@
                                         </option>
                                     </select>
                                 </div>
-
-
                                 <div class="form-component">
                                     <label class="label" for="name">Year</label>
 
@@ -215,46 +210,63 @@
                                         <label for="BE">BE</label><br />
                                     </div>
                                 </div>
-
-<!--                                 <div class="form-component">
-                                    <label class="label" for="name">Will you be able to attend offline events?</label>
-
-                                    <div id="attend1">
-                                        <input type="radio" name="attend1" value="Yes" />
-                                        <label for="yes">YES</label><br />
-                                        <input type="radio" name="attend1" value="No" />
-                                        <label for="no">NO</label><br />
-                                    </div><br />
-
-                                    <div class="form-component">
-                                        <label class="label" for="name">Vaccination Status</label>
-
-                                        <div id="vaccine1">
-                                            <input type="radio" name="vaccine1" value="Fully Vaccinated" />
-                                            <label>Fully Vaccinated</label><br />
-                                            <input type="radio" name="vaccine1" value="Partially Vaccinated" />
-                                            <label>Partially Vaccinated</label><br />
-                                            <input type="radio" name="vaccine1" value="No Vaccine Yet" />
-                                            <label>Not Vaccinated</label><br />
-                                        </div>
-                                    </div> -->
-
-
-
-                                    <!-- <div class="form-component">
-                                        <label class="label" for="branch_name">Slots</label></br>
-                                          <select id="slots" name="slots">
-                                          <option value="" disabled selected>Select your slot</option>
-                                          <option value="9 to 10">9 to 10</option>
-                                          <option value="10 to 11">10 to 11</option>
-                                          <option value="11 to 12">11 to 12</option>
-                                          <option value="12 to 1">12 to 1</option>
-                                        </select>
-                                      </div> -->
-
-                                    <div class="button-group">
-                                        <button type="submit" class="button">Register</button>
+                                <div class="underline">
+                                    <u>Team Member 2</u>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="name">Name</label>
+                                    <input type="text" id="name2" class="form-control form-input" name="name"
+                                        placeholder="Enter your Full Name" required/>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="name">Email ID</label>
+                                    <input type="email" class="form-control" id="email2" name="email"
+                                        placeholder="Enter your Email" required/>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="name">Phone No.</label>
+                                    <input type="tel" class="form-control" id="phone2" name="phone"
+                                        placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" required/>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="college_name">College Name</label>
+                                    <input type="text" class="form-control" id="college_name2" name="college_name"
+                                        placeholder="Enter your College Name" required/>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="branch_name">Branch</label></br>
+                                    <select class="branch1" id="branch2" name="branch" required>
+                                        <option value="" disabled selected>Select your branch</option>
+                                        <option value="CE">Computer Engineering</option>
+                                        <option value="IT">Information Technology</option>
+                                        <option value="EXTC">Electronics & Telecommunication</option>
+                                        <option value="ECS">Electronics & Computer Science</option>
+                                        <option value="MECH">Mechanical Engineering</option>
+                                        <option value="PPT">Printing & Packaging Technology</option>
+                                        <option value="AI & Data Science">Artificial Intelligence & Data Science
+                                        </option>
+                                        <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
+                                        <option value="CS & Engineering">Computer Science & Engineering
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="name">Year</label>
+                                    <div id="year2" name="year1">
+                                        <input type="radio" id="FE2" name="year2" value="FE" required/>
+                                        <label for="FE">FE</label><br />
+                                        <input type="radio" id="SE2" name="year2" value="SE" />
+                                        <label for="SE">SE</label><br />
+                                        <input type="radio" id="TE2" name="year2" value="TE" />
+                                        <label for="TE">TE</label><br />
+                                        <input type="radio" id="BE2" name="year2" value="BE" />
+                                        <label for="BE">BE</label><br />
                                     </div>
+                                </div>
+                                <div id="form2"></div>
+                                <div class="button-group">
+                                    <button type="submit" class="button">Register</button>
+                                </div>
                             </form>
                         </section>
                     </div>

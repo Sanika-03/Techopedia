@@ -193,7 +193,6 @@ if (document.getElementById("squabble")) {
         serialJSON["slot"] = document.getElementById("slots").value;
       }
       serialJSON["total"] = x;
-      // console.log(serialJSON);
       sendData("nexus", serialJSON);
       return false;
     });
@@ -228,43 +227,40 @@ if (document.getElementById("squabble")) {
       sendData("quantumBreak", serialJSON);
       return false;
     });
+} else if (document.getElementById("labyrinth")) {
+  document.getElementById("form2").style.display = "none";
+  document.getElementById("Team2Form").addEventListener("click", () => {
+    document.getElementById("form2").style.display = "none";
+  });
+  document.getElementById("Team1Form").addEventListener("click", () => {
+    document.getElementById("form2").style.display = "none";
+  });
+  document
+    .getElementById("labyrinth")
+    .addEventListener("submit", (formresponse) => {
+      document.getElementById("preloader").style.display = "block";
+      formresponse.preventDefault();
+      for (i = 1; i <= 2; i++) {
+        serialJSON["name" + i] = document.getElementById("name" + i).value;
+        serialJSON["email" + i] = document.getElementById("email" + i).value;
+        serialJSON["phone" + i] = document.getElementById("phone" + i).value;
+        serialJSON["college" + i] = document.getElementById(
+          "college_name" + 1
+        ).value;
+        serialJSON["branch" + i] = document.getElementById("branch" + i).value;
+        serialJSON["year" + i] = document.querySelector(
+          `input[name="year${i}"]:checked`
+        ).value;
+      }
+      sendData("labyrinth", serialJSON);
+      return false;
+    });
 }
-// else if (document.getElementById("labyrinth")) {
-//   document.getElementById("form2").style.display = "none";
-//   document.getElementById("Team2Form").addEventListener("click", () => {
-//     document.getElementById("form2").style.display = "none";
-//   });
-//   document.getElementById("Team1Form").addEventListener("click", () => {
-//     document.getElementById("form2").style.display = "none";
-//   });
-//   document
-//     .getElementById("labyrinth")
-//     .addEventListener("submit", (formresponse) => {
-//       document.getElementById("preloader").style.display = "block";
-//       formresponse.preventDefault();
-//       for (i = 1; i <= 1; i++) {
-//         serialJSON["name" + i] = document.getElementById("name" + i).value;
-//         serialJSON["email" + i] = document.getElementById("email" + i).value;
-//         serialJSON["phone" + i] = document.getElementById("phone" + i).value;
-//         serialJSON["college" + i] = document.getElementById(
-//           "college_name" + 1
-//         ).value;
-//         serialJSON["branch" + i] = document.getElementById("branch" + i).value;
-//         serialJSON["year" + i] = document.querySelector(
-//           `input[name="year${i}"]:checked`
-//         ).value;
-//       }
-//       serialJSON["total"] = 1;
-//       console.log(serialJSON);
-//       // sendData("labyrinth", serialJSON);
-//       return false;
-//     });
-// }
 let serialJSON = {};
 function sendData(event) {
   serialJSON["event"] = event;
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycby2gQaJzcZGs6htazHbXCgGybHc9cqt4X-tjepHg6_RI3kvzAbRnT8mgbISgeC8IifM_w/exec",
+    url: "https://script.google.com/macros/s/AKfycbzTUWrm3Iv3iFvrwH0yX7g1vHh0064CVW7-Vqo7OBDRloHx35paWExhUmYRv52qesnVGw/exec",
 
     type: "POST",
     data: serialJSON,
@@ -283,7 +279,7 @@ function sendData(event) {
 
 window.onload = function () {
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycby2gQaJzcZGs6htazHbXCgGybHc9cqt4X-tjepHg6_RI3kvzAbRnT8mgbISgeC8IifM_w/exec",
+    url: "https://script.google.com/macros/s/AKfycbzTUWrm3Iv3iFvrwH0yX7g1vHh0064CVW7-Vqo7OBDRloHx35paWExhUmYRv52qesnVGw/exec",
     type: "GET",
     dataType: "json",
 
@@ -299,6 +295,8 @@ window.onload = function () {
         pageSlot = res.slotNexus;
       } else if (document.getElementById("quantumBreak")) {
         pageSlot = res.slotQb;
+      } else if (document.getElementById("labyrinth")) {
+        return false;
       }
 
       let htmlSlot = document.getElementById("slots");
