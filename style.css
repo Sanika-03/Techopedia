@@ -473,7 +473,7 @@ h6 {
   color:#fff;
   
 }
-#previous-sponsors .email span ,#previous-sponsors .email span a{
+#previous-sponsors .email span ,#previous-sponsors .email span a , .official-website{
 text-decoration: underline;
 color:#C1CAE8;
 }
@@ -495,6 +495,9 @@ color:#C1CAE8;
 }
 .explore {
   margin: 20px 0;
+}
+.official-website{
+  margin-bottom:20px;
 }
 .collab p {
   font-weight: lighter !important;
@@ -1214,7 +1217,7 @@ padding-bottom: 5px;
 .social-links img:hover{
   box-shadow: 0px 1px 100px 0px #fff;
   /* background-color:#fff */
-  border: #0B001D solid .05px;
+  /* border: #0B001D solid .05px; */
   border-radius:5px;
 }
 @media (max-width:768px){
@@ -1384,3 +1387,24 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#073455", en
 
   
 }
+@media(max-width: 1218px) and (min-width: 988px){
+ .social-links{
+  margin-left: -70px;
+ } 
+}
+@media(max-width: 280px){
+  .social-links{
+    margin-left: -44px;
+  } 
+ }
+@media(max-width: 1382px) and (min-width: 1280px){
+  .social-links{
+    margin-left: -46px;
+  } 
+ }
+@media(max-width: 280px){
+  .social-links{
+    margin-left: -44px;
+  } 
+ }
+
