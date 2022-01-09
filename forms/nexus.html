@@ -1,273 +1,487 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Registration Form</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Techopedia 10.0 | IEEE SIESGST </title>
+    <!-- stylesheet -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- bootstrap cdns -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- terminal effect -->
+<!--     <script src="t.min.js"></script> -->
+    <!-- for on scroll animations -->
+<!--     <link rel="stylesheet" href="animate.css" /> -->
+    <!-- <link rel="stylesheet" href="event.css"> -->
+    <link rel="stylesheet" href="style.css">
+<!--     <script src="wow.min.js"></script> -->
+    <script>
+        window.addEventListener('scroll', (event) => {
+            let yOffset = window.pageYOffset;
+            if (yOffset >= 40) {
+                document.getElementById('navBg').classList.remove('homeBg')
+            }
+            else {
+                document.getElementById('navBg').classList.remove('homeBg')
+            }
+        });
+    </script>
 </head>
 
 <body>
-  <div id="preloader" style="display: none">
-    <span id="loadingText" class="text-white">Loading...</span>
-  </div>
-  <section class="hero-container">
-    <div class="hero-form">
-      <h1 class="primary-title">TECHOPEDIA 10.0</h1>
-      <div class="event">
-        <div class="eventdesc">
-          <div class="eventimg">
-            <img src="./Images/Retro Future 1.jpg" />
-          </div>
-          <div class="event-info">
-            <h2 class="eventtitle">NEXUS</h2>
-            <p class="desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-          </div>
+    <div class="wrapper">
+        <nav class="homeBg" id="navBg">
+            <span id="brand">
+                <a href="https://sanika-03.github.io/Techopedia/"><img class="logo" src="IEEE SIESGST_white.png" alt=""></a>
+            </span>
+
+            <ul id="menu" class="menu pt-3">
+                <li class="nav">
+                    <a href="https://sanika-03.github.io/Techopedia/#home">Home<span>.</span></a>
+                </li>
+                <li class="nav">
+                    <a href="https://sanika-03.github.io/Techopedia/#events">Events<span>.</span></a>
+                </li>
+                <li class="nav">
+                    <a href="https://sanika-03.github.io/Techopedia/#timeline">Timeline<span>.</span></a>
+                </li>
+                <li class="nav">
+                    <a href="https://sanika-03.github.io/Techopedia/#faq">FAQ<span>.</span></a>
+                </li>
+                <li class="nav">
+                    <a href="https://sanika-03.github.io/Techopedia/#sponsors">Sponsors<span>.</span></a>
+                </li>
+            </ul>
+            <div id="toggle">
+                <div class="span">menu</div>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="resize">
+            <div class="close-btn">close</div>
+            <ul id="menu">
+                <li>
+                    <a href="https://sanika-03.github.io/Techopedia/#home">Home<span>.</span></a>
+                </li>
+                <li>
+                    <a href="https://sanika-03.github.io/Techopedia/#events">Events<span>.</span></a>
+                </li>
+                <li>
+                    <a href="https://sanika-03.github.io/Techopedia/#timeline">Timeline<span>.</span></a>
+                </li>
+                <li>
+                    <a href="https://sanika-03.github.io/Techopedia/#faq">FAQ<span>.</span></a>
+                </li>
+                <li>
+                    <a href="https://sanika-03.github.io/Techopedia/#sponsors">Sponsors<span>.</span></a>
+                </li>
+            </ul>
         </div>
-      </div>
-      <section class="form-container">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="Team1Form" data-bs-toggle="tab" data-bs-target="#home" type="button">
-              Team Of 1
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Team2Form" data-bs-toggle="tab" data-bs-target="#profile" type="button">
-              Team Of 2
-            </button>
-          </li>
-        </ul>
-        <form id="nexus" action="#" class="form">
-          <!-- <div id="member1"></div> <div id="member2"></div> -->
-          <div class="underline">
-            <u>Team Member 1</u>
-          </div>
-          <div class="form-component">
-            <label class="label" for="name">Name</label>
-            <input type="text" id="name1" class="form-control form-input" name="name"
-              placeholder="Enter your Full Name" required />
-          </div>
-
-          <div class="form-component">
-            <label class="label" for="name">Email ID</label>
-            <input type="email" class="form-control" id="email1" name="email" placeholder="Enter your Email" required />
-          </div>
-
-          <div class="form-component">
-            <label class="label" for="name">Phone No.</label>
-            <input type="tel" class="form-control" id="phone1" name="phone" placeholder="Enter your Phone Number"
-              pattern="[7-9]{1}[0-9]{9}" required />
-          </div>
-
-          <div class="form-component">
-            <label class="label" for="college_name">College Name</label>
-            <input type="text" class="form-control" id="college_name1" name="college_name"
-              placeholder="Enter your College Name" required />
-          </div>
-
-          <div class="form-component">
-            <label class="label" for="branch_name">Branch</label>
-
-            <select id="branch1" name="branch">
-              <option value="Select">Select</option>
-              <option value="CE">CE</option>
-              <option value="IT">IT</option>
-              <option value="EXTC">EXTC</option>
-              <option value="ECS">ECS</option>
-              <option value="MECH">MECH</option>
-              <option value="PPT">PPT</option>
-              <option value="AI & Data Science">AI & Data Science</option>
-              <option value="AI & ML">AI & ML</option>
-              <option value="CS & Engineering">CS & Engineering</option>
-            </select>
-          </div>
-
-
-
-          <div class="form-component">
-            <label class="label" for="name">Year</label>
-
-            <div id="year1" name="year1">
-              <input type="radio" id="FE1" name="year1" value="FE" />
-              <label for="FE">FE</label><br />
-              <input type="radio" id="SE1" name="year1" value="SE" />
-              <label for="SE">SE</label><br />
-              <input type="radio" id="TE1" name="year1" value="TE" />
-              <label for="TE">TE</label><br />
-              <input type="radio" id="BE1" name="year1" value="BE" />
-              <label for="BE">BE</label><br />
+        
+            <!--------------- navbar starts here --------------->
+            <!--------------- navbar ends here --------------->
+            <div class="mobile-nav" id="resize">
+                <div class="close-btn">close</div>
+                <ul id="menu">
+                    <li>
+                        <a href="https://sanika-03.github.io/Techopedia/#home">Home<span>.</span></a>
+                    </li>
+                    <li>
+                        <a href="https://sanika-03.github.io/Techopedia/#events">Events<span>.</span></a>
+                    </li>
+                    <li>
+                        <a href="https://sanika-03.github.io/Techopedia/#timeline">Timeline<span>.</span></a>
+                    </li>
+                    <li>
+                        <a href="https://sanika-03.github.io/Techopedia/#faq">FAQ<span>.</span></a>
+                    </li>
+                    <li>
+                        <a href="https://sanika-03.github.io/Techopedia/#sponsors">Sponsors<span>.</span></a>
+                    </li>
+                </ul>
             </div>
-          </div>
-
-          <div class="form-component">
-            <label class="label" for="name">Will you be able to attend offline events?</label>
-
-            <div id="attend1">
-              <input type="radio" name="attend1" value="Yes" />
-              <label for="yes">YES</label><br />
-              <input type="radio" name="attend1" value="No" />
-              <label for="no">NO</label><br />
-            </div><br />
-            <div class="form-component">
-              <label class="label" for="name">Vaccination Status</label>
-
-              <div id="vaccine1">
-                <input type="radio" name="vaccine1" value="Fully Vaccinated" />
-                <label>Fully Vaccinated</label><br />
-                <input type="radio" name="vaccine1" value="Partially Vaccinated" />
-                <label>Partially Vaccinated</label><br />
-                <input type="radio" name="vaccine1" value="No Vaccine Yet" />
-                <label>Not Vaccinated</label><br />
-              </div>
+            <!------------------------------- img----------------- -->
+            <div class="test-header"></div>
+            <div class="img">
+                <img src="nexus.png" class="img-fluid" alt="...">
             </div>
+            <!----------------------- Event---------------------------------- -->
 
-            <!-- <div class="form-component">
-              <label class="label" for="branch_name">Slots</label>
+            <div class="event">
+                <h1 class="Event-heading">Nexus</h1>
+                <p class="Event-para">Storyline: A time leap to 3010, the Era of Augmented Reality. Humans with limited
+                    resources are living in Oasis, a virtual world. The winners of Nexus will be chosen as the
+                    Superiorem of Oasis!</p>
 
-              <select id="slots" name="slots">
-                <option value="Select">Select</option>
-                <option value="09-10">09-10</option>
-                <option value="10-11">10-11</option>
-                <option value="11-12">11-12</option>
-                <option value="12-13">12-13</option>
-                <option value="13-14">13-14</option>
-                <option value="14-15">14-15</option>
-                <option value="15-16">15-16</option>
-                <option value="16-17">16-17</option>
-                <option value="17-18">17-18</option>
-              </select>
-            </div> -->
-
-            <!-- -----------------------------------------Member 2---- -->
-            <!-- <div id="form2"></div> -->
-            <div id="form2">
-              <div class="underline">
-                <u>Team Member 2</u>
-              </div>
-
-              <div class="form-component">
-                <label class="label" for="name">Name</label>
-                <input type="text" class="form-control form-input" name="name2" placeholder="Enter your Full Name"
-                  id="name2" />
-              </div>
-
-              <div class="form-component">
-                <label class="label" for="name">Email ID</label>
-                <input type="email" id="email2" class="form-control" name="email2" placeholder="Enter your Email"
-                  require />
-              </div>
+                <p class="Event-para">
+                    Description: A team of two on a quest that requires a blend of technical and logical skills bundled
+                    with a lot of creativity, excitement, and brainstorming. This event is a venture that calls for
+                    creative and enthusiastic minds.
+                </p>
 
 
-              <div class="form-component">
-                <label class="label" for="name">Phone No.</label>
-                <input type="tel" id="phone2" class="form-control" name="phone" placeholder="Enter your Phone Number"
-                  pattern="[7-9]{1}[0-9]{9}" />
-              </div>
+                <h5 class="Event-about">Rounds: 3</h5>
+                <h5 class="Event-about">Max team of: 2</h5>
+                <h5 class="Event-about">Have any queries? Contact us at: <span class="Event-about1"> &nbsp Faizan Kalam
+                        <a href="tel:9867751808" class="phn"> (+91 9867751808)</a> &nbsp &nbsp Kiran Pal <a
+                            href="tel:9920911395" class=" phn"> (+91 9920911395)</a></span></h5>
 
-
-              <div class="form-component">
-                <label class="label" for="college_name">College Name</label>
-                <input type="text" class="form-control" id="college_name2" name="college_name2"
-                  placeholder="Enter your College Name" />
-              </div>
-
-              <div class="form-component">
-                <label class="label" for="branch_name">Branch</label>
-
-                <select id="branch2" name="branch2">
-                  <option value="Select">Select</option>
-                  <option value="CE">CE</option>
-                  <option value="IT">IT</option>
-                  <option value="EXTC">EXTC</option>
-                  <option value="ECS">ECS</option>
-                  <option value="MECH">MECH</option>
-                  <option value="PPT">PPT</option>
-                  <option value="AI & Data Science">AI & Data Science</option>
-                  <option value="AI & ML">AI & ML</option>
-                  <option value="CS & Engineering">CS & Engineering</option>
-                </select>
-              </div>
-
-              <div class="form-component">
-                <label class="label" for="name">Year</label>
-
-                <div id="year2" name="year2">
-                  <input type="radio" id="FE2" name="year2" value="FE" />
-                  <label for="FE">FE</label><br />
-                  <input type="radio" id="SE2" name="year2" value="SE" />
-                  <label for="SE">SE</label><br />
-                  <input type="radio" id="TE2" name="year2" value="TE" />
-                  <label for="TE">TE</label><br />
-                  <input type="radio" id="BE2" name="year2" value="BE" />
-                  <label for="BE">BE</label><br />
+                <!----------------------------------- Form------------------------------ -->
+                <div id="preloader" style="display: none">
+                    <span id="loadingText" class="text-white">Loading...</span>
                 </div>
-              </div>
-              <div class="form-component">
-                <label class="label" for="name">Will you be able to attend offline events?</label>
+                <section class="hero-container">
+                    <div class="hero-form">
+                        <section class="form-container">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="Team1Form" data-bs-toggle="tab"
+                                        data-bs-target="#home" type="button">
+                                        Need a Team?
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="Team2Form" data-bs-toggle="tab"
+                                        data-bs-target="#profile" type="button">
+                                        Team Of 2
+                                    </button>
+                                </li>
+                            </ul>
+                            <form id="nexus" action="#" class="form">
+                                <!-- <div id="member1"></div> <div id="member2"></div> -->
+                                <div class="underline">
+                                    <u>Team Member 1</u>
+                                </div>
+                                <div class="form-component">
+                                    <label class="label" for="name">Name</label>
+                                    <input type="text" id="name1" class="form-control form-input" name="name"
+                                        placeholder="Enter your Full Name" required/>
+                                </div>
 
-                <div id="attend2">
-                  <input type="radio" name="attend2" value="Yes" />
-                  <label for="yes">YES</label><br />
-                  <input type="radio" name="attend2" value="No" />
-                  <label for="no">NO</label><br />
-                </div>
-              </div>
+                                <div class="form-component">
+                                    <label class="label" for="name">Email ID</label>
+                                    <input type="email" class="form-control" id="email1" name="email"
+                                        placeholder="Enter your Email" required/>
+                                </div>
 
-              <div class="form-component">
-                <label class="label" for="name2">Vaccination Status</label>
+                                <div class="form-component">
+                                    <label class="label" for="name">Phone No.</label>
+                                    <input type="tel" class="form-control" id="phone1" name="phone"
+                                        placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" required/>
+                                </div>
 
-                <div id="vaccine2">
-                  <input type="radio" name="vaccine2" value="Fully Vaccinated" />
-                  <label>Fully Vaccinated</label><br />
-                  <input type="radio" name="vaccine2" value="Partially Vaccinated" />
-                  <label>Partially Vaccinated</label><br />
-                  <input type="radio" name="vaccine2" value="No Vaccine Yet" />
-                  <label>Not Vaccinated</label><br />
-                </div>
-              </div>
+                                <div class="form-component">
+                                    <label class="label" for="college_name">College Name</label>
+                                    <input type="text" class="form-control" id="college_name1" name="college_name"
+                                        placeholder="Enter your College Name" required/>
+                                </div>
 
-              <div class="form-component">
-                <label class="label" for="branch_name">Slots</label>
+                                <div class="form-component">
+                                    <label class="label" for="branch_name">Branch</label></br>
 
-                <select id="slots" name="slots">
-                  <option value="Select">Select</option>
-                  <option value="9 to 10">9 to 10</option>
-                  <option value="10 to 11">10 to 11</option>
-                  <option value="11 to 12">11 to 12</option>
-                  <option value="12 to 1">12 to 1</option>
-                </select>
-              </div>
+                                    <select class="branch1" id="branch1" name="branch" required>
+                                        <option value="" disabled selected>Select your branch</option>
+                                        <option value="CE" class="my-3">Computer Engineering</option>
+                                        <option value="IT">Information Technology</option>
+                                        <option value="EXTC">Electronics & Telecommunication</option>
+                                        <option value="ECS">Electronics & Computer Science</option>
+                                        <option value="MECH">Mechanical Engineering</option>
+                                        <option value="PPT">Printing & Packaging Technology</option>
+                                        <option value="AI & Data Science">Artificial Intelligence & Data Science
+                                        </option>
+                                        <option value="AI & ML">Artificial Intelligence & Machine Learning</option>
+                                        <option value="CS & Engineering" class="p-2">Computer Science & Engineering
+                                        </option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-component">
+                                    <label class="label" for="name">Year</label>
+
+                                    <div id="year1" name="year1">
+                                        <input type="radio" id="FE1" name="year1" value="FE" required/>
+                                        <label for="FE">FE</label><br />
+                                        <input type="radio" id="SE1" name="year1" value="SE" />
+                                        <label for="SE">SE</label><br />
+                                        <input type="radio" id="TE1" name="year1" value="TE" />
+                                        <label for="TE">TE</label><br />
+                                        <input type="radio" id="BE1" name="year1" value="BE" />
+                                        <label for="BE">BE</label><br />
+                                    </div>
+                                </div>
+                                    <!-- -----------------------------------------Member 2---- -->
+                                    <!-- <div id="form2"></div> -->
+                                    <div id="form2">
+                                        <div class="underline">
+                                            <u>Team Member 2</u>
+                                        </div>
+
+                                        <div class="form-component">
+                                            <label class="label" for="name">Name</label>
+                                            <input type="text" class="form-control form-input" name="name2"
+                                                placeholder="Enter your Full Name" id="name2" />
+                                        </div>
+
+                                        <div class="form-component">
+                                            <label class="label" for="name">Email ID</label>
+                                            <input type="email" id="email2" class="form-control" name="email2"
+                                                placeholder="Enter your Email"/>
+                                        </div>
+
+
+                                        <div class="form-component">
+                                            <label class="label" for="name">Phone No.</label>
+                                            <input type="tel" id="phone2" class="form-control" name="phone"
+                                                placeholder="Enter your Phone Number" pattern="[7-9]{1}[0-9]{9}" />
+                                        </div>
+
+
+                                        <div class="form-component">
+                                            <label class="label" for="college_name">College Name</label>
+                                            <input type="text" class="form-control" id="college_name2"
+                                                name="college_name2" placeholder="Enter your College Name" />
+                                        </div>
+
+                                        <div class="form-component">
+                                            <label class="label" for="branch_name">Branch</label></br>
+
+                                            <select class="branch1" id="branch1" name="branch">
+                                                <option value="" disabled selected>Select your branch</option>
+                                                <option value="CE" class="my-3">Computer Engineering</option>
+                                                <option value="IT">Information Technology</option>
+                                                <option value="EXTC">Electronics & Telecommunication</option>
+                                                <option value="ECS">Electronics & Computer Science</option>
+                                                <option value="MECH">Mechanical Engineering</option>
+                                                <option value="PPT">Printing & Packaging Technology</option>
+                                                <option value="AI & Data Science">Artificial Intelligence & Data Science
+                                                </option>
+                                                <option value="AI & ML">Artificial Intelligence & Machine Learning
+                                                </option>
+                                                <option value="CS & Engineering" class="p-2">Computer Science &
+                                                    Engineering</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-component">
+                                            <label class="label" for="name">Year</label>
+
+                                            <div id="year2" name="year2">
+                                                <input type="radio" id="FE2" name="year2" value="FE" />
+                                                <label for="FE">FE</label><br />
+                                                <input type="radio" id="SE2" name="year2" value="SE" />
+                                                <label for="SE">SE</label><br />
+                                                <input type="radio" id="TE2" name="year2" value="TE" />
+                                                <label for="TE">TE</label><br />
+                                                <input type="radio" id="BE2" name="year2" value="BE" />
+                                                <label for="BE">BE</label><br />
+                                            </div>
+                                        </div>
+<!--                                         <div class="form-component">
+                                            <label class="label" for="name">Will you be able to attend offline
+                                                events?</label>
+
+                                            <div id="attend2">
+                                                <input type="radio" name="attend2" value="Yes" />
+                                                <label for="yes">YES</label><br />
+                                                <input type="radio" name="attend2" value="No" />
+                                                <label for="no">NO</label><br />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-component">
+                                            <label class="label" for="name2">Vaccination Status</label>
+
+                                            <div id="vaccine2">
+                                                <input type="radio" name="vaccine2" value="Fully Vaccinated" />
+                                                <label>Fully Vaccinated</label><br />
+                                                <input type="radio" name="vaccine2" value="Partially Vaccinated" />
+                                                <label>Partially Vaccinated</label><br />
+                                                <input type="radio" name="vaccine2" value="No Vaccine Yet" />
+                                                <label>Not Vaccinated</label><br />
+                                            </div>
+                                        </div> -->
+                                    </div>
+                       
+                                    <div class="form-component">
+                                        <label class="label" for="branch_name">Slots</label></br>
+                                        <select id="slots" name="slots">
+                                            <option value="" disabled selected>Select your slot</option>
+                                            <option value="9 to 10">9 to 10</option>
+                                            <option value="10 to 11">10 to 11</option>
+                                            <option value="11 to 12">11 to 12</option>
+                                            <option value="12 to 1">12 to 1</option>
+                                        </select>
+                                    </div>
+                         <div class="button-group">
+                                <button type="submit" class="button">Register</button>
+                            </div>
+
+                                    
+                            </form>
+                    
+                                    
+                        </section>
+                    </div>
+                </section>
+
+                <!-- ------------------footer starts here!------------------- -->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="hr">
+                            <div class="row"></div>
+                        </div>
+
+                        <br /><br />
+
+                        <div class="info">
+                            <div class="row">
+                                <div class="col-lg-4" id="personal">
+                                    <h3>Explore.</h3>
+                                    <div class="explore">
+                                        <a href="#home" data-wow-delay="0.2s" class="con">Home</a>
+                                        <a href="#events" data-wow-delay="0.2s" class="con">Events</a>
+                                        <a href="mailto: ieee@siesgst.ac.in" data-wow-delay="0.2s"
+                                            class="con">Contact</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 footer-column">
+                                    <h3 class="follow-us">Follow us at.</h3>
+
+                                    <ul class="social-links">
+                                        <li id="insta" class="wow fadeInUp" data-wow-delay="0.6s"><a target="_blank"
+                                                href="https://www.instagram.com/ieeesiesgst/?hl=en"><img
+                                                    src="InstagramLogo (1).png" alt=""></a>
+                                        </li>
+                                        <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
+                                                href="https://www.linkedin.com/company/ieee-gst"><img
+                                                    src="LinkedinLogo.png" alt=""></a></li>
+
+                                        <li class="wow fadeInUp" data-wow-delay="0.8s"><a target="_blank"
+                                                href="https://twitter.com/_ieeesiesgst?s=09"><img src="twitter logo.png"
+                                                    alt=""></li>
+                                        <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
+                                                href="https://www.youtube.com/c/IEEESIESGST"><img src="youtube logo.png"
+                                                    alt=""></a></li>
+                                        <li class="wow fadeInUp" data-wow-delay="0.4s"><a target="_blank"
+                                                href="https://www.facebook.com/groups/714385779076148/?ref=share"><img
+                                                    src="FacebookLogo.png" alt=""></a></li>
+                                        <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
+                                                href="https://open.spotify.com/show/08snSfTbCS9EcxWTDIJYuV?si=s5eliMbwTPeOXAC2ZG8MDg&utm_source=copy-link"><img
+                                                    src="SpotifyLogo.png" alt=""></a></li>
+                                        <li class="wow fadeInUp" data-wow-delay="1s"><a target="_blank"
+                                                href="https://www.youtube.com/c/IEEESIESGST"><img src="github logo.png"
+                                                    alt=""></a></li>
+                                    </ul>
+
+
+
+                                    <br /><br />
+
+
+                                </div>
+
+                                <div class="col-lg-4" id="address">
+                                    <h3 class="Reach-us">Reach us at.</h3>
+                                    <h4 data-wow-delay="0.2s"><span><a href="mailto: ieee@siesgst.ac.in" class="con">
+                                                ieee@siesgst.ac.in
+                                            </a></span></h4>
+                                    <a href="tel:908923792" data-wow-delay="0.2s" class="con">+91 908923792
+                                        </h4>
+                                        <a href="tel:899023723" data-wow-delay="0.2s" class="con">+91 899023723</h4>
+                                            <br /><br />
+                                </div>
+                            </div>
+                            <h3 class="copyright"> &copy; 2021 - 2022</h3>
+                        </div>
+                    </div>
+                    <br />
+                </footer>
+                <!--------------- footer ends here --------------->
+
+                <br /><br /><br /><br />
             </div>
-            <div class="button-group">
-              <button type="submit" class="button">Register</button>
-            </div>
-        </form>
-      </section>
-    </div>
-  </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+
+            <!-- greensock cdn -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+            <script type="text/javascript">
+                // navigation starts here
+
+                $("#toggle").click(function () {
+                    $(this).toggleClass("on");
+                    $("#resize").toggleClass("active");
+                });
+
+                $("#resize ul li a").click(function () {
+                    $(this).toggleClass("on");
+                    $("#resize").toggleClass("active");
+                });
+
+                $(".close-btn").click(function () {
+                    $(this).toggleClass("on");
+                    $("#resize").toggleClass("active");
+                });
+
+                TweenMax.from("#brand", 1, {
+                    delay: 0.4,
+                    y: 10,
+                    opacity: 0,
+                    ease: Expo.easeInOut,
+                });
+
+                TweenMax.staggerFrom(
+                    "#menu li a",
+                    1,
+                    {
+                        delay: 0.4,
+                        opacity: 0,
+                        ease: Expo.easeInOut,
+                    },
+                    0.1
+                );
+
+                // nav animation ends
+
+
+            </script>
+            <script src="script.js"></script>
 </body>
 
 </html>
+<script>
+    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+    accordionItemHeaders.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", event => {
+            accordionItemHeader.classList.toggle("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if (accordionItemHeader.classList.contains("active")) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+                accordionItemHeader.style.backgroundColor = "#000516";
+                accordionItemHeader.style.border = "#fff solid 1px";
+            }
+            else {
+                accordionItemBody.style.maxHeight = 0;
+                accordionItemHeader.style.backgroundColor = "transparent";
+                accordionItemHeader.style.border = "#fff solid 1px";
+
+            }
+
+        });
+    });
+</script>
