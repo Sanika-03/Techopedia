@@ -26,6 +26,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- ______________boxicons________________ -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <!-- _________animation_____________ -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <script>
     window.addEventListener('scroll',(event) => {
       let yOffset = window.pageYOffset;
@@ -101,7 +106,7 @@
         </div>
       </div>
       
-      <div class="countdown" id="demo">
+      <div class="countdown animate__animated  animate__pulse" id="demo">
       <div id="timer" class=" d-flex 
         align-items-center justify-content-center">
         <div id="days" class="align-items-center flex-column d-flex justify-content-center"></div>
@@ -642,7 +647,8 @@
 
             <div class="col-lg-4" id="address">
               <h3 class="Reach-us">Reach us at.</h3>
-              <h4 data-wow-delay="0.2s">ieee@siesgst.ac.in</h4>
+              <a href="mailto: ieee@siesgst.ac.in" data-wow-delay="0.2s">ieee@siesgst.ac.in</a>
+              <br />
               <a href="tel:908923792" data-wow-delay="0.2s">+91 908923792
               </h4>
               <a href="tel:899023723" data-wow-delay="0.2s">+91 899023723</h4>

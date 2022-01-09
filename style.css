@@ -210,7 +210,9 @@ nav #brand a:hover {
   top: -2px;
   line-height: 80px;
 }
-
+.mobile-nav.active{
+  position: fixed;
+}
 #resize {
   z-index: 1;
   top: 0px;
@@ -1178,6 +1180,7 @@ textarea:focus {
 .menu li a:hover::after {
   color: #1d2223;
 }
+
 
 /* Footer  */
 #explore h3{
